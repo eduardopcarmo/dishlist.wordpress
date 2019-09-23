@@ -1,11 +1,11 @@
 {
-  "Street": {
-    "Name": "Kingsway",
-    "Number": "2222",
-    "Extra": "Unit 1"
+  "street": {
+    "name": "Kingsway",
+    "number": "2222",
+    "extra": "Unit 1"
   },
-  "PostalCode": "V5N2T7W",
-  "Latitude": 49.242863,
-  "Longitude": -123.060518,
-  "City": "/dto/Generic/city.json"
+  "postal_code": "V5N2T7W",
+  "latitude": 49.242863,
+  "longitude": -123.060518,
+  "city": "/dto/Generic/city.json"
 }

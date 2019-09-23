@@ -1,13 +1,8 @@
 {
-  "Id": "6eec5eb6-9755-11e4-b981-feb7b39d48d6",
-  "Name": "Veggie Bowl",
-  "Address": "/dto/Generic/address.json",
-  "OpenOurs": ["/dto/Generic/openHour.json", "/dto/Generic/openHour.json"],
-  "Phones": ["9999999999", "9999999999", "9999999999"],
-  "WebSite": "http://www.veggiebowl.ca",
-  "Dishes": [
-    "/dto/Restaurant/restaurant.json",
-    "/dto/Restaurant/restaurant.json",
-    "/dto/Restaurant/restaurant.json"
-  ]
+  "id": "6eec5eb6-9755-11e4-b981-feb7b39d48d6",
+  "name": "Veggie Bowl",
+  "address": "/dto/Generic/address.json",
+  "open_hours": ["/dto/Generic/openHour.json", "/dto/Generic/openHour.json"],
+  "phones": ["9999999999", "9999999999", "9999999999"],
+  "website": "http://www.veggiebowl.ca"
 }

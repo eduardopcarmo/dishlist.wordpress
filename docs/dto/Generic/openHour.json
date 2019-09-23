@@ -1,5 +1,5 @@
 {
-  "DayOfTheWeek": "/dto/Generic/dayOfTheWeek.json",
-  "Open": "09:00:00",
-  "Close": "20:00:00"
+  "day_of_the_week": "/dto/Generic/dayOfTheWeek.json",
+  "open": "09:00:00",
+  "close": "20:00:00"
 }
