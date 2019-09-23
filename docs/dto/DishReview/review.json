@@ -1,0 +1,13 @@
+{
+  "Id": "6eec5eb6-9755-11e4-b981-feb7b39d48d6",
+  "Text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem massa, bibendum sed justo in, finibus volutpat ex. Cras et auctor augue. Fusce fringilla, quam et malesuada auctor, sapien turpis pharetra mi, ut pretium odio quam ac nunc. Praesent eget tempor neque. Sed tincidunt odio id varius placerat. Nam consectetur fringilla enim a maximus. Curabitur dignissim nec nisi eget consectetur. Nunc tortor tortor, tincidunt non viverra in, commodo at neque.",
+  "Tags": ["/dto/Generic/tag.json", "/dto/Generic/tag.json"],
+  "Rating": 5,
+  "Price": 10.5,
+  "Photos": [
+    "https://cookieandkate.com/images/2017/01/vegetarian-pho-2.jpg",
+    "https://cookieandkate.com/images/2017/01/vegetarian-pho-2.jpg"
+  ],
+  "User": "/dto/User/user.json",
+  "Date": "2019-09-23T11:40:33.123Z"
+}
