@@ -13,6 +13,7 @@ You need Docker to run this application.
 #### Running Worpress Website
 
 1: You'll be able to access in the address: `http://localhost:8000` (Website) and `http://localhost:8000/wp-admin/` (Dashboard)
+
 2: Use **User**: team4 and **Password**: \$zOXx#PgHUSMWC3TC5
 
 ---
@@ -20,4 +21,5 @@ You need Docker to run this application.
 #### Running PhpMyAdmin
 
 1: You'll be able to access in the address: `http://localhost:8080`
+
 2: Use **User**: root and **Password**: langara
