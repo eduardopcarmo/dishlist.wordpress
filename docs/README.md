@@ -47,6 +47,7 @@ Restaurant and Dish DTO's and Endpoints
 - DTO:
 
   - **Dish:** /dto/Restaurant/dish.json
+  - **Ingredient**: /dto/Restaurant/ingredient.json
   - **Restaurant:** /dto/Restaurant/restaurant.json
 
 - Endpoints:
