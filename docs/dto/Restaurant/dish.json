@@ -1,12 +1,16 @@
 {
   "Id": "6eec5eb6-9755-11e4-b981-feb7b39d48d6",
   "Name": "Phò / Vegetarian Pho",
-  "Description": "PRice noodles, five spiced broth, vegan ham, ginger in broth, assorted tofu, broccoli, lotus root, zucchini, snap peas, enoki mushrooms, carrots, cauliflower",
+  "Description": "Rice noodles, five spiced broth, vegan ham, ginger in broth, assorted tofu, broccoli, lotus root, zucchini, snap peas, enoki mushrooms, carrots, cauliflower",
   "Price": 10.5,
   "Photos": [
     "https://cookieandkate.com/images/2017/01/vegetarian-pho-2.jpg",
     "https://cookieandkate.com/images/2017/01/vegetarian-pho-2.jpg"
   ],
   "Rating": 5,
-  "Tags": ["/dto/Generic/tag.json", "/dto/Generic/tag.json"]
+  "Tags": ["/dto/Generic/tag.json", "/dto/Generic/tag.json"],
+  "Ingredients": [
+    "/dto/Restaurant/ingredient.json",
+    "/dto/Restaurant/ingredient.json"
+  ]
 }
