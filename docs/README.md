@@ -55,7 +55,7 @@ Restaurant and Dish DTO's and Endpoints
   - **Search Restaurant by Name:** api/restaurant/search_by_name => POST => Return: Array of Restaurant.json
   - **Get Restaurant by Id:** api/restaurant/get?id=Restaurant.Id => GET => Return: Restaurant.json
   - **Get Restaurant by QRCode (Restaurant.Id):** api/restaurant/get?id=QRCode => GET => Return: Restaurant.json
-  - **Get Dishes from a Restaurant:** api/restaurant/get_dishes?id=Restaurant.Id => GET => Return: Array of Dish.json
+  - **Get Dishes from a Restaurant:** api/restaurant/get_dishes?id=Restaurant.Id&tags=Tag.Id;Tag.Id => GET => Return: Array of Dish.json
 
 ---
 
@@ -70,5 +70,5 @@ Review DTO's and Endpoints
 - Endpoints:
 
   - **Get Reviews from a dish:** api/review/get?id=Dish.Id&Page=1 => Get => Return: Array of review.json
-  - **Create a new review:** api/review/add => POST: review.json => Return: review.json
+  - **Create a new review:** api/review/add?id=Dish.Id => POST: review.json => Return: review.json
   - **Add Phtos to a existent review:** api/review/add_photo?id=Review.Id => POST: PHOTO??? => Return: string with photo URL
