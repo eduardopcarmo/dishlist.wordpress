@@ -56,6 +56,7 @@ Restaurant and Dish DTO's and Endpoints
   - **Get Restaurant by Id:** api/restaurant/get?id=Restaurant.Id => GET => Return: Restaurant.json
   - **Get Restaurant by QRCode (Restaurant.Id):** api/restaurant/get?id=QRCode => GET => Return: Restaurant.json
   - **Get Dishes from a Restaurant:** api/restaurant/get_dishes?id=Restaurant.Id&tags=Tag.Id;Tag.Id => GET => Return: Array of Dish.json
+  - **Get TOP 3 Dishes from a Restaurant + User:** api/restaurant/get_dishes?id=Restaurant.Id&userId=User.Id => GET => Return: Array of Dish.json
 
 ---
 
