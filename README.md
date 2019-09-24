@@ -24,6 +24,8 @@ You need Docker to run this application.
 
 2: Use **User**: root and **Password**: langara
 
+---
+
 #### How to dump wordpress db in MySQL
 
 1: You'll need to discovery the name of your MySQL docker Container. To do this, run this command in your terminal:
@@ -35,6 +37,8 @@ You need Docker to run this application.
 3: Replace MYSQL_CONTAINER_NAME with the name of your docker container, and run this command in yout terminal:
 
 - docker exec MYSQL_CONTAINER_NAME /usr/bin/mysqldump --user="root" --password="langara" wordpress > db_dump/wordpress_dump.sql
+
+---
 
 #### How to "Restart" all docker Container used in this project (DON'T DO!!!!!!!!!!!)
 
