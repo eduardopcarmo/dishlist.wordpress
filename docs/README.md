@@ -29,14 +29,8 @@ Generic DTO's and Endpoints
 
   - **Address:** /dto/Generic/address.json
   - **City:** /dto/Generic/city.json
-  - **Day of the Week:** /dto/Generic/dayOfTheWeek.json
-  - **Open hour:** /dto/Generic/openHour.json
   - **Province:** /dto/Generic/province.json
   - **Tag:** /dto/Generic/tag.json
-
-- Endpoints:
-
-  - **Get the list of `Days of the Week`:** api/generic/daysoftheweek/get_all => GET => Return: Array of Days of the Week
 
 ---
 
@@ -52,7 +46,7 @@ Restaurant and Dish DTO's and Endpoints
 
 - Endpoints:
 
-  - **Search Restaurant by Name:** api/restaurant/search_by_name => POST => Return: Array of Restaurant.json
+  - **Search Restaurant by Name:** api/restaurant/search_by_name.php => POST => Return: Array of Restaurant.json
   - **Get Restaurant by Id:** api/restaurant/get?id=Restaurant.Id => GET => Return: Restaurant.json
   - **Get Restaurant by QRCode (Restaurant.Id):** api/restaurant/get?id=QRCode => GET => Return: Restaurant.json
   - **Get Dishes from a Restaurant:** api/restaurant/get_dishes?id=Restaurant.Id&tags=Tag.Id;Tag.Id => GET => Return: Array of Dish.json

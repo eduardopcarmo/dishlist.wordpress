@@ -2,7 +2,6 @@
   "id": "6eec5eb6-9755-11e4-b981-feb7b39d48d6",
   "name": "Veggie Bowl",
   "address": "/dto/Generic/address.json",
-  "open_hours": ["/dto/Generic/openHour.json", "/dto/Generic/openHour.json"],
   "phones": ["9999999999", "9999999999", "9999999999"],
   "website": "http://www.veggiebowl.ca"
 }
