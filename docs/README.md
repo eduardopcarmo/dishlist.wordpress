@@ -15,9 +15,8 @@ User DTO and Endpoints
 - Endpoints:
 
   - **Create a new user:** api/user/add => POST: User => Return: User.json
-  - **Update a existent user:** api/user/update => PUT: User => Return: HTTP STATUS 200
-  - **Get a existent user:** api/user/get?id=User.Id => GET => Return: User.json
-  - **Inactive a existent user:** api/user/delete?id=User.Id => DELETE => Return: HTTP STATUS 200
+  - **Update an existent user:** api/user/update => PUT: User => Return: HTTP STATUS 200
+  - **Get an existent user:** api/user/get?id=User.Id => GET => Return: User.json
 
 ---
 

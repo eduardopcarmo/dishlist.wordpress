@@ -14,7 +14,11 @@ services:
     depends_on:
       - db
     image: wordpress:latest
-    volumes: ["./wp/:/var/www/html"]
+    volumes:
+      [
+        "./wp/:/var/www/html",
+        "./wp-php/z_dishlist.ini:/usr/local/etc/php/conf.d/z_dishlist.ini",
+      ]
     ports:
       - "8000:80"
     restart: always
@@ -23,6 +27,7 @@ services:
       WORDPRESS_DB_USER: team4
       WORDPRESS_DB_PASSWORD: langara
       WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: 1
   phpmyadmin:
     depends_on:
       - db
