@@ -1,18 +1,7 @@
 version: "3.3"
 
 services:
-  db:
-    image: mysql:5.7
-    volumes: ["./db/:/var/lib/mysql"]
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: langara
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: team4
-      MYSQL_PASSWORD: langara
   wp:
-    depends_on:
-      - db
     image: wordpress:latest
     volumes:
       [
@@ -23,18 +12,8 @@ services:
       - "8000:80"
     restart: always
     environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: team4
-      WORDPRESS_DB_PASSWORD: langara
-      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_HOST: 74.208.228.35:3306
+      WORDPRESS_DB_USER: wp_h8m3k
+      WORDPRESS_DB_PASSWORD: 5_Vl28beTU
+      WORDPRESS_DB_NAME: wp_v1sxv
       WORDPRESS_DEBUG: 1
-  phpmyadmin:
-    depends_on:
-      - db
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - "8080:80"
-    restart: always
-    environment:
-      PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: langara
