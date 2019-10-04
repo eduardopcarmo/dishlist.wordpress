@@ -1,7 +1,6 @@
 {
-  "id": "6eec5eb6-9755-11e4-b981-feb7b39d48d6",
+  "id": 1,
   "name": "Veggie Bowl",
-  "address": "/dto/Generic/address.json",
-  "phones": ["9999999999", "9999999999", "9999999999"],
+  "description": "This restaurant was funded in 1995, and today is the most famous vegan restaurant of British Columbia.",
   "website": "http://www.veggiebowl.ca"
 }

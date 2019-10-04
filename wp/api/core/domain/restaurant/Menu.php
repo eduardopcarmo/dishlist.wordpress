@@ -1,14 +1,42 @@
 <?php
 class Menu{
-
     // Properties
-    public $restaurant;
-    public $dishes;
-    public $top_3_dishes;
+    public $place;
+    public $featured;
     public $categories;
- 
-    // Constructor
-    public function __construct(){
-    }
+ }
+
+class MenuFeatured{
+    // Properties
+    public $id;
+    public $name;
+    public $thumbnail;
+}
+
+class MenuCategory{
+    // Properties
+    public $id;
+    public $name;
+    public $items;
+}
+
+class MenuCategoryItem{
+    // Properties
+    public $id;
+    public $name;
+    public $short_description;
+    public $thumbnail;
+    public $rating;
+    public $price;
+    public $average_time;
+    public $people;
+    public $tags;
+}
+
+class MenuCategoryItemTag{
+    // Properties
+    public $id;
+    public $name;
+    public $color;
 }
 ?>

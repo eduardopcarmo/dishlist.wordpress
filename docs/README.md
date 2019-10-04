@@ -1,12 +1,12 @@
 # DishList.Wordpress
 
-DTO and Endpoint's inicial documentation and reference.
+DTO and Endpoint's documentation and reference.
 
 ---
 
 #### User
 
-User DTO and Endpoints
+User: DTO + Endpoints
 
 - DTO:
 
@@ -14,55 +14,23 @@ User DTO and Endpoints
 
 - Endpoints:
 
-  - **Create a new user:** api/user/add => POST: User => Return: User.json
-  - **Update an existent user:** api/user/update => PUT: User => Return: HTTP STATUS 200
-  - **Get an existent user:** api/user/get?id=User.Id => GET => Return: User.json
+  - **Create a new user:** api/user/create.php => POST: user.json => Return: user.json
+  - **Get an existent user:** api/user/read.php?id=[VALUE] => GET => Return: user.json
 
 ---
 
-#### Generic
+#### Restaurant, Menu and Dish
 
-Generic DTO's and Endpoints
-
-- DTO:
-
-  - **Address:** /dto/Generic/address.json
-  - **City:** /dto/Generic/city.json
-  - **Province:** /dto/Generic/province.json
-  - **Tag:** /dto/Generic/tag.json
-
----
-
-#### Restaurant, Dish
-
-Restaurant and Dish DTO's and Endpoints
+Restaurant, Menu and Dish: DTO's + Endpoints
 
 - DTO:
 
-  - **Dish:** /dto/Restaurant/dish.json
-  - **Ingredient**: /dto/Restaurant/ingredient.json
+  - **Menu**: /dto/Restaurant/menu.json
   - **Restaurant:** /dto/Restaurant/restaurant.json
+  - **Dish:** /dto/Restaurant/restaurant.json
 
 - Endpoints:
 
-  - **Search Restaurant by Name:** api/restaurant/search_by_name.php => POST => Return: Array of Restaurant.json
-  - **Get Restaurant by Id:** api/restaurant/get?id=Restaurant.Id => GET => Return: Restaurant.json
-  - **Get Restaurant by QRCode (Restaurant.Id):** api/restaurant/get?id=QRCode => GET => Return: Restaurant.json
-  - **Get Dishes from a Restaurant:** api/restaurant/get_dishes?id=Restaurant.Id&tags=Tag.Id;Tag.Id => GET => Return: Array of Dish.json
-  - **Get TOP 3 Dishes from a Restaurant + User:** api/restaurant/get_dishes?id=Restaurant.Id&userId=User.Id => GET => Return: Array of Dish.json
-
----
-
-#### Review
-
-Review DTO's and Endpoints
-
-- DTO:
-
-  - **Review:** /dto/DishReview/review.json
-
-- Endpoints:
-
-  - **Get Reviews from a dish:** api/review/get?id=Dish.Id&Page=1 => Get => Return: Array of review.json
-  - **Create a new review:** api/review/add?id=Dish.Id => POST: review.json => Return: review.json
-  - **Add Phtos to a existent review:** api/review/add_photo?id=Review.Id => POST: PHOTO??? => Return: string with photo URL
+  - **Search Restaurant by Name:** /api/restaurant/read.php?name=[VALUE] => GET => Return: Array of restaurant.json
+  - **Get Restaurant Menu by Restaurant Id:** /api/menu/read.php?id=[VALUE] => GET => Return: menu.json
+  - **Get Dish by Dish Id:** /api/dish/read.php?id=[VALUE] => GET => Return: dish.json

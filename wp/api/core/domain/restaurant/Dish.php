@@ -4,17 +4,25 @@ class Dish{
     // Properties
     public $id;
     public $name;
-    public $description;
     public $short_description;
-    public $price;
-    public $photos;
+    public $description;
+    public $thumbnail;
     public $rating;
+    public $price;
     public $average_time;
     public $tags;
     public $ingredients;
- 
-    // Constructor
-    public function __construct(){
-    }
+    public $photos;
+}
+
+class DishPhoto{
+    public $id;
+    public $description;
+    public $url;
+}
+
+class DishIngredient{
+    public $id;
+    public $name;
 }
 ?>

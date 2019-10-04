@@ -17,11 +17,11 @@
         $id = isset($_GET["id"]) ? $_GET["id"] : 0;
         
         // Check if is a "Valid" ID
-        if($id > 0)
+        if(is_numeric($id) && $id > 0)
         {
             // Get user by ID
             $sUsers = new SUser();
-            $user = $sUsers->Get($id);
+            $user = $sUsers->Get((int)$id);
 
             // Check if user exists
             if($user != null){

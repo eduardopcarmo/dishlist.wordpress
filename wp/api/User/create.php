@@ -23,7 +23,7 @@
             
             // Create new user user
             $sUsers = new SUser();
-            $user = $sUsers->Create($user);
+            $user = $sUsers->Create($user->name, $user->phone);
 
             // Check if user was created
             if($user != null && $user->id > 0){

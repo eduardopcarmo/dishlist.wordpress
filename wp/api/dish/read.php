@@ -1,7 +1,7 @@
 <?php
     // Domain
     include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/domain/ErrorMessage.php";
-    include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/domain/restaurant/Restaurant.php";
+    include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/domain/restaurant/Dish.php";
 
     // Service
     include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/service/SRestaurant.php";
@@ -13,24 +13,23 @@
 
     // Check HTTP Method
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        
-        //Name
-        $name = isset($_GET["name"]) ? urldecode($_GET["name"]) : null;
-        
+        // ID
+        $id = isset($_GET["id"]) ? $_GET["id"] : 0;
+
         // Check if is a "Valid" ID
-        if($name != null)
+        if(is_numeric($id) && $id > 0)
         {
             // Get Restaurant
             $sRestaurant = new SRestaurant();
-            $restaurant = $sRestaurant->List($name);
+            $menu = $sRestaurant->GetDish((int)$id);
 
-               // Check if Restaurant exists
-            if($restaurant != null){
+            // Check if Menu exists
+            if($menu != null){
                 // set response code - 200 OK
                 http_response_code(200);
             
                 // User in json format
-                echo json_encode($restaurant);
+                echo json_encode($menu);
 
                 // Stop execution
                 return;

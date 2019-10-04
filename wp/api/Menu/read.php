@@ -16,15 +16,12 @@
         // ID
         $id = isset($_GET["id"]) ? $_GET["id"] : 0;
 
-        // User Id
-        $userId = isset($_GET["userId"]) ? $_GET["userId"] : 0;
-        
         // Check if is a "Valid" ID
-        if($id > 0)
+        if(is_numeric($id) && $id > 0)
         {
             // Get Restaurant
             $sRestaurant = new SRestaurant();
-            $menu = $sRestaurant->GetMenu($id, $userId);
+            $menu = $sRestaurant->GetMenu((int)$id);
 
             // Check if Menu exists
             if($menu != null){
