@@ -13,7 +13,7 @@ A starter theme called Dishlist.
 
 == Description ==
 
-Description
+An awesome _S-base theme
 
 == Installation ==
 
