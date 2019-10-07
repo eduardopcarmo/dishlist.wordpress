@@ -128,5 +128,65 @@ class Database{
         // Return id
         return $id;
     }    
+
+    // Execute UPDATE
+    public function Update($sql, $valuesToReplace){
+        // Recieve ID
+        $success = false;
+
+        // Check Parameters
+        if ($sql === null || trim($sql) === ""){
+            die("ERROR: Parameter sql is required.");
+        }
+
+        // Connect to MySQL server
+        $mysqli = new mysqli($this->DbHost, $this->DbUser, $this->DbPass, $this->DbName);
+        
+        // Check connection
+        if($mysqli === false){
+            die("ERROR: Could not connect to DB. " . $mysqli->connect_error);
+        }
+
+        // Statement
+        $stmt = $mysqli->prepare($sql);
+
+        // Add parameters
+        if ($valuesToReplace !== null && is_array($valuesToReplace) && count($valuesToReplace) > 0){
+            $stmt_types = "";
+            $stmt_values = array();
+            foreach($valuesToReplace as $key => $item){
+                switch(gettype($item)){
+                    case "string":
+                        $stmt_types = $stmt_types . "s"; // corresponding variable has type string
+                        break;
+                    case "integer":
+                        $stmt_types = $stmt_types . "i"; // corresponding variable has type integer
+                        break;
+                    case "double":
+                        $stmt_types = $stmt_types . "d"; // corresponding variable has type double
+                        break;
+                    default:
+                        $stmt_types = $stmt_types . "d"; // corresponding variable is a blob and will be sent in packets
+                        break;
+                }
+                $stmt_values[] = $item;          
+            }
+            $stmt->bind_param($stmt_types, ...$stmt_values);
+        }
+
+
+
+        // Execute
+        if($stmt->execute()){
+            $success = $stmt->affected_rows > 0;
+        }
+
+        // Close connection and statement
+        $stmt->close();
+        $mysqli->close();
+
+        // Return id
+        return $success;
+    }
 }
 ?>

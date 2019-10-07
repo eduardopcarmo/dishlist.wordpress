@@ -1,7 +1,7 @@
 <?php
     // Domain
     include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/domain/ErrorMessage.php";
-    include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/domain/review/Review.php";
+    include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/domain/restaurant/Review.php";
 
     // Service
     include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/service/SReview.php";
@@ -15,20 +15,28 @@
 
     // Check HTTP Method
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // ID
-        $id = isset($_GET["id"]) ? $_GET["id"] : 0;
 
-        // Review
+        // ID
+        $itemId = isset($_GET["id"]) ? $_GET["id"] : 0;
+
+        // User
         $review = json_decode(file_get_contents("php://input"));
 
         // Check values
-        if(!empty($user->text)){
-            
+        if(is_numeric($itemId)
+            && $itemId > 0 
+            && is_numeric($review->rating)
+            && $review->rating > -1 
+            && !empty($review->description)
+            && $review->user !== null
+            && is_numeric($review->user->id)
+            && $review->user->id > 0){
+
             // Create new user user
             $sReview = new SReview();
-            $review = $sReview->Create($id, $review);
+            $review = $sReview->Create($itemId, $review);
 
-            // Check if user was created
+            // Check if review was created
             if($review != null && $review->id > 0){
                 // set response code - 201 Created
                 http_response_code(201);
@@ -45,7 +53,7 @@
         http_response_code(404);
 
         // Erro Message in json format
-        echo json_encode(new ErrorMessage(404, "Reviews does not created."));
+        echo json_encode(new ErrorMessage(404, "Review does not created."));
         
         // Stop execution
         return;
