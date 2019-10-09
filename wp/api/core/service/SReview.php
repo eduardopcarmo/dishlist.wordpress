@@ -24,7 +24,7 @@ class SReview{
 
         // Check if is a valide id
         if($id !== null && is_int($id)){
-            // Get Dish info
+            // Get Review
             $sql = "SELECT ";
             $sql .= "    MIR.review_id ";
             $sql .= "    , MIR.item_id ";
@@ -45,10 +45,12 @@ class SReview{
                 $review = new Review();
                 $review->id = $result[0]["review_id"];
                 $review->rating = $result[0]["review_rating"];
-                $review->description = $result[0]["review_description"];
+                $review->description = json_encode($result[0]["review_description"]);
                 $review->date_created = $result[0]["review_date_created"];
                 $review->user = new User();
-                $review->user->name = $result[0]["user_name"];
+                $review->user->name = json_encode($result[0]["user_name"]);
+                // Remove all null values
+                $review->user = (object) array_filter((array) $review->user);
             }
         }
 
@@ -57,8 +59,69 @@ class SReview{
     }
 
     // Get List of Reviews by Dish Id and Page
-    public function GetList($itemId, $page){
-        return null;
+    public function GetList($id, $page){
+        // List of reviews
+        $reviewList = null;
+
+        // Control Pagination
+        $pItensPerPage = 10;
+        $pOffset = ((int)$page - 1) * $pItensPerPage; 
+        $pTotalItens = 0;
+        $pTotalPages = 0;
+
+        // Dicover total reviews by dish id
+        $result = $this->database->Select("SELECT COUNT(review_id) AS total_itens FROM api_menu_item_review WHERE item_id = ?;", array("item_id" => (int)$id));
+        if($result !== null && is_array($result) && count($result) > 0){
+            $pTotalItens = (int)$result[0]["total_itens"];
+        }
+        $pTotalPages = ceil($pTotalItens / $pItensPerPage);
+        
+        // Get reviews according to the page
+        $sql = "SELECT ";
+        $sql .= "    MIR.review_id ";
+        $sql .= "    , MIR.item_id ";
+        $sql .= "    , U.user_name ";
+        $sql .= "    , MIR.review_rating ";
+        $sql .= "    , MIR.review_description ";
+        $sql .= "    , MIR.review_date_created ";
+        $sql .= "FROM ";
+        $sql .= "	api_menu_item_review MIR ";
+        $sql .= "   INNER JOIN api_user U ON MIR.user_id = U.user_id ";
+        $sql .= "WHERE ";
+        $sql .= "	item_id = ? ";
+        $sql .= "ORDER BY MIR.review_date_created DESC ";
+        $sql .= "LIMIT ?, ? ;";
+
+        // Get itens according to the page
+        $result = $this->database->Select($sql, 
+            array(
+                "item_id" => (int)$id,
+                "pOffset" => (int)$pOffset,
+                "pItensPerPage" => (int)$pItensPerPage
+            ));
+        if($result !== null && is_array($result) && count($result) > 0){
+            $reviewList = new ReviewList();
+            $reviewList->current_page = (int)$page;
+            $reviewList->total_reviews = (int)$pTotalItens;
+            $reviewList->total_pages = (int)$pTotalPages;
+            $reviewList->reviews = array();
+            for($i = 0; $i < count($result) ; $i++){
+                // "Build" Review
+                $review = new Review();
+                $review->id = $result[$i]["review_id"];
+                $review->rating = $result[$i]["review_rating"];
+                $review->description = json_encode($result[$i]["review_description"]);
+                $review->date_created = $result[$i]["review_date_created"];
+                $review->user = new User();
+                $review->user->name = json_encode($result[$i]["user_name"]);
+                // Remove all null values
+                $review->user = (object) array_filter((array) $review->user);
+                $reviewList->reviews[] = $review;
+            }
+        }
+
+        // Return Review List
+        return $reviewList;
     }
 
     // Create new review

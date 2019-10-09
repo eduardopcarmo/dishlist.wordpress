@@ -1,7 +1,7 @@
 <?php
     // Domain
     include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/domain/ErrorMessage.php";
-    include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/domain/review/Review.php";
+    include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/domain/restaurant/Review.php";
 
     // Service
     include_once $_SERVER["DOCUMENT_ROOT"] . "/api/core/service/SReview.php";
@@ -22,12 +22,13 @@
         // Check if is a "Valid" request
         if($id > 0)
         {
+
             // Get Restaurant
             $sReview = new SReview();
             $reviews = null;
 
             // Get Reviews by Dish ID
-            $reviews = $sReview->Get($id, $page);
+            $reviews = $sReview->GetList($id, $page);
 
             // Check if has review exists
             if($reviews != null){
