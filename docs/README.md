@@ -14,8 +14,8 @@ User: DTO + Endpoints
 
 - Endpoints:
 
-  - **Create a new user:** api/user/create.php => POST: user.json => Return: user.json
-  - **Get an existent user:** api/user/read.php?id=[VALUE] => GET => Return: user.json
+  - **Create a new user:** http://dishlist.wmdd.ca/api/user/create.php => POST: user.json => Return: user.json
+  - **Get an existent user:** http://dishlist.wmdd.ca/api/user/read.php?id=[VALUE] => GET => Return: user.json
 
 ---
 
@@ -31,9 +31,9 @@ Restaurant, Menu and Dish: DTO's + Endpoints
 
 - Endpoints:
 
-  - **Search Restaurant by Name:** /api/restaurant/read.php?name=[VALUE] => GET => Return: Array of restaurant.json
-  - **Get Restaurant Menu by Restaurant Id:** /api/menu/read.php?id=[VALUE] => GET => Return: menu.json
-  - **Get Dish by Dish Id:** /api/dish/read.php?id=[VALUE] => GET => Return: dish.json
+  - **Search Restaurant by Name:** http://dishlist.wmdd.ca/api/restaurant/read.php?name=[VALUE] => GET => Return: Array of restaurant.json
+  - **Get Restaurant Menu by Restaurant Id:** http://dishlist.wmdd.ca/api/menu/read.php?id=[VALUE] => GET => Return: menu.json
+  - **Get Dish by Dish Id:** http://dishlist.wmdd.ca/api/dish/read.php?id=[VALUE] => GET => Return: dish.json
 
 ---
 
@@ -48,5 +48,5 @@ Review: DTO's + Endpoints
 
 - Endpoints:
 
-  - **Add new Review:** /api/review/create.php?id=[DISH_ID] => POST => Return: Review.json
-  - **Get Reviews by Dish Id:** /api/review/read.php?id=[DISH_ID]&page=[PAGE_NUMBER] => GET => Return: ReviewList.json
+  - **Add new Review:** http://dishlist.wmdd.ca/api/review/create.php?id=[DISH_ID] => POST => Return: Review.json
+  - **Get Reviews by Dish Id:** http://dishlist.wmdd.ca/api/review/read.php?id=[DISH_ID]&page=[PAGE_NUMBER] => GET => Return: ReviewList.json
