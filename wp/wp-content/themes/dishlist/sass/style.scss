@@ -1,9 +1,9 @@
 /*!
 Theme Name: Dishlist
-Theme URI: http://underscores.me/
+Theme URI: https://github.com/eduardopcarmo/dishlist.wordpress
 Author: Nazanin
 Author URI: http://dishlist.wmdd.ca
-Description: An awesome _S-base theme
+Description: A new theme for a new time,A custom theme for dishlist project.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -86,14 +86,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "modules/clearings";
 
 /*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 @import "site/secondary/widgets";
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
 
 /*--------------------------------------------------------------
 # Infinite scroll

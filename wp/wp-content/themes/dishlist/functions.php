@@ -44,7 +44,8 @@ if ( ! function_exists( 'dishlist_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'dishlist' ),
+			'primary' => esc_html__( 'Primary', 'dishlist' ),
+			'social' => esc_html__( 'Social Media Menu', 'dishlist' ),
 		) );
 
 		/*
@@ -74,10 +75,10 @@ if ( ! function_exists( 'dishlist_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 90,
+			'width'       => 90,
 			'flex-width'  => true,
-			'flex-height' => true,
+			//'flex-height' => true,
 		) );
 	}
 endif;
@@ -120,9 +121,16 @@ add_action( 'widgets_init', 'dishlist_widgets_init' );
  * Enqueue scripts and styles.
  */
 function dishlist_scripts() {
+	//Enqueue Google Fonts: Cabin for san-serif and Marko One as serif
+	wp_enqueue_style('dishlist-fonts','https://fonts.googleapis.com/css?family=Cabin:400,400i,700,700i|Marko+One');
+	
 	wp_enqueue_style( 'dishlist-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'dishlist-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'dishlist-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_localize_script('dishlist-navigation','dishlistScreenReaderText',array(
+		'expand' => __('Expand child menu','dishlist'),
+		'collapse' => __('Collapse child menu','dishlist'),
+	));
 
 	wp_enqueue_script( 'dishlist-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -131,6 +139,28 @@ function dishlist_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'dishlist_scripts' );
+
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array  $urls           URLs to print for resource hints.
+ * @param string $relation_type  The relation type the URLs are printed.
+ * @return array $urls           URLs to print for resource hints.
+ */
+function dishlist_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'dishlist-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'dishlist_resource_hints', 10, 2 );
+
 
 /**
  * Implement the Custom Header feature.
