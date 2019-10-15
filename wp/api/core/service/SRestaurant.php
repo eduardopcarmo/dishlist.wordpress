@@ -24,7 +24,7 @@ class SRestaurant{
         // Check if is a valide id
         if($id !== null && is_int($id)){
             // Execute the select
-            $result = $this->database->Select("SELECT rest_id, rest_name, rest_description, rest_website FROM api_restaurant WHERE rest_id = ?;"
+            $result = $this->database->Select("SELECT rest_id, rest_name, rest_description, rest_website, rest_thumbnail FROM api_restaurant WHERE rest_id = ?;"
                 , array("rest_id" => $id));
 
             // Check if has found the restaurant
@@ -34,6 +34,7 @@ class SRestaurant{
                 $restaurant->name = json_encode($result[0]['rest_name']);
                 $restaurant->description = json_encode($result[0]['rest_description']);
                 $restaurant->website = $result[0]['rest_website'];
+                $restaurant->thumbnail = $result[0]['rest_thumbnail'];
             }
         }
 
@@ -49,7 +50,7 @@ class SRestaurant{
         // Check if is a valid name
         if($name !== null && trim($name) !== ""){
             // Execute the select
-            $result = $this->database->Select("SELECT rest_id, rest_name, rest_description, rest_website FROM api_restaurant WHERE rest_name LIKE '%" . $name .  "%';", null);
+            $result = $this->database->Select("SELECT rest_id, rest_name, rest_description, rest_website, rest_thumbnail FROM api_restaurant WHERE rest_name LIKE '%" . $name .  "%';", null);
 
             // Check if has found restaurants
             if($result !== null && is_array($result) && count($result) > 0){
@@ -62,6 +63,7 @@ class SRestaurant{
                     $restaurant->name = $result[$i]["rest_name"];
                     $restaurant->description = $result[$i]["rest_description"];
                     $restaurant->website = $result[$i]["rest_website"];
+                    $restaurant->thumbnail = $result[$i]['rest_thumbnail'];
                     $restaurants[] = $restaurant;
                 }
             }
