@@ -1,0 +1,70 @@
+.site-footer{
+        position: relative;
+        padding: 1em;
+        font-family: $font__serif;
+        font-weight: 0.5em !important;
+        color:$color__text;
+        border-bottom: 1px solid $color__text;
+        text-align: center;
+        @media screnn and (min-width: $query__small){
+            padding: 1em 2em;
+        }
+    
+}
+
+.social-menu{
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        a{
+            display: block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            
+        }
+    }
+}
+
+//facebook icon
+.menu-item-34{
+    background-image: url('http://localhost:8000/wp-content/uploads/2019/10/facebook-logo.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    margin:1em;
+}
+
+//twitter icon
+.menu-item-35{
+    background-image: url('http://localhost:8000/wp-content/uploads/2019/10/twitter-social-logotype.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    margin:1em;
+}
+//instagram icon
+.menu-item-36{
+    background-image: url('http://localhost:8000/wp-content/uploads/2019/10/instagram-social-network-logo-of-photo-camera.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    margin:1em;
+}
+
+//Linkedin icon
+.menu-item-37{
+    background-image: url('http://localhost:8000/wp-content/uploads/2019/10/linkedin-logo.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    margin:1em;
+}
