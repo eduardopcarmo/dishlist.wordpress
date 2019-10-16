@@ -174,6 +174,44 @@ class SRestaurant{
                         $category->items[] = $item;
                     }
                 }
+
+                // Features
+                $sql = "SELECT ";
+                $sql .= "    M.menu_id "; 
+                $sql .= "    , M.menu_name ";
+                $sql .= "    , MI.item_id "; 
+                $sql .= "    , MI.item_name "; 
+                $sql .= "    , MI.item_short_description "; 
+                $sql .= "    , MI.item_description "; 
+                $sql .= "    , MI.item_thumbnail "; 
+                $sql .= "    , MI.item_average_rating "; 
+                $sql .= "    , MI.item_price "; 
+                $sql .= "    , MI.item_average_time "; 
+                $sql .= "    , MI.item_to_people "; 
+                $sql .= "FROM ";
+                $sql .= "	api_menu M ";  
+                $sql .= "    INNER JOIN api_menu_item MI ON M.menu_id = MI.menu_id ";  
+                $sql .= "WHERE "; 
+                $sql .= "	M.rest_id = ? ";  
+                $sql .= "ORDER BY "; 
+                $sql .= "	MI.item_average_rating DESC ";
+                $sql .= "    , MI.item_name ";
+                $sql .= "LIMIT 3;";
+
+                // Execute the select
+                $result = $this->database->Select($sql, array("rest_id" => (int)$menu->place->id));
+                if($result !== null && is_array($result) && count($result) > 0){
+                    // "Build" Feature
+                    for($i = 0; $i < count($result); $i++){
+                        // "Build" Item
+                        $item = new MenuCategoryItem();
+                        $item->id = $result[$i]["item_id"];
+                        $item->name = json_encode($result[$i]["item_name"]);
+                        $item->thumbnail = $result[$i]["item_thumbnail"];
+                        $item->rating = $result[$i]["item_average_rating"];
+                        $menu->featured[] = (object) array_filter((array) $item);
+                    }
+                }
             }
         }
         
