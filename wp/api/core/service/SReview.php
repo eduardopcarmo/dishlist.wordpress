@@ -45,10 +45,10 @@ class SReview{
                 $review = new Review();
                 $review->id = $result[0]["review_id"];
                 $review->rating = $result[0]["review_rating"];
-                $review->description = json_encode($result[0]["review_description"]);
+                $review->description = $result[0]["review_description"];
                 $review->date_created = $result[0]["review_date_created"];
                 $review->user = new User();
-                $review->user->name = json_encode($result[0]["user_name"]);
+                $review->user->name = $result[0]["user_name"];
                 // Remove all null values
                 $review->user = (object) array_filter((array) $review->user);
             }
@@ -110,10 +110,10 @@ class SReview{
                 $review = new Review();
                 $review->id = $result[$i]["review_id"];
                 $review->rating = $result[$i]["review_rating"];
-                $review->description = json_encode($result[$i]["review_description"]);
+                $review->description = $result[$i]["review_description"];
                 $review->date_created = $result[$i]["review_date_created"];
                 $review->user = new User();
-                $review->user->name = json_encode($result[$i]["user_name"]);
+                $review->user->name = $result[$i]["user_name"];
                 // Remove all null values
                 $review->user = (object) array_filter((array) $review->user);
                 $reviewList->reviews[] = $review;

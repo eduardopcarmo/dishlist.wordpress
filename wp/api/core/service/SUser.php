@@ -32,8 +32,8 @@ class SUser{
             if($result !== null && is_array($result) && count($result) > 0){
                 $user = new User();
                 $user->id = $result[0]['user_id'];
-                $user->name = json_encode($result[0]['user_name']);
-                $user->phone = json_encode($result[0]['user_phone']);
+                $user->name = $result[0]['user_name'];
+                $user->phone = $result[0]['user_phone'];
             }
         }
         

@@ -31,8 +31,8 @@ class SRestaurant{
             if($result !== null && is_array($result) && count($result) > 0){
                 $restaurant = new Restaurant();
                 $restaurant->id = $result[0]['rest_id'];
-                $restaurant->name = json_encode($result[0]['rest_name']);
-                $restaurant->description = json_encode($result[0]['rest_description']);
+                $restaurant->name = $result[0]['rest_name'];
+                $restaurant->description = $result[0]['rest_description'];
                 $restaurant->website = $result[0]['rest_website'];
                 $restaurant->thumbnail = $result[0]['rest_thumbnail'];
             }
@@ -129,15 +129,15 @@ class SRestaurant{
                             }
                             $category = new MenuCategory();
                             $category->id = $result[$i]["menu_id"];
-                            $category->name = json_encode($result[$i]["menu_name"]);
+                            $category->name = $result[$i]["menu_name"];
                             $category->items = array();
                         }
 
                         // "Build" Item
                         $item = new MenuCategoryItem();
                         $item->id = $result[$i]["item_id"];
-                        $item->name = json_encode($result[$i]["item_name"]);
-                        $item->short_description = json_encode($result[$i]["item_short_description"]);
+                        $item->name = $result[$i]["item_name"];
+                        $item->short_description = $result[$i]["item_short_description"];
                         $item->thumbnail = $result[$i]["item_thumbnail"];
                         $item->rating = $result[$i]["item_average_rating"];
                         $item->price = $result[$i]["item_price"];
@@ -164,7 +164,7 @@ class SRestaurant{
                             for($t = 0; $t < count($result_tags); $t++){
                                 $tag = new MenuCategoryItemTag();
                                 $tag->id = $result_tags[$t]["tag_id"];
-                                $tag->name = json_encode($result_tags[$t]["tag_name"]);
+                                $tag->name = $result_tags[$t]["tag_name"];
                                 $tag->color = $result_tags[$t]["tag_color"];
                                 $item->tags[] = $tag;
                             }
@@ -206,7 +206,7 @@ class SRestaurant{
                         // "Build" Item
                         $item = new MenuCategoryItem();
                         $item->id = $result[$i]["item_id"];
-                        $item->name = json_encode($result[$i]["item_name"]);
+                        $item->name = $result[$i]["item_name"];
                         $item->thumbnail = $result[$i]["item_thumbnail"];
                         $item->rating = $result[$i]["item_average_rating"];
                         $menu->featured[] = (object) array_filter((array) $item);
@@ -248,9 +248,9 @@ class SRestaurant{
                 // "Build" Dish
                 $dish = new Dish();
                 $dish->id = $result[0]["item_id"];
-                $dish->name = json_encode($result[0]["item_name"]);
-                $dish->short_description = json_encode($result[0]["item_short_description"]);
-                $dish->description = json_encode($result[0]["item_description"]);
+                $dish->name = $result[0]["item_name"];
+                $dish->short_description = $result[0]["item_short_description"];
+                $dish->description = $result[0]["item_description"];
                 $dish->thumbnail = $result[0]["item_thumbnail"];
                 $dish->rating = $result[0]["item_average_rating"];
                 $dish->price = $result[0]["item_price"];
@@ -278,7 +278,7 @@ class SRestaurant{
                     for($t = 0; $t < count($result_tags); $t++){
                         $tag = new MenuCategoryItemTag();
                         $tag->id = $result_tags[$t]["tag_id"];
-                        $tag->name = json_encode($result_tags[$t]["tag_name"]);
+                        $tag->name = $result_tags[$t]["tag_name"];
                         $tag->color = $result_tags[$t]["tag_color"];
                         $dish->tags[] = $tag;
                     }
@@ -302,7 +302,7 @@ class SRestaurant{
                     for($t = 0; $t < count($result_ingredients); $t++){
                         $ingredient = new DishIngredient();
                         $ingredient->id = $result_ingredients[$t]["item_ingredient_id"];
-                        $ingredient->name = json_encode($result_ingredients[$t]["item_ingredient_name"]);
+                        $ingredient->name = $result_ingredients[$t]["item_ingredient_name"];
                         $dish->ingredients[] = $ingredient;
                     }
                 }
@@ -325,7 +325,7 @@ class SRestaurant{
                     for($t = 0; $t < count($result_photos); $t++){
                         $photo = new DishPhoto();
                         $photo->id = $result_photos[$t]["item_photo_id"];
-                        $photo->description = json_encode($result_photos[$t]["item_photo_description"]);
+                        $photo->description = $result_photos[$t]["item_photo_description"];
                         $photo->url = $result_photos[$t]["item_photo_url"];
                         $dish->photos[] = $photo;
                     }
