@@ -39,4 +39,17 @@
 			}
 		} );
 	} );
+
+
+		console.log("you are here!!!");
+		var ww = document.body.clientWidth;
+		if (ww < 600) {
+		  $('div').removeClass('alignleft');
+		} else {
+		  $('div').addClass('alignleft');
+		};
+  
 } )( jQuery );
+
+
+
