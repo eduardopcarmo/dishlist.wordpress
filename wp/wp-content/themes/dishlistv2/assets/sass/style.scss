@@ -33,6 +33,7 @@ Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
     5.2 Contact Page
     5.3 About Us
     5.3 FAQ
+6.0 Media Queries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -86,3 +87,8 @@ Styles based on Typography @link https://medium.com/@elad/normalize-css-or-css-r
 5.3 FAQ
 --------------------------------------------------------------*/
 @import "pages/_faq-page.scss";
+
+/*--------------------------------------------------------------
+6.0 Media Queries
+--------------------------------------------------------------*/
+@import "main/_media_queries.scss";

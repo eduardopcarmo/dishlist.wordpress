@@ -135,3 +135,15 @@ h1 {
         }
     }
 }
+
+/* Primary Container */
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 0px;
+
+    >main {
+        width: 100%;
+    }
+}

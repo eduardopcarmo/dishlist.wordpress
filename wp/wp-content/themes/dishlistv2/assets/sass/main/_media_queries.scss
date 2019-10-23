@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+larger than 768 px (small devices, tablets)
+--------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {}
+
+/*--------------------------------------------------------------
+larger than 992 px (medium devices)
+--------------------------------------------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+/*--------------------------------------------------------------
+larger than 1200px (large devices)
+--------------------------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+    body {
+        >main {
+            width: 1024px;
+            margin: 0 auto;
+        }
+    }
+}
