@@ -4,7 +4,7 @@ function dishlist_add_google_fonts()
 {
     wp_enqueue_style(
         'dishlist-google-fonts', 
-        'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap', 
+        'https://fonts.googleapis.com/css?family=Lato:400,700&display=swap', 
         false 
     ); 
 }

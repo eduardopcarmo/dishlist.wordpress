@@ -37,6 +37,13 @@ Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
 0.0 Sass Variables
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+Font-size
+Based on https: //www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Colors
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 1.0 Normalize
 Styles based on Normalize v8.0.1 @link https://github.com/necolas/normalize.css/blob/master/normalize.css
 --------------------------------------------------------------*/
@@ -455,19 +462,54 @@ Styles based on Typography @link https://medium.com/@elad/normalize-css-or-css-r
 /*! Elad Shechter's Typograpy RESET | https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e */
 html {
   /*for using REM units*/
-  font-size: 1px;
+  font-size: 16px;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16rem;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
-  line-height: 1.3;
+  line-height: 1.5em;
   color: #585858;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: #000;
+}
+
 h1 {
-  font-size: 20rem;
+  font-size: 3rem;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 1.375rem;
+  line-height: 1.1em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.2em;
+}
+
+h4 {
+  font-size: 1.15rem;
+  line-height: 1.3em;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -479,6 +521,119 @@ Header
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Main
+--------------------------------------------------------------*/
+/* SECTION TITLE */
+h1.section-title {
+  color: #EA0024;
+  text-align: center;
+}
+
+/* BUTTON */
+.btn,
+.btn:link,
+.btn:visited {
+  font-size: 1.375rem;
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(234, 0, 36, 0.2);
+  margin: 10px;
+  /* softens or eases the motion - makes it smoother */
+  transition: all 0.5s;
+  /* Remove the default "highlight"*/
+  outline: none;
+}
+.btn.btn-primary,
+.btn:link.btn-primary,
+.btn:visited.btn-primary {
+  color: #fff;
+  background-color: #EA0024;
+}
+.btn.btn-secondary,
+.btn:link.btn-secondary,
+.btn:visited.btn-secondary {
+  color: #000;
+  background-color: #ADADAD;
+  box-shadow: 0 4px 10px rgba(173, 173, 173, 0.2);
+}
+.btn.btn-outline-primary,
+.btn:link.btn-outline-primary,
+.btn:visited.btn-outline-primary {
+  color: #EA0024;
+  border: 1px solid #EA0024;
+  background-color: #fff;
+}
+.btn.btn-outline-secondary,
+.btn:link.btn-outline-secondary,
+.btn:visited.btn-outline-secondary {
+  color: #000;
+  border: 1px solid #ADADAD;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(173, 173, 173, 0.2);
+}
+.btn:hover,
+.btn:link:hover,
+.btn:visited:hover {
+  transform: translateY(-4px);
+}
+.btn:active,
+.btn:link:active,
+.btn:visited:active {
+  transform: translateY(-2px);
+}
+
+/* FORM */
+.form > .form-group label {
+  font-weight: 700;
+  color: #000;
+  font-size: 1.15rem;
+  display: block;
+  padding: 0.5em;
+}
+.form > .form-group label span {
+  color: #EA0024;
+}
+.form > .form-group label > em {
+  font-weight: 400;
+  color: #EA0024;
+  display: none;
+}
+.form > .form-group label > em::before {
+  content: "(";
+}
+.form > .form-group label > em::after {
+  content: ")";
+}
+.form > .form-group input[type=text],
+.form > .form-group textarea {
+  font-size: 1.15rem;
+  border: 1px solid #ADADAD;
+  width: 100%;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  box-shadow: 0 4px 10px rgba(88, 88, 88, 0.2);
+  /* softens or eases the motion - makes it smoother */
+  transition: all 0.5s;
+  /* Remove the default "highlight"*/
+  outline: none;
+}
+.form > .form-group input[type=text]:hover,
+.form > .form-group textarea:hover {
+  transform: translateY(-2px);
+}
+.form > .form-group input[type=text]:active,
+.form > .form-group textarea:active {
+  transform: translateY(0);
+}
+.form > .form-group.show-error label > em {
+  display: inline-block;
+}
+.form > .form-group.show-error input[type=text],
+.form > .form-group.show-error textarea {
+  border: 1px solid #EA0024;
+}
+
 /*--------------------------------------------------------------
 5.0 Pages
 --------------------------------------------------------------*/

@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+Font-size
+Based on https: //www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/
+--------------------------------------------------------------*/
+$font-size-base: 16px;
+
+// $font-size-h1: 1.5rem;
+// $font-size-h2: 1.35rem;
+// $font-size-h3: 1.25rem;
+// $font-size-h4: 1.15rem;
+// $font-size-h5: 1rem;
+// $font-size-h6: 1rem;
+$font-size-h1: 3rem;
+$font-size-h2: 1.375rem;
+
+$font-size-h3: 1.25rem;
+$font-size-h4: 1.15rem;
+$font-size-h5: 1rem;
+$font-size-h6: 1rem;
+
+$font-size-btn: $font-size-h2;
+
+/*--------------------------------------------------------------
+Colors
+--------------------------------------------------------------*/
+$font-black: #000;
+$font-white: #fff;
+$font-color-header: $font-black;
+$font-color: #585858;
+$primary-color: #EA0024;
+$secondary-color: #ADADAD;

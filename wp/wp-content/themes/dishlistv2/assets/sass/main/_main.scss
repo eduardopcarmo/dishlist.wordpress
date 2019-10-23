@@ -7,3 +7,131 @@ Header
 Footer
 --------------------------------------------------------------*/
 @import "_footer.scss";
+
+/*--------------------------------------------------------------
+Main
+--------------------------------------------------------------*/
+
+/* SECTION TITLE */
+h1 {
+    &.section-title {
+        color: $primary-color;
+        text-align: center;
+    }
+}
+
+/* BUTTON */
+.btn,
+.btn:link,
+.btn:visited {
+    font-size: $font-size-btn;
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(234, 0, 36, 0.2);
+    margin: 10px;
+    /* softens or eases the motion - makes it smoother */
+    transition: all 0.5s;
+
+    /* Remove the default "highlight"*/
+    outline: none;
+
+    &.btn-primary {
+        color: $font-white;
+        background-color: $primary-color;
+    }
+
+    &.btn-secondary {
+        color: $font-black;
+        background-color: $secondary-color;
+        box-shadow: 0 4px 10px rgba(173, 173, 173, 0.2);
+    }
+
+    &.btn-outline-primary {
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        background-color: $font-white;
+    }
+
+    &.btn-outline-secondary {
+        color: $font-black;
+        border: 1px solid $secondary-color;
+        background-color: $font-white;
+        box-shadow: 0 4px 10px rgba(173, 173, 173, 0.2);
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    &:active {
+        transform: translateY(-2px);
+    }
+}
+
+/* FORM */
+.form {
+    >.form-group {
+        label {
+            font-weight: 700;
+            color: $font-black;
+            font-size: $font-size-h4;
+            display: block;
+            padding: 0.5em;
+
+            span {
+                color: $primary-color;
+            }
+
+            >em {
+                font-weight: 400;
+                color: $primary-color;
+                display: none;
+
+                &::before {
+                    content: "(";
+                }
+
+                &::after {
+                    content: ")";
+                }
+            }
+        }
+
+        input[type="text"],
+        textarea {
+            font-size: $font-size-h4;
+            border: 1px solid $secondary-color;
+            width: 100%;
+            border-radius: 0.5em;
+            padding: 0.5em;
+            box-shadow: 0 4px 10px rgba(88, 88, 88, 0.2);
+
+            /* softens or eases the motion - makes it smoother */
+            transition: all 0.5s;
+
+            /* Remove the default "highlight"*/
+            outline: none;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+
+        &.show-error {
+            label {
+                >em {
+                    display: inline-block;
+                }
+            }
+
+            input[type="text"],
+            textarea {
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+}
