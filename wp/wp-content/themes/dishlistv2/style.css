@@ -513,6 +513,13 @@ h6 {
   line-height: 1.5em;
 }
 
+dt {
+  color: #000;
+  font-weight: 700;
+  font-size: 1.375rem;
+  line-height: 1.1em;
+}
+
 /*--------------------------------------------------------------
 4.0 Generic (Main)
 --------------------------------------------------------------*/
@@ -525,10 +532,22 @@ Footer
 /*--------------------------------------------------------------
 Main
 --------------------------------------------------------------*/
-/* SECTION TITLE */
-h1.section-title {
+/* TITLE */
+h1.title {
   color: #EA0024;
   text-align: center;
+  margin: 20px 0;
+}
+
+/* SUBTITLE */
+h2.subtitle,
+h3.subtitle {
+  color: #EA0024;
+  margin: 0 0 20px 0;
+}
+
+h3.subtitle {
+  border-bottom: 1px solid #707070;
 }
 
 /* BUTTON */
@@ -635,6 +654,15 @@ h1.section-title {
   border: 1px solid #EA0024;
 }
 
+/* Box */
+.box {
+  margin: 10px 0;
+}
+.box > img {
+  float: left;
+  margin-right: 10px;
+}
+
 /* Primary Container */
 body {
   display: grid;
@@ -643,6 +671,7 @@ body {
   grid-gap: 0px;
 }
 body > main {
+  padding: 0 10px;
   width: 100%;
 }
 
@@ -662,6 +691,24 @@ body > main {
 5.3 FAQ
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+Page FAQ
+--------------------------------------------------------------*/
+.faq section.faq-popular-questions {
+  background-image: url("assets/images/faq_question_mark.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+.faq section.faq-help-topics {
+  background-color: #F7F7F7;
+  background-image: url("assets/images/circle_white_bottom_right.png"), url("assets/images/circle_gray_top_left.png");
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+}
+.faq section.faq-help-topics > .faq-help-topics-content > .faq-help-topics-content-col {
+  margin: 10px;
+}
+
+/*--------------------------------------------------------------
 6.0 Media Queries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -677,6 +724,18 @@ larger than 1200px (large devices)
   body > main {
     width: 1024px;
     margin: 0 auto;
+  }
+  body > main.faq section.faq-popular-questions > .faq-popular-questions-content {
+    max-width: 66%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+  body > main.faq section.faq-help-topics > .faq-help-topics-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
 }
 

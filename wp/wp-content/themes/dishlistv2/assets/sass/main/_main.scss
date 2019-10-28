@@ -12,13 +12,32 @@ Footer
 Main
 --------------------------------------------------------------*/
 
-/* SECTION TITLE */
+/* TITLE */
 h1 {
-    &.section-title {
+    &.title {
         color: $primary-color;
         text-align: center;
+        margin: 20px 0;
     }
 }
+
+/* SUBTITLE */
+h2,
+h3 {
+    &.subtitle {
+        color: $primary-color;
+        margin: 0 0 20px 0;
+    }
+}
+
+h3 {
+    &.subtitle {
+        border-bottom: 1px solid $border-bottom-h3;
+        //border-bottom-color: $border-bottom-h3;
+    }
+}
+
+
 
 /* BUTTON */
 .btn,
@@ -136,6 +155,16 @@ h1 {
     }
 }
 
+/* Box */
+.box {
+    margin: 10px 0;
+
+    >img {
+        float: left;
+        margin-right: 10px;
+    }
+}
+
 /* Primary Container */
 body {
     display: grid;
@@ -144,6 +173,7 @@ body {
     grid-gap: 0px;
 
     >main {
+        padding: 0 10px;
         width: 100%;
     }
 }

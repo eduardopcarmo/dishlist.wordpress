@@ -20,7 +20,7 @@ function dishlist_styles_and_scripts()
     );
 }
 
-
- 
 add_action('wp_enqueue_scripts', 'dishlist_add_google_fonts' );
 add_action('wp_enqueue_scripts', 'dishlist_styles_and_scripts');
+
+add_post_type_support( 'post', 'excerpt' );

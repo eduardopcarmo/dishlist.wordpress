@@ -1,39 +1,76 @@
 <?php
 get_header();
 ?>
-<main>
-    <h1>H1</h1>
-    <h2>H2</h2>
-    <p>Paragraph</p>
-    <h1 class="section-title">section-title</h1>
-    <br>
-    <br>
-    <button class="btn btn-primary">btn btn-primary</button>
-    <br>
-    <button class="btn btn-secondary">btn btn-secondary</button>
-    <br>
-    <button class="btn btn-outline-primary">btn btn-outline-primary</button>
-    <br>
-    <button class="btn btn-outline-secondary">btn btn-outline-secondary</button>
-    <br>
-    <br>
-    <br>
-    <form class="form" action="#">
-        <div class="form-group">
-            <label>label <span>*<span></label>
-            <input type="text" name="" placeholder="text">
-            <span>Error Message<span>
+<main class="faq">
+    <h1 class="title">FAQ</h1>
+    <section class="faq-popular-questions">
+        <h2 class="subtitle">Popular questions</h2>
+        <div class="faq-popular-questions-content">
+            <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'category_name' => 'popular-questions',
+                    'posts_per_page' => 999,
+                );
+                $arr_posts = new WP_Query( $args );
+                if ( $arr_posts->have_posts() ) {
+                    while ( $arr_posts->have_posts() ) {
+                        $arr_posts->the_post();
+                        ?>
+                        <div class="box">
+                            <h3><?php the_title(); ?></h3>
+                            <p><?= get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
+                        </div>
+                        <?php
+                    }
+                    wp_reset_postdata();
+                }
+            ?> 
         </div>
-        <div class="form-group">
-            <label>label</label>
-            <textarea name="" rows="4" placeholder="text"></textarea>
+    </section>
+    <section class="faq-help-topics">
+        <h2 class="subtitle">Help Topics</h2>
+        <div class="faq-help-topics-content">
+            <?php
+            $terms = get_terms( array(
+                "taxonomy" => "category",
+                "orderby" => "name",
+                "order" => "ASC",
+                "child_of" => "11"
+            ) );
+            foreach ($terms as $term) {
+                $args = array(
+                    "post_type" => "post", 
+                    "post_status" => "publish", 
+                    "cat" => $term->term_id,
+                    "orderby" => "name",
+                    "order"   => "ASC"
+                ); 
+                $query_posts = new WP_Query( $args );
+                if ( $query_posts->have_posts() ) {
+                    ?>
+                    <div class="faq-help-topics-content-col">
+                        <h3 class="subtitle"><?= $term->name; ?></h2>
+                        <?php
+                        while ( $query_posts->have_posts() ) {
+                            $query_posts->the_post();
+                            ?>
+                            <div class="box">
+                                <h3><?php the_title(); ?></h3>
+                                <p><?= get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
+                            </div>
+                            <?php
+                        }
+                        wp_reset_postdata();
+                        ?>
+                    </div>
+                    <?php
+                } 
+            } 
+            ?>
         </div>
-        <div class="form-group show-error">
-            <label>label <span>*</span> <em>Error Message</em></label>
-            <input type="text" name="" placeholder="text">
-        </div>
-    </form>
+    </section>
 </main>
-
 <?php
 get_footer();
