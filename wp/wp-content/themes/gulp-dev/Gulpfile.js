@@ -1,4 +1,4 @@
-var themename = 'dishlist';
+var themename = 'dishlistv2';
 
 var gulp = require('gulp'),
 	// Prepare and optimize code etc
@@ -36,6 +36,7 @@ gulp.task('css', function() {
 	.pipe(sourcemaps.write(scss + 'maps'))
 	.pipe(gulp.dest(root));
 });
+
 
 // Optimize images through gulp-image
 gulp.task('images', function() {

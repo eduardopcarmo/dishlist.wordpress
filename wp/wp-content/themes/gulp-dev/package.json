@@ -1,5 +1,5 @@
 {
-  "name": "dishlist",
+  "name": "dishlistv2",
   "version": "0.0.1",
   "description": "Accessible WordPress theme utilizing flex layouts and modern development practices.",
   "main": "index.php",
@@ -26,7 +26,8 @@
     "gulp-postcss": "^6.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.2.0",
-    "jshint": "^2.9.4"
+    "jshint": "^2.9.4",
+    "node-sass": "^4.13.0"
   },
   "dependencies": {
     "node-sass": "^4.12.0"

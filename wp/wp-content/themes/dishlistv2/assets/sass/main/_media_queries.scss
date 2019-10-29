@@ -14,6 +14,12 @@ larger than 1200px (large devices)
 @media only screen and (min-width: 1200px) {
     body {
         >main {
+<<<<<<< HEAD
+=======
+            //width: 1024px;
+            margin: 0 auto;
+
+>>>>>>> db9d4968d0c0cd3ee1a5f3d42731f95460086fc2
             &.faq {
                 section {
                     h2 {
