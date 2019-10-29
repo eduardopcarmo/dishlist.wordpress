@@ -16,6 +16,28 @@ larger than 1200px (large devices)
         >main {
             //width: 1024px;
             margin: 0 auto;
+
+            &.faq {
+                section {
+                    &.faq-popular-questions {
+                        >.faq-popular-questions-content {
+                            max-width: 66%;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: auto;
+                            grid-gap: 10px;
+                        }
+                    }
+
+                    &.faq-help-topics {
+                        >.faq-help-topics-content {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-template-rows: auto;
+                        }
+                    }
+                }
+            }
         }
     }
 }

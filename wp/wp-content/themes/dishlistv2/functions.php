@@ -39,22 +39,17 @@ function dishlist_setup() {
         'primary' => esc_html__( 'Primary', 'dishlistv2' ),
         'social' => esc_html__( 'Social Media Menu', 'dishlistv2' ),
     ) );
-    }
-
-/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
-        add_theme_support( 'post-thumbnails' );
+}
         
-
-        
-add_action( 'after_setup_theme', 'dishlist_setup' );    
-add_theme_support('custom-logo');
 add_action('wp_enqueue_scripts', 'dishlist_add_google_fonts' );
 add_action('wp_enqueue_scripts', 'dishlist_styles_and_scripts');
+add_action( 'after_setup_theme', 'dishlist_setup' );    
+add_theme_support('custom-logo');
 
-
-
-
+add_post_type_support( 'post', 'excerpt' );
+/*
+* Enable support for Post Thumbnails on posts and pages.
+*
+* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+*/
+add_theme_support( 'post-thumbnails' );
