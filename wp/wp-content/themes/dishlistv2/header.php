@@ -17,6 +17,25 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <header>
-        <h1><?php bloginfo('name'); ?></h1>
+    <header class="site-header">
+    <div class="site-branding">
+            <?php 
+			the_custom_logo();?>
+			<h1>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <span class="site-title-clr">DISH</span>LIST
+                </a>
+            </h1>	
+        </div><!-- .site-branding -->
+        
+        <nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'menu_id'        => 'primary-menu',
+			) );
+			?>
+		</nav><!-- #site-navigation -->
+
     </header>
