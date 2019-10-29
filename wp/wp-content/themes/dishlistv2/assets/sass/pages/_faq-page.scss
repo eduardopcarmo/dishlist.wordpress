@@ -5,8 +5,10 @@ Page FAQ
     section {
         &.faq-popular-questions {
             background-image: url("assets/images/faq_question_mark.png");
-            background-position: top right;
+            background-position: 50% 20px;
             background-repeat: no-repeat;
+            background-size: 220px;
+            padding-top: 380px;
         }
 
         &.faq-help-topics {
@@ -15,10 +17,11 @@ Page FAQ
                 url("assets/images/circle_gray_top_left.png");
             background-position: top left, bottom right;
             background-repeat: no-repeat;
+            background-size: 448px, 448px;
 
             >.faq-help-topics-content {
                 >.faq-help-topics-content-col {
-                    margin: 10px;
+                    padding-right: 10px;
                 }
             }
 

@@ -14,14 +14,18 @@ larger than 1200px (large devices)
 @media only screen and (min-width: 1200px) {
     body {
         >main {
-            width: 1024px;
-            margin: 0 auto;
-
             &.faq {
                 section {
+                    h2 {
+                        width: 1024px;
+                        margin: 0 auto;
+                        padding: 20px 0;
+                    }
+
                     &.faq-popular-questions {
                         >.faq-popular-questions-content {
-                            max-width: 66%;
+                            width: 1024px;
+                            margin: 0 auto;
                             display: grid;
                             grid-template-columns: 1fr 1fr;
                             grid-template-rows: auto;
@@ -31,6 +35,8 @@ larger than 1200px (large devices)
 
                     &.faq-help-topics {
                         >.faq-help-topics-content {
+                            width: 1024px;
+                            margin: 0 auto;
                             display: grid;
                             grid-template-columns: 1fr 1fr 1fr;
                             grid-template-rows: auto;

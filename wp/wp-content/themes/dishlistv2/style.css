@@ -544,6 +544,8 @@ h2.subtitle,
 h3.subtitle {
   color: #EA0024;
   margin: 0 0 20px 0;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 h3.subtitle {
@@ -603,6 +605,12 @@ h3.subtitle {
   transform: translateY(-2px);
 }
 
+.btn-link,
+.btn-link:link,
+.btn-link:visited {
+  color: #EA0024;
+}
+
 /* FORM */
 .form > .form-group label {
   font-weight: 700;
@@ -656,7 +664,11 @@ h3.subtitle {
 
 /* Box */
 .box {
-  margin: 10px 0;
+  margin: 20px 40px;
+}
+.box h3 {
+  text-align: center;
+  margin-bottom: 10px;
 }
 .box > img {
   float: left;
@@ -670,11 +682,6 @@ body {
   grid-template-rows: auto;
   grid-gap: 0px;
 }
-body > main {
-  padding: 0 10px;
-  width: 100%;
-}
-
 /*--------------------------------------------------------------
 5.0 Pages
 --------------------------------------------------------------*/
@@ -695,17 +702,20 @@ Page FAQ
 --------------------------------------------------------------*/
 .faq section.faq-popular-questions {
   background-image: url("assets/images/faq_question_mark.png");
-  background-position: top right;
+  background-position: 50% 20px;
   background-repeat: no-repeat;
+  background-size: 220px;
+  padding-top: 380px;
 }
 .faq section.faq-help-topics {
   background-color: #F7F7F7;
   background-image: url("assets/images/circle_white_bottom_right.png"), url("assets/images/circle_gray_top_left.png");
   background-position: top left, bottom right;
   background-repeat: no-repeat;
+  background-size: 448px, 448px;
 }
 .faq section.faq-help-topics > .faq-help-topics-content > .faq-help-topics-content-col {
-  margin: 10px;
+  padding-right: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -721,18 +731,22 @@ larger than 992 px (medium devices)
 larger than 1200px (large devices)
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
-  body > main {
+  body > main.faq section h2 {
     width: 1024px;
     margin: 0 auto;
+    padding: 20px 0;
   }
   body > main.faq section.faq-popular-questions > .faq-popular-questions-content {
-    max-width: 66%;
+    width: 1024px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 10px;
   }
   body > main.faq section.faq-help-topics > .faq-help-topics-content {
+    width: 1024px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;

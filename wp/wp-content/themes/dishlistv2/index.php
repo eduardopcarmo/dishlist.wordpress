@@ -20,7 +20,7 @@ get_header();
                         ?>
                         <div class="box">
                             <h3><?php the_title(); ?></h3>
-                            <p><?= get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
+                            <p><?= get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>" class="btn-link">See more >></a></p>
                         </div>
                         <?php
                     }
@@ -58,7 +58,7 @@ get_header();
                             ?>
                             <div class="box">
                                 <h3><?php the_title(); ?></h3>
-                                <p><?= get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">Read More</a></p>
+                                <p><?= get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>" class="btn-link">See more >></a></p>
                             </div>
                             <?php
                         }

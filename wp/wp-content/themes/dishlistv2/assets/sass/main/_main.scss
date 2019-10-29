@@ -27,6 +27,8 @@ h3 {
     &.subtitle {
         color: $primary-color;
         margin: 0 0 20px 0;
+        text-transform: uppercase;
+        text-align: center;
     }
 }
 
@@ -85,6 +87,12 @@ h3 {
     &:active {
         transform: translateY(-2px);
     }
+}
+
+.btn-link,
+.btn-link:link,
+.btn-link:visited {
+    color: $primary-color;
 }
 
 /* FORM */
@@ -157,7 +165,12 @@ h3 {
 
 /* Box */
 .box {
-    margin: 10px 0;
+    margin: 20px 40px;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 
     >img {
         float: left;
@@ -172,8 +185,5 @@ body {
     grid-template-rows: auto;
     grid-gap: 0px;
 
-    >main {
-        padding: 0 10px;
-        width: 100%;
-    }
+    >main {}
 }
