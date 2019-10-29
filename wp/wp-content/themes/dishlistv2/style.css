@@ -489,7 +489,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.375rem;
+  font-size: 2rem;
   line-height: 1.1em;
 }
 
@@ -519,6 +519,121 @@ h6 {
 /*--------------------------------------------------------------
 Header
 --------------------------------------------------------------*/
+/* Logo and Title
+   ========================================================================== */
+.site-header {
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem;
+  box-shadow: -1px 4px 19px -1px rgba(0, 0, 0, 0.11);
+}
+.site-header h1 {
+  font-size: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .site-header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .site-header h1 {
+    font-size: 3rem;
+  }
+}
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.custom-logo-link {
+  margin-right: 1rem;
+}
+.custom-logo-link img {
+  display: block;
+  height: 42px;
+  width: auto;
+}
+@media only screen and (min-width: 768px) {
+  .custom-logo-link img {
+    height: 80px;
+    width: auto;
+  }
+}
+
+.site-title-clr {
+  color: #EA0024;
+}
+
+/* Menu
+   ========================================================================== */
+.main-navigation {
+  align-self: center;
+}
+.main-navigation ul {
+  margin-top: 1rem;
+}
+.main-navigation .menu-item {
+  display: none;
+  text-align: center;
+  margin-top: 0.1rem;
+  padding: 0.7rem;
+  background-color: #33292A;
+  color: white;
+  border: 1px solid #33292A;
+  border-radius: 2px;
+}
+.main-navigation .menu-item:hover {
+  background-color: white;
+  color: #33292A;
+  box-shadow: inset -1px 4px 19px -1px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 768px) {
+  .main-navigation .menu-item:hover {
+    background-color: white;
+    color: #EA0024;
+    box-shadow: none;
+    text-decoration: underlin;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-navigation ul {
+    display: flex;
+  }
+  .main-navigation ul .menu-item {
+    display: inline-block;
+    padding-left: 1rem;
+    background-color: white;
+    color: #33292A;
+    border: none;
+  }
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  margin: 1rem 1.2rem 0 0;
+  padding: 0.6rem 0.8rem;
+  width: 50px;
+  height: 50px;
+  font-size: 80%;
+  text-transform: uppercase;
+  background-image: url("http://localhost:8000/wp-content/uploads/2019/10/menu-icon-1.png");
+  background-size: cover;
+  /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: white;
+}
+@media only screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
@@ -535,7 +650,7 @@ h1.section-title {
 .btn,
 .btn:link,
 .btn:visited {
-  font-size: 1.375rem;
+  font-size: 2rem;
   padding: 10px 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(234, 0, 36, 0.2);
@@ -652,6 +767,201 @@ body > main {
 /*--------------------------------------------------------------
 5.1 Front-Page
 --------------------------------------------------------------*/
+/****************************************
+Animation on main page
+*/
+.main-animation {
+  background-image: url("http://localhost:8000/wp-content/uploads/2019/10/Dish1.png");
+  background-repeat: no-repeat;
+  background-position: right -2rem top 5rem;
+  background-size: 280px 280px;
+  padding-bottom: 3rem;
+}
+@media only screen and (min-width: 768px) {
+  .main-animation {
+    background-position: right 9rem top 11rem;
+    background-size: 350px 350px;
+    height: 700px;
+    margin-left: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main-animation {
+    margin-left: 8rem;
+  }
+}
+
+/****************************************
+Button Style
+*/
+.btn-primary {
+  width: 290px;
+}
+@media only screen and (min-width: 768px) {
+  .btn-primary {
+    width: 260px;
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .btn-outline-primary {
+    width: 260px;
+    margin-top: 2rem;
+  }
+}
+
+/****************************************
+Home Page Style - Main area
+*/
+.main-area {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url("http://localhost:8000/wp-content/uploads/2019/10/Home-top-mobile-1.png"), url("http://localhost:8000/wp-content/uploads/2019/10/bg-left.png");
+  background-repeat: no-repeat, no-repeat;
+  height: auto;
+  background-position: right 0 top 0, left 0 bottom 0;
+  background-size: auto, 130px 150px;
+  text-align: center;
+}
+.main-area h1 {
+  padding-top: 18rem;
+}
+.main-area p {
+  padding-top: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .main-area {
+    background-image: url("http://localhost:8000/wp-content/uploads/2019/10/home-top-screen.png"), url("http://localhost:8000/wp-content/uploads/2019/10/bg-left.png");
+    height: 700px;
+    background-size: auto 700px, 200px 300px;
+    text-align: left;
+  }
+  .main-area h1 {
+    padding-top: 13rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main-area {
+    background-size: auto 700px, 300px 400px;
+  }
+}
+
+/****************************************
+Home Page Style - Feature Area
+*/
+.post-area {
+  background-image: url("http://localhost:8000/wp-content/uploads/2019/10/bg-left-top.png");
+  background-repeat: no-repeat;
+  background-position: left 0 top 0;
+  background-size: 130px 150px;
+  position: relative;
+  text-align: center;
+}
+.post-area h2 {
+  color: #EA0024;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+.post-area div {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.post-area .post-row {
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .post-area {
+    background-size: 200px 300px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .post-area {
+    background-size: 300px 400px;
+  }
+}
+
+.bg-berry {
+  position: absolute;
+  top: -2rem;
+  right: 1rem;
+  z-index: 999;
+  width: 100px;
+  height: 100px;
+}
+@media only screen and (min-width: 768px) {
+  .bg-berry {
+    top: 10rem;
+  }
+}
+
+.bg-dish2 {
+  display: none;
+  position: absolute;
+  top: -9rem;
+  right: 0;
+  z-index: 1000;
+  height: 300px;
+  width: auto;
+}
+@media only screen and (min-width: 768px) {
+  .bg-dish2 {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .row {
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  .row .col-1 {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-image: url("http://localhost:8000/wp-content/uploads/2019/10/mobile-pic.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .row .col-2 {
+    grid-column: 2/3;
+    align-self: center;
+  }
+  .row .col-3 {
+    grid-column: 3/4;
+    align-self: center;
+  }
+}
+
+.post-row {
+  display: grid;
+  grid-template-columns: repeat(1fr, 2fr);
+  grid-template-rows: repeat(1fr, 2fr);
+  justify-content: center;
+  text-align: center;
+}
+.post-row .post-thumb {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 80px;
+  height: 80px;
+  margin-right: 1.5rem;
+  margin-top: -2rem;
+}
+.post-row .entry-header {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  text-align: left;
+  padding: 1rem;
+}
+.post-row .entry-content {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  text-align: left;
+}
+
 /*--------------------------------------------------------------
 5.2 Contact Page
 --------------------------------------------------------------*/
@@ -675,7 +985,6 @@ larger than 1200px (large devices)
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
   body > main {
-    width: 1024px;
     margin: 0 auto;
   }
 }
