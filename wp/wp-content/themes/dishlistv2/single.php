@@ -1,4 +1,11 @@
 <?php
+/**
+ * The Single page for our theme
+ *
+ * @package Dishlist
+ * @since 0.1.0
+ * @version 0.0.1
+ */
 get_header();
 ?>
 <main class="faq-single">

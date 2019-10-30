@@ -7,7 +7,10 @@
  * @version 0.0.1
  */
 ?>
-    <footer>
+    <footer class="footer">
+        <div class="footer-cta">
+            
+        </div>
         footer
     </footer>
     <?php wp_footer(); ?>
