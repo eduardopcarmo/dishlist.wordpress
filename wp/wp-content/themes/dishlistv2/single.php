@@ -15,6 +15,10 @@ if(have_posts()==true)
             <div class="faq-single-content">
                 <?php the_content(); ?>
             </div>
+            <div class="faq-single-img"></div>
+            <div class="faq-single-footer">
+                <a class="btn btn-primary" href="<?php echo esc_url( get_page_link( 96 ) ); ?>">Back</a>
+            </div>
         </article>
         <?php
     }
@@ -23,9 +27,6 @@ if(have_posts()==true)
     echo '<p>There are no posts to display!';
 }
 ?>
-    <div class="faq-single-footer">
-        <a class="btn btn-primary" href="<?php echo esc_url( get_page_link( 96 ) ); ?>">Back</a>
-    </div>
 </main>
 <?php
 get_footer();

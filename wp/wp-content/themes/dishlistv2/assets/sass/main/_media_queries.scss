@@ -68,6 +68,20 @@ larger than 1200px (large devices)
                         grid-column: 1/1;
                     }
 
+                    >.faq-single-img {
+                        background-position: right top;
+                    }
+
+                    >.faq-single-footer {
+                        padding: 30px 30px 30px 0;
+
+                        .btn {
+                            width: inherit;
+                            margin: inherit;
+                            display: inline-block;
+                        }
+                    }
+
                 }
             }
         }

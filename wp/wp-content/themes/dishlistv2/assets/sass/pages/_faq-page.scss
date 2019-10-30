@@ -59,12 +59,8 @@ Page FAQ
     article {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto 260px;
+        grid-template-rows: auto auto 290px auto;
         padding: 30px;
-        background-image: url("assets/images/faq_solution.png");
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: 220px;
 
         >h2 {
             margin-bottom: 20px;
@@ -75,18 +71,23 @@ Page FAQ
                 width: 100%;
             }
         }
-    }
 
-    >.faq-single-footer {
-        padding: 30px;
+        >.faq-single-img {
+            background-image: url("assets/images/faq_solution.png");
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: 220px;
+        }
 
-        .btn {
-            width: 100%;
-            margin: 0;
-            display: inline-block;
-            text-align: center;
+        >.faq-single-footer {
+            padding: 30px;
+
+            .btn {
+                width: 100%;
+                margin: 0;
+                display: inline-block;
+                text-align: center;
+            }
         }
     }
-
-
 }

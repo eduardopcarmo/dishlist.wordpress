@@ -1052,12 +1052,8 @@ Page FAQ
 .faq-single article {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 260px;
+  grid-template-rows: auto auto 290px auto;
   padding: 30px;
-  background-image: url("assets/images/faq_solution.png");
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 220px;
 }
 .faq-single article > h2 {
   margin-bottom: 20px;
@@ -1065,10 +1061,16 @@ Page FAQ
 .faq-single article > .faq-single-content img {
   width: 100%;
 }
-.faq-single > .faq-single-footer {
+.faq-single article > .faq-single-img {
+  background-image: url("assets/images/faq_solution.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 220px;
+}
+.faq-single article > .faq-single-footer {
   padding: 30px;
 }
-.faq-single > .faq-single-footer .btn {
+.faq-single article > .faq-single-footer .btn {
   width: 100%;
   margin: 0;
   display: inline-block;
@@ -1129,6 +1131,17 @@ larger than 1200px (large devices)
   body > main.faq-single > article > h2,
 body > main.faq-single > article .faq-single-content {
     grid-column: 1/1;
+  }
+  body > main.faq-single > article > .faq-single-img {
+    background-position: right top;
+  }
+  body > main.faq-single > article > .faq-single-footer {
+    padding: 30px 30px 30px 0;
+  }
+  body > main.faq-single > article > .faq-single-footer .btn {
+    width: inherit;
+    margin: inherit;
+    display: inline-block;
   }
 }
 
