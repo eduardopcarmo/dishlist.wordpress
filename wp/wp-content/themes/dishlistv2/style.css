@@ -516,7 +516,7 @@ h6 {
 dt {
   color: #000;
   font-weight: 700;
-  font-size: 1.375rem;
+  font-size: 2rem;
   line-height: 1.1em;
 }
 
@@ -779,7 +779,7 @@ h3.subtitle {
 
 /* Box */
 .box {
-  margin: 20px 40px;
+  margin: 20px 0;
 }
 .box h3 {
   text-align: center;
@@ -1011,21 +1011,31 @@ Home Page Style - Feature Area
 Page FAQ
 --------------------------------------------------------------*/
 .faq section.faq-popular-questions {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 320px auto;
   background-image: url("assets/images/faq_question_mark.png");
-  background-position: 50% 20px;
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: 220px;
-  padding-top: 380px;
+  padding: 30px;
+}
+.faq section.faq-popular-questions > h2 {
+  grid-row: 2/3;
+}
+.faq section.faq-popular-questions > .faq-popular-questions-content {
+  grid-row: 3/4;
 }
 .faq section.faq-help-topics {
   background-color: #F7F7F7;
   background-image: url("assets/images/circle_white_bottom_right.png"), url("assets/images/circle_gray_top_left.png");
   background-position: top left, bottom right;
   background-repeat: no-repeat;
-  background-size: 448px, 448px;
+  background-size: 100px;
+  padding: 30px;
 }
-.faq section.faq-help-topics > .faq-help-topics-content > .faq-help-topics-content-col {
-  padding-right: 10px;
+.faq section.faq-help-topics > .faq-help-topics-content > .faq-help-topics-content-col > h3 {
+  padding-bottom: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -1041,12 +1051,8 @@ larger than 992 px (medium devices)
 larger than 1200px (large devices)
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
-<<<<<<< HEAD
   body > main.faq section h2 {
     width: 1024px;
-=======
-  body > main {
->>>>>>> db9d4968d0c0cd3ee1a5f3d42731f95460086fc2
     margin: 0 auto;
     padding: 20px 0;
   }

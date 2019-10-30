@@ -1,5 +1,7 @@
 <?php
-// Load google fonts
+/**
+* Load google fonts
+*/
 function dishlist_add_google_fonts() 
 {
     wp_enqueue_style(
@@ -9,8 +11,9 @@ function dishlist_add_google_fonts()
     ); 
 }
 
-
-// Load all Styles and Scripts
+/**
+* Load all Styles and Scripts
+*/
 function dishlist_styles_and_scripts()
 {
     wp_enqueue_style(
@@ -29,6 +32,24 @@ function dishlist_styles_and_scripts()
     wp_enqueue_script( 'dishlistv2-customizer', get_stylesheet_directory_uri().'/assets/js/customizer.js', array('jquery'),'1.0', true );
 }
 
+/**
+* Change this default excerpt length to 20 words
+* @link https://developer.wordpress.org/reference/hooks/excerpt_length/
+*/
+function dishlist_excerpt_length( $length ) {
+    return 10;
+}
+add_filter( 'excerpt_length', 'dishlist_excerpt_length', 999 );
+
+/**
+* Change this default excerpt more and add link to the post / page
+* @link https://developer.wordpress.org/reference/hooks/excerpt_more/
+*/
+function dishlist_excerpt_more( $more ) {
+    return sprintf( ' ... <a href="%1$s" class="btn-link">See more >></a>',
+        esc_url( get_permalink( get_the_ID() ) ));
+}
+add_filter( 'excerpt_more', 'dishlist_excerpt_more' );
 
 /**
 * Sets up theme defaults and registers support for various WordPress features.
@@ -41,15 +62,22 @@ function dishlist_setup() {
     ) );
 }
         
-add_action('wp_enqueue_scripts', 'dishlist_add_google_fonts' );
-add_action('wp_enqueue_scripts', 'dishlist_styles_and_scripts');
+// Actions
+add_action( 'wp_enqueue_scripts', 'dishlist_add_google_fonts' );
+add_action( 'wp_enqueue_scripts', 'dishlist_styles_and_scripts');
 add_action( 'after_setup_theme', 'dishlist_setup' );    
-add_theme_support('custom-logo');
 
-add_post_type_support( 'post', 'excerpt' );
+// Add to theme
+add_theme_support( 'custom-logo' );
+
 /*
 * Enable support for Post Thumbnails on posts and pages.
-*
 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 */
 add_theme_support( 'post-thumbnails' );
+
+/*
+* Enable support for Post Excerpt
+* @link https://developer.wordpress.org/reference/functions/add_post_type_support/
+*/
+add_post_type_support( 'post', 'excerpt' );

@@ -4,11 +4,23 @@ Page FAQ
 .faq {
     section {
         &.faq-popular-questions {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 320px auto;
             background-image: url("assets/images/faq_question_mark.png");
-            background-position: 50% 20px;
+            background-position: center top;
             background-repeat: no-repeat;
             background-size: 220px;
-            padding-top: 380px;
+            // padding-top: 380px;
+            padding: 30px;
+
+            >h2 {
+                grid-row: 2/3;
+            }
+
+            >.faq-popular-questions-content {
+                grid-row: 3/4;
+            }
         }
 
         &.faq-help-topics {
@@ -17,14 +29,16 @@ Page FAQ
                 url("assets/images/circle_gray_top_left.png");
             background-position: top left, bottom right;
             background-repeat: no-repeat;
-            background-size: 448px, 448px;
+            background-size: 100px;
+            padding: 30px;
 
             >.faq-help-topics-content {
                 >.faq-help-topics-content-col {
-                    padding-right: 10px;
+                    >h3 {
+                        padding-bottom: 10px;
+                    }
                 }
             }
-
         }
     }
 }
