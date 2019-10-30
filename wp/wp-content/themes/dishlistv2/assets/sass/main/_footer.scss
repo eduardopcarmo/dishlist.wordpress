@@ -1,0 +1,82 @@
+footer {
+    &.footer {
+        >.footer-cta {
+            //linear-gradient(to right bottom, #f16f3b73, #732a1085),
+            background-image: url("assets/images/get_the_app_bg_1.png");
+            background-position: -240px -300px;
+            background-size: 700px;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 30px;
+
+            >div.footer-cta-img {
+                margin-bottom: 30px;
+            }
+
+            >h2 {
+
+                padding: 0 0 30px 0;
+            }
+
+            >div.footer-cta-btns {
+                >.btn {
+                    width: 100%;
+                    display: block;
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        >.footer-social-links-menu {
+            ul {
+                text-align: center;
+
+                li {
+                    display: inline-block;
+                    padding: 0;
+
+                    >a {
+                        line-height: 0;
+                        font-size: 0;
+                        color: transparent;
+                        display: block;
+                        height: 39px;
+                        width: 39px;
+                        background-size: 39px;
+                    }
+
+                    &.icon-facebook {
+                        a {
+                            background-image: url("assets/images/icon_facebook.png");
+                        }
+                    }
+
+                    &.icon-twitter {
+                        a {
+                            background-image: url("assets/images/icon_twitter.png");
+                        }
+                    }
+
+                    &.icon-youtube {
+                        a {
+                            background-image: url("assets/images/icon_youtube.png");
+                        }
+                    }
+
+                    &.icon-instagram {
+                        a {
+                            background-image: url("assets/images/icon_instagram.png");
+                        }
+                    }
+                }
+            }
+
+        }
+
+        >.footer-copyright {
+            padding: 30px;
+            text-align: center;
+        }
+
+    }
+}
