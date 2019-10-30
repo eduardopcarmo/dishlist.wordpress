@@ -30,6 +30,7 @@ get_header();
         </div>
     </section>
     <section class="faq-help-topics">
+        <span class="strawberry-plate"></span>
         <h2 class="subtitle">Help Topics</h2>
         <div class="faq-help-topics-content">
             <?php
@@ -40,32 +41,34 @@ get_header();
                 "child_of" => "11"
             ) );
             foreach ($terms as $term) {
-                $args = array(
-                    "post_type" => "post", 
-                    "post_status" => "publish", 
-                    "cat" => $term->term_id,
-                    "orderby" => "name",
-                    "order"   => "ASC"
-                ); 
-                $query_posts = new WP_Query( $args );
-                if ( $query_posts->have_posts() ) {
-                    ?>
-                    <div class="faq-help-topics-content-col">
-                        <h3 class="subtitle"><?= $term->name; ?></h2>
-                        <?php
-                        while ( $query_posts->have_posts() ) {
-                            $query_posts->the_post();
-                            ?>
-                            <div class="box">
-                                <h3><?php the_title(); ?></h3>
-                                <p><?= get_the_excerpt(); ?></p>
-                            </div>
-                            <?php
-                        }
-                        wp_reset_postdata();
+                if($term->term_id !== 6){
+                    $args = array(
+                        "post_type" => "post", 
+                        "post_status" => "publish", 
+                        "cat" => $term->term_id,
+                        "orderby" => "name",
+                        "order"   => "ASC"
+                    ); 
+                    $query_posts = new WP_Query( $args );
+                    if ( $query_posts->have_posts() ) {
                         ?>
-                    </div>
-                    <?php
+                        <div class="faq-help-topics-content-col">
+                            <h3 class="subtitle"><?= $term->name; ?></h2>
+                            <?php
+                            while ( $query_posts->have_posts() ) {
+                                $query_posts->the_post();
+                                ?>
+                                <div class="box">
+                                    <h3><?php the_title(); ?></h3>
+                                    <p><?= get_the_excerpt(); ?></p>
+                                </div>
+                                <?php
+                            }
+                            wp_reset_postdata();
+                            ?>
+                        </div>
+                        <?php
+                    }
                 } 
             } 
             ?>

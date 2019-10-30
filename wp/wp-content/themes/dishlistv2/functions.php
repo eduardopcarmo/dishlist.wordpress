@@ -46,7 +46,7 @@ add_filter( 'excerpt_length', 'dishlist_excerpt_length', 999 );
 * @link https://developer.wordpress.org/reference/hooks/excerpt_more/
 */
 function dishlist_excerpt_more( $more ) {
-    return sprintf( ' ... <a href="%1$s" class="btn-link">See more >></a>',
+    return sprintf( ' ... <br ><a href="%1$s" class="btn-link">See more >></a>',
         esc_url( get_permalink( get_the_ID() ) ));
 }
 add_filter( 'excerpt_more', 'dishlist_excerpt_more' );

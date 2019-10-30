@@ -6,7 +6,7 @@ Page FAQ
         &.faq-popular-questions {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 320px auto;
+            grid-template-rows: 340px auto;
             background-image: url("assets/images/faq_question_mark.png");
             background-position: center top;
             background-repeat: no-repeat;
@@ -31,6 +31,18 @@ Page FAQ
             background-repeat: no-repeat;
             background-size: 100px;
             padding: 30px;
+            position: relative;
+
+            >.strawberry-plate {
+                position: absolute;
+                top: -24px;
+                left: 10px;
+                background-image: url("assets/images/strawberry_plate.png");
+                display: block;
+                width: 84px;
+                height: 50px;
+                background-size: cover;
+            }
 
             >.faq-help-topics-content {
                 >.faq-help-topics-content-col {
@@ -41,4 +53,40 @@ Page FAQ
             }
         }
     }
+}
+
+.faq-single {
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 260px;
+        padding: 30px;
+        background-image: url("assets/images/faq_solution.png");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 220px;
+
+        >h2 {
+            margin-bottom: 20px;
+        }
+
+        >.faq-single-content {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    >.faq-single-footer {
+        padding: 30px;
+
+        .btn {
+            width: 100%;
+            margin: 0;
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
+
 }
