@@ -806,8 +806,10 @@ h3.subtitle {
   content: ")";
 }
 .form > .form-group input[type=text],
+.form > .form-group input[type=email],
 .form > .form-group textarea,
 .wpcf7-form > .form-group input[type=text],
+.wpcf7-form > .form-group input[type=email],
 .wpcf7-form > .form-group textarea {
   font-size: 1.15rem;
   border: 1px solid #ADADAD;
@@ -821,14 +823,18 @@ h3.subtitle {
   outline: none;
 }
 .form > .form-group input[type=text]:hover,
+.form > .form-group input[type=email]:hover,
 .form > .form-group textarea:hover,
 .wpcf7-form > .form-group input[type=text]:hover,
+.wpcf7-form > .form-group input[type=email]:hover,
 .wpcf7-form > .form-group textarea:hover {
   transform: translateY(-2px);
 }
 .form > .form-group input[type=text]:active,
+.form > .form-group input[type=email]:active,
 .form > .form-group textarea:active,
 .wpcf7-form > .form-group input[type=text]:active,
+.wpcf7-form > .form-group input[type=email]:active,
 .wpcf7-form > .form-group textarea:active {
   transform: translateY(0);
 }
@@ -837,8 +843,10 @@ h3.subtitle {
   display: inline-block;
 }
 .form > .form-group.show-error input[type=text],
+.form > .form-group.show-error input[type=email],
 .form > .form-group.show-error textarea,
 .wpcf7-form > .form-group.show-error input[type=text],
+.wpcf7-form > .form-group.show-error input[type=email],
 .wpcf7-form > .form-group.show-error textarea {
   border: 1px solid #EA0024;
 }
@@ -1067,6 +1075,24 @@ Home Page Style - Feature Area
 /*--------------------------------------------------------------
 5.2 Contact Page
 --------------------------------------------------------------*/
+.contact .form-group input[type=submit] {
+  /*font-size: $font-size-btn;*/
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(234, 0, 36, 0.2);
+  /* margin: 10px; */
+  /* softens or eases the motion - makes it smoother */
+  transition: all 0.5s;
+  /* Remove the default "highlight"*/
+  outline: none;
+  /* Apply btn-primary style */
+  color: #fff;
+  background-color: #EA0024;
+  /* Settings for mobile size */
+  width: 100%;
+  font-size: 1.15rem;
+}
+
 /*--------------------------------------------------------------
 5.3 About Us
 --------------------------------------------------------------*/
