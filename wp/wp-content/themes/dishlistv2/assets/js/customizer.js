@@ -11,6 +11,8 @@
     if(winWidth>768){
         $(".main-area button").removeClass("btn-primary");
         $(".main-area button").addClass("btn-outline-primary");
+        $(".fqa-area button").removeClass("btn-primary");
+        $(".fqa-area button").addClass("btn-outline-primary");
         
     } 
 	
@@ -19,11 +21,16 @@
         if(winX<768){
             $(".main-area button").removeClass("btn-outline-primary");
             $(".main-area button").addClass("btn-primary");
+            $(".fqa-area button").removeClass("btn-outline-primary");
+            $(".fqa-area button").addClass("btn-primary");
+            
             
         } else {
             $(".main-area button").removeClass("btn-primary");
             $(".main-area button").addClass("btn-outline-primary");
-            
+            $(".fqa-area button").removeClass("btn-primary");
+            $(".fqa-area button").addClass("btn-outline-primary");
+           
         }
     });
 
