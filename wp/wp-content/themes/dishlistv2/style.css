@@ -644,6 +644,58 @@ Header
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
+footer.footer > .footer-cta {
+  background-image: url("assets/images/get_the_app_bg_1.png");
+  background-position: -240px -300px;
+  background-size: 700px;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 30px;
+}
+footer.footer > .footer-cta > div.footer-cta-img {
+  margin-bottom: 30px;
+}
+footer.footer > .footer-cta > h2 {
+  padding: 0 0 30px 0;
+}
+footer.footer > .footer-cta > div.footer-cta-btns > .btn {
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+}
+footer.footer > .footer-social-links-menu ul {
+  text-align: center;
+}
+footer.footer > .footer-social-links-menu ul li {
+  display: inline-block;
+  padding: 0;
+}
+footer.footer > .footer-social-links-menu ul li > a {
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+  display: block;
+  height: 39px;
+  width: 39px;
+  background-size: 39px;
+}
+footer.footer > .footer-social-links-menu ul li.icon-facebook a {
+  background-image: url("assets/images/icon_facebook.png");
+}
+footer.footer > .footer-social-links-menu ul li.icon-twitter a {
+  background-image: url("assets/images/icon_twitter.png");
+}
+footer.footer > .footer-social-links-menu ul li.icon-youtube a {
+  background-image: url("assets/images/icon_youtube.png");
+}
+footer.footer > .footer-social-links-menu ul li.icon-instagram a {
+  background-image: url("assets/images/icon_instagram.png");
+}
+footer.footer > .footer-copyright {
+  padding: 30px;
+  text-align: center;
+}
+
 /*--------------------------------------------------------------
 Main
 --------------------------------------------------------------*/
@@ -659,6 +711,8 @@ h2.subtitle,
 h3.subtitle {
   color: #EA0024;
   margin: 0 0 20px 0;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 h3.subtitle {
@@ -718,30 +772,45 @@ h3.subtitle {
   transform: translateY(-2px);
 }
 
+.btn-link,
+.btn-link:link,
+.btn-link:visited {
+  color: #EA0024;
+}
+
 /* FORM */
-.form > .form-group label {
+.form > .form-group label,
+.wpcf7-form > .form-group label {
   font-weight: 700;
   color: #000;
   font-size: 1.15rem;
   display: block;
   padding: 0.5em;
 }
-.form > .form-group label span {
+.form > .form-group label span,
+.wpcf7-form > .form-group label span {
   color: #EA0024;
 }
-.form > .form-group label > em {
+.form > .form-group label > em,
+.wpcf7-form > .form-group label > em {
   font-weight: 400;
   color: #EA0024;
   display: none;
 }
-.form > .form-group label > em::before {
+.form > .form-group label > em::before,
+.wpcf7-form > .form-group label > em::before {
   content: "(";
 }
-.form > .form-group label > em::after {
+.form > .form-group label > em::after,
+.wpcf7-form > .form-group label > em::after {
   content: ")";
 }
 .form > .form-group input[type=text],
-.form > .form-group textarea {
+.form > .form-group input[type=email],
+.form > .form-group textarea,
+.wpcf7-form > .form-group input[type=text],
+.wpcf7-form > .form-group input[type=email],
+.wpcf7-form > .form-group textarea {
   font-size: 1.15rem;
   border: 1px solid #ADADAD;
   width: 100%;
@@ -754,24 +823,41 @@ h3.subtitle {
   outline: none;
 }
 .form > .form-group input[type=text]:hover,
-.form > .form-group textarea:hover {
+.form > .form-group input[type=email]:hover,
+.form > .form-group textarea:hover,
+.wpcf7-form > .form-group input[type=text]:hover,
+.wpcf7-form > .form-group input[type=email]:hover,
+.wpcf7-form > .form-group textarea:hover {
   transform: translateY(-2px);
 }
 .form > .form-group input[type=text]:active,
-.form > .form-group textarea:active {
+.form > .form-group input[type=email]:active,
+.form > .form-group textarea:active,
+.wpcf7-form > .form-group input[type=text]:active,
+.wpcf7-form > .form-group input[type=email]:active,
+.wpcf7-form > .form-group textarea:active {
   transform: translateY(0);
 }
-.form > .form-group.show-error label > em {
+.form > .form-group.show-error label > em,
+.wpcf7-form > .form-group.show-error label > em {
   display: inline-block;
 }
 .form > .form-group.show-error input[type=text],
-.form > .form-group.show-error textarea {
+.form > .form-group.show-error input[type=email],
+.form > .form-group.show-error textarea,
+.wpcf7-form > .form-group.show-error input[type=text],
+.wpcf7-form > .form-group.show-error input[type=email],
+.wpcf7-form > .form-group.show-error textarea {
   border: 1px solid #EA0024;
 }
 
 /* Box */
 .box {
-  margin: 10px 0;
+  margin: 20px 0;
+}
+.box h3 {
+  text-align: center;
+  margin-bottom: 10px;
 }
 .box > img {
   float: left;
@@ -785,11 +871,6 @@ body {
   grid-template-rows: auto;
   grid-gap: 0px;
 }
-body > main {
-  padding: 0 10px;
-  width: 100%;
-}
-
 /*--------------------------------------------------------------
 5.0 Pages
 --------------------------------------------------------------*/
@@ -1121,6 +1202,24 @@ Home Page Style - Feature Area
 /*--------------------------------------------------------------
 5.2 Contact Page
 --------------------------------------------------------------*/
+.contact .form-group input[type=submit] {
+  /*font-size: $font-size-btn;*/
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(234, 0, 36, 0.2);
+  /* margin: 10px; */
+  /* softens or eases the motion - makes it smoother */
+  transition: all 0.5s;
+  /* Remove the default "highlight"*/
+  outline: none;
+  /* Apply btn-primary style */
+  color: #fff;
+  background-color: #EA0024;
+  /* Settings for mobile size */
+  width: 100%;
+  font-size: 1.15rem;
+}
+
 /*--------------------------------------------------------------
 5.3 About Us
 --------------------------------------------------------------*/
@@ -1131,18 +1230,70 @@ Home Page Style - Feature Area
 Page FAQ
 --------------------------------------------------------------*/
 .faq section.faq-popular-questions {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 340px auto;
   background-image: url("assets/images/faq_question_mark.png");
-  background-position: top right;
+  background-position: center top;
   background-repeat: no-repeat;
+  background-size: 220px;
+  padding: 30px;
+}
+.faq section.faq-popular-questions > h2 {
+  grid-row: 2/3;
+}
+.faq section.faq-popular-questions > .faq-popular-questions-content {
+  grid-row: 3/4;
 }
 .faq section.faq-help-topics {
   background-color: #F7F7F7;
   background-image: url("assets/images/circle_white_bottom_right.png"), url("assets/images/circle_gray_top_left.png");
   background-position: top left, bottom right;
   background-repeat: no-repeat;
+  background-size: 100px;
+  padding: 30px;
+  position: relative;
 }
-.faq section.faq-help-topics > .faq-help-topics-content > .faq-help-topics-content-col {
-  margin: 10px;
+.faq section.faq-help-topics > .strawberry-plate {
+  position: absolute;
+  top: -24px;
+  left: 10px;
+  background-image: url("assets/images/strawberry_plate.png");
+  display: block;
+  width: 84px;
+  height: 50px;
+  background-size: cover;
+}
+.faq section.faq-help-topics > .faq-help-topics-content > .faq-help-topics-content-col > h3 {
+  padding-bottom: 10px;
+}
+
+.faq-single article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 290px auto;
+  padding: 30px;
+}
+.faq-single article > h2 {
+  margin-bottom: 20px;
+}
+.faq-single article > .faq-single-content img {
+  width: 100%;
+}
+.faq-single article > .faq-single-img {
+  background-image: url("assets/images/faq_solution.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 220px;
+}
+.faq-single article > .faq-single-footer {
+  padding: 30px;
+}
+.faq-single article > .faq-single-footer .btn {
+  width: 100%;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -1158,20 +1309,84 @@ larger than 992 px (medium devices)
 larger than 1200px (large devices)
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
-  body > main {
+  body > main.faq section.faq-popular-questions {
+    width: 1024px;
     margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    background-position: right center;
+  }
+  body > main.faq section.faq-popular-questions > h2 {
+    grid-column: 1/4;
   }
   body > main.faq section.faq-popular-questions > .faq-popular-questions-content {
-    max-width: 66%;
+    grid-column: 1/3;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 10px;
+  }
+  body > main.faq section.faq-help-topics {
+    background-size: 200px;
+  }
+  body > main.faq section.faq-help-topics > .strawberry-plate {
+    width: 200px;
+    height: 110px;
+    top: -55px;
   }
   body > main.faq section.faq-help-topics > .faq-help-topics-content {
+    width: 1024px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+  }
+  body > main.faq-single > article {
+    width: 1024px;
+    margin: 0 auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    background-position: right top;
+  }
+  body > main.faq-single > article > h2,
+body > main.faq-single > article .faq-single-content {
+    grid-column: 1/1;
+  }
+  body > main.faq-single > article > .faq-single-img {
+    background-position: right top;
+  }
+  body > main.faq-single > article > .faq-single-footer {
+    padding: 30px 30px 30px 0;
+  }
+  body > main.faq-single > article > .faq-single-footer .btn {
+    width: inherit;
+    margin: inherit;
+    display: inline-block;
+  }
+  body > footer.footer > .footer-cta {
+    background-image: linear-gradient(to right bottom, #ffffff6b, #ffffff6b), url("assets/images/get_the_app_bg_1.png");
+    background-position: top left;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  body > footer.footer > .footer-cta > h2 {
+    padding: 120px 0 0 0;
+    text-align: left;
+  }
+  body > footer.footer > .footer-cta > div.footer-cta-img {
+    grid-row: 1/3;
+  }
+  body > footer.footer > .footer-cta > div.footer-cta-btns {
+    text-align: left;
+  }
+  body > footer.footer > .footer-cta > div.footer-cta-btns > .btn {
+    width: inherit;
+    margin: inherit;
+    display: inline-block;
+  }
+  body > footer.footer > .footer-social-links-menu ul li > a {
+    margin: 0 10px;
   }
 }
 

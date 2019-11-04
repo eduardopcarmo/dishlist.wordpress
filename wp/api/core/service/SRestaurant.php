@@ -24,8 +24,15 @@ class SRestaurant{
         // Check if is a valide id
         if($id !== null && is_int($id)){
             // Execute the select
-            $result = $this->database->Select("SELECT rest_id, rest_name, rest_description, rest_website, rest_thumbnail FROM api_restaurant WHERE rest_id = ?;"
-                , array("rest_id" => $id));
+            $sql = "SELECT ";
+            $sql .= "R.rest_id, R.rest_name, R.rest_description, R.rest_website, R.rest_thumbnail, R.street_name, R.post_code ";
+            $sql .= ", C.name, P.short_name ";
+            $sql .= "FROM "; 
+            $sql .= "api_restaurant R ";
+            $sql .= "LEFT JOIN api_city C ON R.city_id = C.id ";
+            $sql .= "LEFT JOIN api_province P ON C.province_id = P.id "; 
+            $sql .= "WHERE rest_id = ?;";
+            $result = $this->database->Select($sql, array("rest_id" => $id));
 
             // Check if has found the restaurant
             if($result !== null && is_array($result) && count($result) > 0){
@@ -35,6 +42,10 @@ class SRestaurant{
                 $restaurant->description = $result[0]['rest_description'];
                 $restaurant->website = $result[0]['rest_website'];
                 $restaurant->thumbnail = $result[0]['rest_thumbnail'];
+                $restaurant->street_name = $result[0]['street_name'];
+                $restaurant->post_code = $result[0]['post_code'];
+                $restaurant->city = $result[0]['name'];
+                $restaurant->province = $result[0]['short_name'];
             }
         }
 
@@ -50,7 +61,15 @@ class SRestaurant{
         // Check if is a valid name
         if($name !== null && trim($name) !== ""){
             // Execute the select
-            $result = $this->database->Select("SELECT rest_id, rest_name, rest_description, rest_website, rest_thumbnail FROM api_restaurant WHERE rest_name LIKE '%" . $name .  "%';", null);
+            $sql = "SELECT ";
+            $sql .= "R.rest_id, R.rest_name, R.rest_description, R.rest_website, R.rest_thumbnail, R.street_name, R.post_code ";
+            $sql .= ", C.name, P.short_name ";
+            $sql .= "FROM "; 
+            $sql .= "api_restaurant R ";
+            $sql .= "LEFT JOIN api_city C ON R.city_id = C.id ";
+            $sql .= "LEFT JOIN api_province P ON C.province_id = P.id "; 
+            $sql .= "WHERE R.rest_name LIKE '%" . $name .  "%';";
+            $result = $this->database->Select($sql, null);
 
             // Check if has found restaurants
             if($result !== null && is_array($result) && count($result) > 0){
@@ -64,6 +83,10 @@ class SRestaurant{
                     $restaurant->description = $result[$i]["rest_description"];
                     $restaurant->website = $result[$i]["rest_website"];
                     $restaurant->thumbnail = $result[$i]['rest_thumbnail'];
+                    $restaurant->street_name = $result[$i]['street_name'];
+                    $restaurant->post_code = $result[$i]['post_code'];
+                    $restaurant->city = $result[$i]['name'];
+                    $restaurant->province = $result[$i]['short_name'];
                     $restaurants[] = $restaurant;
                 }
             }
@@ -172,6 +195,11 @@ class SRestaurant{
 
                         // Add item to category
                         $category->items[] = $item;
+                    }
+
+                    // Check if need to be "add"
+                    if($category !== null){
+                        $menu->categories[] = $category;
                     }
                 }
 
