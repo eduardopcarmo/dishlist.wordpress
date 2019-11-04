@@ -24,16 +24,16 @@ $line-size-dt: $line-size-base;
 
 
 // Desktop
-$desktop_font-size-base: 30px;
-$desktop_font-size-h1: 2rem;
-$desktop_font-size-h2: 1.34rem;
-$desktop_font-size-h3: 1.34rem;
+$desktop_font-size-base: $font-size-base; //30px;
+$desktop_font-size-h1: $font-size-h1;
+$desktop_font-size-h2: $font-size-h2;
+$desktop_font-size-h3: $font-size-h3;
 $desktop_font-size-h4: $desktop_font-size-base;
 $desktop_font-size-h5: $desktop_font-size-base;
 $desktop_font-size-h6: $desktop_font-size-base;
 $desktop_font-size-btn: $desktop_font-size-base;
 
-$desktop_line-size-base: 2em;
+$desktop_line-size-base: $line-size-base;
 $desktop_line-size-h1: $desktop_line-size-base;
 $desktop_line-size-h2: $desktop_line-size-base;
 $desktop_line-size-h3: $desktop_line-size-base;

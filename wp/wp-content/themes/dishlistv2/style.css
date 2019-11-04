@@ -531,46 +531,46 @@ larger than 1200px (large devices)
 @media only screen and (min-width: 1200px) {
   html {
     /*for using REM units*/
-    font-size: 30px;
+    font-size: 16px;
   }
 
   body {
-    line-height: 2em;
+    line-height: 1.5em;
   }
 
   h1 {
     font-size: 2rem;
-    line-height: 2em;
+    line-height: 1.5em;
   }
 
   h2 {
-    font-size: 1.34rem;
-    line-height: 2em;
+    font-size: 1.38rem;
+    line-height: 1.5em;
   }
 
   h3 {
-    font-size: 1.34rem;
-    line-height: 2em;
+    font-size: 1.38rem;
+    line-height: 1.5em;
   }
 
   h4 {
-    font-size: 30px;
-    line-height: 2em;
+    font-size: 16px;
+    line-height: 1.5em;
   }
 
   h5 {
-    font-size: 30px;
-    line-height: 2em;
+    font-size: 16px;
+    line-height: 1.5em;
   }
 
   h6 {
-    font-size: 30px;
-    line-height: 2em;
+    font-size: 16px;
+    line-height: 1.5em;
   }
 
   dt {
-    font-size: 1.34rem;
-    line-height: 2em;
+    font-size: 1.38rem;
+    line-height: 1.5em;
   }
 }
 /*--------------------------------------------------------------
@@ -803,7 +803,8 @@ h4.subtitle {
 /* BUTTON */
 .btn,
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
   font-size: 16px;
   padding: 10px 30px;
   width: 100%;
@@ -816,29 +817,36 @@ h4.subtitle {
   /* Remove the default "highlight"*/
   outline: none;
 }
-.btn.btn-primary,
+.btn.btn-primary, .btn.wpcf7-submit,
 .btn:link.btn-primary,
-.btn:visited.btn-primary {
+.btn:link.wpcf7-submit,
+.btn:visited.btn-primary,
+.btn:visited.wpcf7-submit,
+input[type=submit].btn-primary,
+input[type=submit].wpcf7-submit {
   color: #fff;
   background-color: #EA0024;
 }
 .btn.btn-secondary,
 .btn:link.btn-secondary,
-.btn:visited.btn-secondary {
+.btn:visited.btn-secondary,
+input[type=submit].btn-secondary {
   color: #000;
   background-color: #ADADAD;
   box-shadow: 0 4px 10px rgba(173, 173, 173, 0.2);
 }
 .btn.btn-outline-primary,
 .btn:link.btn-outline-primary,
-.btn:visited.btn-outline-primary {
+.btn:visited.btn-outline-primary,
+input[type=submit].btn-outline-primary {
   color: #EA0024;
   border: 1px solid #EA0024;
   background-color: #fff;
 }
 .btn.btn-outline-secondary,
 .btn:link.btn-outline-secondary,
-.btn:visited.btn-outline-secondary {
+.btn:visited.btn-outline-secondary,
+input[type=submit].btn-outline-secondary {
   color: #000;
   border: 1px solid #ADADAD;
   background-color: #fff;
@@ -846,12 +854,14 @@ h4.subtitle {
 }
 .btn:hover,
 .btn:link:hover,
-.btn:visited:hover {
+.btn:visited:hover,
+input[type=submit]:hover {
   transform: translateY(-4px);
 }
 .btn:active,
 .btn:link:active,
-.btn:visited:active {
+.btn:visited:active,
+input[type=submit]:active {
   transform: translateY(-2px);
 }
 
@@ -969,7 +979,7 @@ larger than 1200px (large devices)
   .btn,
 .btn:link,
 .btn:visited {
-    font-size: 30px;
+    font-size: 16px;
     width: auto;
     display: inline-block;
     padding: 10px 50px;

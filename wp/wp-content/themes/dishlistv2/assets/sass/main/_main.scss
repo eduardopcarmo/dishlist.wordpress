@@ -45,7 +45,8 @@ h4 {
 /* BUTTON */
 .btn,
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type="submit"] {
     font-size: $font-size-btn;
     padding: 10px 30px;
     width: 100%;
@@ -59,7 +60,8 @@ h4 {
     /* Remove the default "highlight"*/
     outline: none;
 
-    &.btn-primary {
+    &.btn-primary,
+    &.wpcf7-submit {
         color: $font-white;
         background-color: $primary-color;
     }

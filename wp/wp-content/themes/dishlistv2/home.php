@@ -17,7 +17,6 @@ get_header();?>
             </div><!-- .main-animation div-->
         </div><!-- .main-area div -->
 
-
         <!-- #Feature Posts -->
         <section id="feature-sec">
                 <div class="post-area">
