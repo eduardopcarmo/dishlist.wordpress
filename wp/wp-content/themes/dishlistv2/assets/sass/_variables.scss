@@ -2,37 +2,59 @@
 Font-size
 Based on https: //www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/
 --------------------------------------------------------------*/
+// Mobile
 $font-size-base: 16px;
+$font-size-h1: 2rem;
+$font-size-h2: 1.38rem;
+$font-size-h3: 1.38rem;
+$font-size-h4: $font-size-base;
+$font-size-h5: $font-size-base;
+$font-size-h6: $font-size-base;
+$font-size-btn: $font-size-base;
 
-// $font-size-h1: 1.5rem;
-// $font-size-h2: 1.35rem;
-// $font-size-h3: 1.25rem;
-// $font-size-h4: 1.15rem;
-// $font-size-h5: 1rem;
-// $font-size-h6: 1rem;
-$font-size-h1: 3rem;
-$font-size-h2: 2rem;//1.375rem;
+$line-size-base: 1.5em;
+$line-size-h1: $line-size-base;
+$line-size-h2: $line-size-base;
+$line-size-h3: $line-size-base;
+$line-size-h4: $line-size-base;
+$line-size-h5: $line-size-base;
+$line-size-h6: $line-size-base;
+$line-size-btn: $line-size-base;
+$line-size-dt: $line-size-base;
 
-$font-size-h3: 1.25rem;
-$font-size-h4: 1.15rem;
-$font-size-h5: 1rem;
-$font-size-h6: 1rem;
 
-$font-size-btn: $font-size-h2;
+// Desktop
+$desktop_font-size-base: 30px;
+$desktop_font-size-h1: 2rem;
+$desktop_font-size-h2: 1.34rem;
+$desktop_font-size-h3: 1.34rem;
+$desktop_font-size-h4: $desktop_font-size-base;
+$desktop_font-size-h5: $desktop_font-size-base;
+$desktop_font-size-h6: $desktop_font-size-base;
+$desktop_font-size-btn: $desktop_font-size-base;
+
+$desktop_line-size-base: 2em;
+$desktop_line-size-h1: $desktop_line-size-base;
+$desktop_line-size-h2: $desktop_line-size-base;
+$desktop_line-size-h3: $desktop_line-size-base;
+$desktop_line-size-h4: $desktop_line-size-base;
+$desktop_line-size-h5: $desktop_line-size-base;
+$desktop_line-size-h6: $desktop_line-size-base;
+$desktop_line-size-btn: $desktop_line-size-base;
+$desktop_line-size-dt: $desktop_line-size-base;
 
 /*--------------------------------------------------------------
 Colors
 --------------------------------------------------------------*/
+// Mobile
 $font-black: #000;
 $font-white: #fff;
 $font-color-header: $font-black;
 $font-color: #585858;
-
 $primary-color: #EA0024;
 $primary-bg-color: $font-white;
-
 $secondary-color: #ADADAD;
 $secondary-bg-color: #F7F7F7;
-
-$border-bottom-h3: #707070;
-$dark-grey:#33292A;
+$tertiary-color: #33292A;
+$tertiary-bg-color: $tertiary-color;
+$border-bottom-h4: #707070;

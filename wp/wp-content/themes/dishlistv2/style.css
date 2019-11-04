@@ -32,7 +32,6 @@ Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
     5.2 Contact Page
     5.3 About Us
     5.3 FAQ
-6.0 Media Queries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 0.0 Sass Variables
@@ -484,42 +483,96 @@ h6 {
 }
 
 h1 {
-  font-size: 3rem;
-  line-height: 1em;
+  font-size: 2rem;
+  line-height: 1.5em;
 }
 
 h2 {
-  font-size: 2rem;
-  line-height: 1.1em;
+  font-size: 1.38rem;
+  line-height: 1.5em;
 }
 
 h3 {
-  font-size: 1.25rem;
-  line-height: 1.2em;
+  font-size: 1.38rem;
+  line-height: 1.5em;
 }
 
 h4 {
-  font-size: 1.15rem;
-  line-height: 1.3em;
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5em;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5em;
 }
 
 dt {
   color: #000;
   font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.1em;
+  font-size: 1.38rem;
+  line-height: 1.5em;
 }
 
+/*--------------------------------------------------------------
+larger than 768 px (small devices, tablets)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+larger than 992 px (medium devices)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+larger than 1200px (large devices)
+--------------------------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+  html {
+    /*for using REM units*/
+    font-size: 30px;
+  }
+
+  body {
+    line-height: 2em;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 2em;
+  }
+
+  h2 {
+    font-size: 1.34rem;
+    line-height: 2em;
+  }
+
+  h3 {
+    font-size: 1.34rem;
+    line-height: 2em;
+  }
+
+  h4 {
+    font-size: 30px;
+    line-height: 2em;
+  }
+
+  h5 {
+    font-size: 30px;
+    line-height: 2em;
+  }
+
+  h6 {
+    font-size: 30px;
+    line-height: 2em;
+  }
+
+  dt {
+    font-size: 1.34rem;
+    line-height: 2em;
+  }
+}
 /*--------------------------------------------------------------
 4.0 Generic (Main)
 --------------------------------------------------------------*/
@@ -658,11 +711,6 @@ footer.footer > .footer-cta > div.footer-cta-img {
 footer.footer > .footer-cta > h2 {
   padding: 0 0 30px 0;
 }
-footer.footer > .footer-cta > div.footer-cta-btns > .btn {
-  width: 100%;
-  display: block;
-  margin: 10px 0;
-}
 footer.footer > .footer-social-links-menu ul {
   text-align: center;
 }
@@ -697,6 +745,38 @@ footer.footer > .footer-copyright {
 }
 
 /*--------------------------------------------------------------
+larger than 768 px (small devices, tablets)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+larger than 992 px (medium devices)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+larger than 1200px (large devices)
+--------------------------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+  body > footer.footer > .footer-cta {
+    background-image: linear-gradient(to right bottom, #ffffff6b, #ffffff6b), url("assets/images/get_the_app_bg_1.png");
+    background-position: top left;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  body > footer.footer > .footer-cta > h2 {
+    padding: 120px 0 0 0;
+    text-align: left;
+  }
+  body > footer.footer > .footer-cta > div.footer-cta-img {
+    grid-row: 1/3;
+  }
+  body > footer.footer > .footer-cta > div.footer-cta-btns {
+    text-align: left;
+  }
+  body > footer.footer > .footer-social-links-menu ul li > a {
+    margin: 0 10px;
+  }
+}
+/*--------------------------------------------------------------
 Main
 --------------------------------------------------------------*/
 /* TITLE */
@@ -708,14 +788,15 @@ h1.title {
 
 /* SUBTITLE */
 h2.subtitle,
-h3.subtitle {
+h3.subtitle,
+h4.subtitle {
   color: #EA0024;
   margin: 0 0 20px 0;
   text-transform: uppercase;
   text-align: center;
 }
 
-h3.subtitle {
+h4.subtitle {
   border-bottom: 1px solid #707070;
 }
 
@@ -723,11 +804,13 @@ h3.subtitle {
 .btn,
 .btn:link,
 .btn:visited {
-  font-size: 2rem;
+  font-size: 16px;
   padding: 10px 30px;
+  width: 100%;
+  display: block;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(234, 0, 36, 0.2);
-  margin: 10px;
+  margin: 10px 0;
   /* softens or eases the motion - makes it smoother */
   transition: all 0.5s;
   /* Remove the default "highlight"*/
@@ -783,7 +866,7 @@ h3.subtitle {
 .wpcf7-form > .form-group label {
   font-weight: 700;
   color: #000;
-  font-size: 1.15rem;
+  font-size: 16px;
   display: block;
   padding: 0.5em;
 }
@@ -811,7 +894,7 @@ h3.subtitle {
 .wpcf7-form > .form-group input[type=text],
 .wpcf7-form > .form-group input[type=email],
 .wpcf7-form > .form-group textarea {
-  font-size: 1.15rem;
+  font-size: 16px;
   border: 1px solid #ADADAD;
   width: 100%;
   border-radius: 0.5em;
@@ -872,6 +955,26 @@ body {
   grid-gap: 0px;
 }
 /*--------------------------------------------------------------
+larger than 768 px (small devices, tablets)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+larger than 992 px (medium devices)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+larger than 1200px (large devices)
+--------------------------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+  /* BUTTON */
+  .btn,
+.btn:link,
+.btn:visited {
+    font-size: 30px;
+    width: auto;
+    display: inline-block;
+    padding: 10px 50px;
+  }
+}
+/*--------------------------------------------------------------
 5.0 Pages
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -898,26 +1001,6 @@ Animation on main page
 @media only screen and (min-width: 1024px) {
   .main-animation {
     margin-left: 8rem;
-  }
-}
-
-/****************************************
-Button Style
-*/
-.btn-primary {
-  width: 290px;
-}
-@media only screen and (min-width: 768px) {
-  .btn-primary {
-    width: 260px;
-    margin-top: 2rem;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .btn-outline-primary {
-    width: 260px;
-    margin-top: 2rem;
   }
 }
 
@@ -1136,14 +1219,6 @@ Home Page Style - Feature Area
     padding-left: 14rem;
   }
 }
-.fqa-area button {
-  display: block;
-}
-@media only screen and (min-width: 786px) {
-  .fqa-area button {
-    margin-left: 14rem;
-  }
-}
 
 .ad-area {
   background-image: url("http://localhost:8000/wp-content/uploads/2019/11/bg-ad-mob.png");
@@ -1202,24 +1277,6 @@ Home Page Style - Feature Area
 /*--------------------------------------------------------------
 5.2 Contact Page
 --------------------------------------------------------------*/
-.contact .form-group input[type=submit] {
-  /*font-size: $font-size-btn;*/
-  padding: 10px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(234, 0, 36, 0.2);
-  /* margin: 10px; */
-  /* softens or eases the motion - makes it smoother */
-  transition: all 0.5s;
-  /* Remove the default "highlight"*/
-  outline: none;
-  /* Apply btn-primary style */
-  color: #fff;
-  background-color: #EA0024;
-  /* Settings for mobile size */
-  width: 100%;
-  font-size: 1.15rem;
-}
-
 /*--------------------------------------------------------------
 5.3 About Us
 --------------------------------------------------------------*/
@@ -1297,9 +1354,6 @@ Page FAQ
 }
 
 /*--------------------------------------------------------------
-6.0 Media Queries
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 larger than 768 px (small devices, tablets)
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -1357,11 +1411,6 @@ body > main.faq-single > article .faq-single-content {
   body > main.faq-single > article > .faq-single-footer {
     padding: 30px 30px 30px 0;
   }
-  body > main.faq-single > article > .faq-single-footer .btn {
-    width: inherit;
-    margin: inherit;
-    display: inline-block;
-  }
   body > footer.footer > .footer-cta {
     background-image: linear-gradient(to right bottom, #ffffff6b, #ffffff6b), url("assets/images/get_the_app_bg_1.png");
     background-position: top left;
@@ -1379,11 +1428,6 @@ body > main.faq-single > article .faq-single-content {
   }
   body > footer.footer > .footer-cta > div.footer-cta-btns {
     text-align: left;
-  }
-  body > footer.footer > .footer-cta > div.footer-cta-btns > .btn {
-    width: inherit;
-    margin: inherit;
-    display: inline-block;
   }
   body > footer.footer > .footer-social-links-menu ul li > a {
     margin: 0 10px;

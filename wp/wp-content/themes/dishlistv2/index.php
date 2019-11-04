@@ -60,7 +60,7 @@ get_header();
                     if ( $query_posts->have_posts() ) {
                         ?>
                         <div class="faq-help-topics-content-col">
-                            <h3 class="subtitle"><?= $term->name; ?></h2>
+                            <h4 class="subtitle"><?= $term->name; ?></h4>
                             <?php
                             while ( $query_posts->have_posts() ) {
                                 $query_posts->the_post();
