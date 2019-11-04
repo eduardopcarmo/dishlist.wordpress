@@ -127,6 +127,7 @@ h3 {
         }
 
         input[type="text"],
+        input[type="email"],
         textarea {
             font-size: $font-size-h4;
             border: 1px solid $secondary-color;
@@ -158,6 +159,7 @@ h3 {
             }
 
             input[type="text"],
+            input[type="email"],
             textarea {
                 border: 1px solid $primary-color;
             }
