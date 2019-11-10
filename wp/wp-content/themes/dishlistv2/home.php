@@ -70,14 +70,17 @@ get_header();?>
                             endwhile;
                         echo '</div>'; // close poat-area-row tag
                     endif;?>
+
+                    <!-- The FQA Link -->
+            <section id="faq-area">
+                <div class="faq-box">
+                    <h2>Do you have any question?</h2>
+                    <a class="btn btn-primary ">Go to FAQ</a>
+                </div> 
+            </section><!--#faq-area section-->
+            <span class="faq-area-bg"></span> 
         </section><!-- #feature section -->     
-        <!-- The FQA Link -->
-        <section id="faq-area">
-            <div class="faq-box">
-                <h2>Do you have any question?</h2>
-                <a class="btn btn-primary ">Go to FAQ</a>
-            </div>  
-        </section><!--#faq-area section-->
+
 	</main>
 <?php
 get_footer();
