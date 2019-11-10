@@ -991,178 +991,88 @@ larger than 1200px (large devices)
 /*--------------------------------------------------------------
 5.1 Front-Page
 --------------------------------------------------------------*/
-/****************************************
-Animation on main page
-*/
-.main-animation {
-  background-image: url("http://localhost:8000/wp-content/uploads/2019/10/Dish1.png");
-  background-repeat: no-repeat;
-  background-position: right -2rem top 5rem;
-  background-size: 280px 280px;
-  padding-bottom: 3rem;
+/*--------------------------------------------------------------
+Page Home
+--------------------------------------------------------------*/
+.home-container {
+  margin: auto 0;
 }
-@media only screen and (min-width: 768px) {
-  .main-animation {
-    background-position: right 9rem top 11rem;
-    background-size: 350px 350px;
-    height: 700px;
-    margin-left: 2rem;
-  }
+.home-container section {
+  /*-----------------Feature area--------------------*/
 }
-@media only screen and (min-width: 1024px) {
-  .main-animation {
-    margin-left: 8rem;
-  }
-}
-
-/****************************************
-Home Page Style - Main area
-*/
-.main-area {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-image: url("http://localhost:8000/wp-content/uploads/2019/11/Group-203.png"), url("http://localhost:8000/wp-content/uploads/2019/10/bg-left.png");
+.home-container section#home-main {
+  position: relative;
+  overflow: hidden;
+  background-image: url("assets/images/home_bg_1.png"), url("assets/images/circle_white_bottom_left.png");
   background-repeat: no-repeat, no-repeat;
-  height: auto;
+  height: 650px;
   background-position: right 0 top 0, left 0 bottom 0;
   background-size: auto, 130px 150px;
+  display: block;
+  /*-----------------Animation plate--------------*/
+  /*-----------------Main area--------------------*/
+}
+.home-container section#home-main > .main-animation {
+  background-image: url("assets/images/home_dish_1.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 110px;
+  right: -5%;
+  display: block;
+  overflow: hidden;
+  background-size: 250px 250px;
+  height: 250px;
+  width: 250px;
+  padding-bottom: 3rem;
+}
+.home-container section#home-main > .main-area {
+  margin: 0;
+  padding: 30px;
   text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 280px;
+  z-index: 1;
+  display: block;
 }
-.main-area h1 {
-  padding-top: 18rem;
+.home-container section#home-main > .main-area > p.first {
+  padding-top: 20px;
 }
-.main-area p {
-  padding-top: 2rem;
+.home-container section#home-main > .main-area > p.last {
+  padding-bottom: 20px;
 }
-@media only screen and (min-width: 768px) {
-  .main-area {
-    background-image: url("http://localhost:8000/wp-content/uploads/2019/10/home-top-screen.png"), url("http://localhost:8000/wp-content/uploads/2019/10/bg-left.png");
-    height: 700px;
-    background-size: auto 700px, 200px 300px;
-    text-align: left;
-  }
-  .main-area h1 {
-    padding-top: 13rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .main-area {
-    background-size: auto 700px, 300px 400px;
-  }
-}
-
-/****************************************
-Home Page Style - Feature Area
-*/
-.post-area {
-  background-image: url("http://localhost:8000/wp-content/uploads/2019/10/bg-left-top.png");
+.home-container section#feature {
+  background-image: url("assets/images/circle_gray_top.png");
   background-repeat: no-repeat;
   background-position: left 0 top 0;
   background-size: 130px 150px;
   position: relative;
   text-align: center;
+  padding: 30px 30px 0;
 }
-.post-area h2 {
-  color: #EA0024;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
-}
-.post-area div {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.post-area .post-row {
-  margin-top: 2rem;
-}
-@media only screen and (min-width: 768px) {
-  .post-area {
-    background-size: 200px 300px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .post-area {
-    background-size: 300px 400px;
-  }
-}
-
-.bg-berry {
+.home-container section#feature > .home-sb-plate {
+  background-image: url("assets/images/home_strawberry_palte.png");
+  background-repeat: no-repeat;
   position: absolute;
-  top: -2rem;
-  right: 1rem;
-  z-index: 999;
-  width: 100px;
+  top: -4%;
+  right: 15px;
+  background-size: 100px 100px;
   height: 100px;
+  width: 100px;
 }
-@media only screen and (min-width: 768px) {
-  .bg-berry {
-    top: 10rem;
-  }
+.home-container section#feature > h2 {
+  color: #EA0024;
+  margin: 20px;
 }
-
-.bg-dish2 {
-  display: none;
-  position: absolute;
-  top: -9rem;
-  right: 0;
-  z-index: 1000;
-  height: 300px;
-  width: auto;
-}
-@media only screen and (min-width: 768px) {
-  .bg-dish2 {
-    display: inline-block;
-  }
-}
-
-@media only screen and (min-width: 786px) and (max-width: 1200px) {
-  .row {
-    min-height: 700px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
-  .row .col-2 {
-    grid-column: 1/2;
-    align-self: center;
-  }
-  .row .col-3 {
-    grid-column: 2/3;
-    align-self: center;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .row {
-    min-height: 700px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-  }
-  .row .col-1 {
-    grid-column: 1/2;
-    grid-row: 1/4;
-    background-image: url("http://localhost:8000/wp-content/uploads/2019/10/mobile-pic.png");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .row .col-2 {
-    grid-column: 2/3;
-    align-self: center;
-  }
-  .row .col-3 {
-    grid-column: 3/4;
-    align-self: center;
-  }
-}
-
-.post-row {
+.home-container section#feature article > .post-row {
   display: grid;
   grid-template-columns: repeat(1fr, 2fr);
   grid-template-rows: repeat(1fr, 2fr);
   justify-content: center;
   text-align: center;
+  margin-top: 50px;
 }
-.post-row .post-thumb {
+.home-container section#feature article > .post-row > .post-thumb {
   grid-column: 1/2;
   grid-row: 2/3;
   width: 80px;
@@ -1170,119 +1080,32 @@ Home Page Style - Feature Area
   margin-right: 1.5rem;
   margin-top: -2rem;
 }
-.post-row .entry-header {
+.home-container section#feature article > .post-row > .entry-header {
   grid-column: 2/3;
   grid-row: 1/2;
   text-align: left;
-  padding: 1rem;
 }
-.post-row .entry-content {
+.home-container section#feature article > .post-row > .entry-content {
   grid-column: 2/3;
   grid-row: 2/3;
   text-align: left;
+  padding-top: 10px;
 }
-
-.fqa-area {
-  position: relative;
+.home-container section#faq-area {
   text-align: center;
-}
-@media only screen and (min-width: 786px) {
-  .fqa-area {
-    text-align: left;
-  }
-}
-.fqa-area .bg-faq {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .fqa-area .bg-faq {
-    top: -2rem;
-    right: 0;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .fqa-area .bg-faq {
-    top: -5rem;
-    right: 0;
-  }
-}
-.fqa-area h2 {
-  display: inline-block;
-  margin-top: 3.5rem;
-  padding-bottom: 2rem;
-  font-size: 2rem;
-  vertical-align: middle;
-}
-@media only screen and (min-width: 786px) {
-  .fqa-area h2 {
-    margin-top: 8rem;
-    padding-left: 12rem;
-    font-size: 3rem;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .fqa-area h2 {
-    margin-top: 10rem;
-    padding-left: 14rem;
-  }
-}
-
-.ad-area {
-  background-image: url("http://localhost:8000/wp-content/uploads/2019/11/bg-ad-mob.png");
+  background-image: url("assets/images/home_fqa_bg.png");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: repeat(1fr, 2fr, 1fr);
-  margin-top: 2rem;
-  position: relative;
-  text-align: center;
+  overflow: hidden;
+  height: 200px;
+  padding: 0 30px;
 }
-@media only screen and (min-width: 786px) {
-  .ad-area {
-    background-image: url("http://localhost:8000/wp-content/uploads/2019/10/bg-adver.png");
-    margin-top: 7rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
+.home-container section#faq-area > .faq-box {
+  padding-top: 80px;
 }
-.ad-area .adv {
-  background-image: url("http://localhost:8000/wp-content/uploads/2019/11/ad-img.png");
-  background-repeat: no-repeat;
-  background-size: 20rem auto;
-  background-position: center;
-  grid-row: 2/3;
-  min-height: 300px;
-}
-@media only screen and (min-width: 786px) {
-  .ad-area .adv {
-    grid-column: 1/2;
-    grid-row: 1/3;
-    background-size: 80%;
-  }
-}
-.ad-area h2 {
-  margin-top: 1.5rem;
-}
-@media only screen and (min-width: 786px) {
-  .ad-area h2 {
-    grid-column: 2/3;
-    position: absolute;
-    top: 30%;
-  }
-}
-@media only screen and (min-width: 786px) {
-  .ad-area .ad-content {
-    display: inline;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    text-align: left;
-  }
+.home-container section#faq-area > .faq-box > a {
+  margin: 25px 0;
 }
 
 /*--------------------------------------------------------------
