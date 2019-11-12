@@ -2,7 +2,7 @@
 Animation on main page
 */
 .main-animation {
-    background-image: url("http://localhost:8000/wp-content/uploads/2019/10/Dish1.png");
+    background-image: url($host + "/wp-content/uploads/2019/10/Dish1.png");
     background-repeat: no-repeat;
     background-position: right -2rem top 5rem;
     background-size: 280px 280px;
@@ -30,7 +30,7 @@ Home Page Style - Main area
     width: 100%;
     margin: 0;
     padding: 0;
-    background-image: url("http://localhost:8000/wp-content/uploads/2019/11/Group-203.png"), url("http://localhost:8000/wp-content/uploads/2019/10/bg-left.png");
+    background-image: url($host + "/wp-content/uploads/2019/11/Group-203.png"), url($host + "/wp-content/uploads/2019/10/bg-left.png");
     background-repeat: no-repeat, no-repeat;
     height: auto;
     background-position: right 0 top 0, left 0 bottom 0;
@@ -47,7 +47,7 @@ Home Page Style - Main area
     }
 
     @media only screen and (min-width: 768px) {
-        background-image: url("http://localhost:8000/wp-content/uploads/2019/10/home-top-screen.png"), url("http://localhost:8000/wp-content/uploads/2019/10/bg-left.png");
+        background-image: url($host + "/wp-content/uploads/2019/10/home-top-screen.png"), url($host + "/wp-content/uploads/2019/10/bg-left.png");
         height: 700px;
         background-size: auto 700px, 200px 300px;
         text-align: left;
@@ -71,7 +71,7 @@ Home Page Style - Feature Area
 */
 
 .post-area {
-    background-image: url("http://localhost:8000/wp-content/uploads/2019/10/bg-left-top.png");
+    background-image: url($host + "/wp-content/uploads/2019/10/bg-left-top.png");
     background-repeat: no-repeat;
     background-position: left 0 top 0;
     background-size: 130px 150px;
@@ -164,7 +164,7 @@ Home Page Style - Feature Area
         .col-1 {
             grid-column: 1/2;
             grid-row: 1/4;
-            background-image: url("http://localhost:8000/wp-content/uploads/2019/10/mobile-pic.png");
+            background-image: url($host + "/wp-content/uploads/2019/10/mobile-pic.png");
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -284,7 +284,7 @@ Home Page Style - Feature Area
 
 // the Advertisement area on Home page
 .ad-area {
-    background-image: url("http://localhost:8000/wp-content/uploads/2019/11/bg-ad-mob.png");
+    background-image: url($host + "/wp-content/uploads/2019/11/bg-ad-mob.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
@@ -297,14 +297,14 @@ Home Page Style - Feature Area
     text-align: center;
 
     @media only screen and (min-width: 786px) {
-        background-image: url("http://localhost:8000/wp-content/uploads/2019/10/bg-adver.png");
+        background-image: url($host + "/wp-content/uploads/2019/10/bg-adver.png");
         margin-top: 7rem;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
     }
 
     .adv {
-        background-image: url("http://localhost:8000/wp-content/uploads/2019/11/ad-img.png");
+        background-image: url($host + "/wp-content/uploads/2019/11/ad-img.png");
         background-repeat: no-repeat;
         background-size: 20rem auto;
         background-position: center;
