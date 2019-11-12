@@ -2,6 +2,11 @@
 Font-size
 Based on https: //www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/
 --------------------------------------------------------------*/
+
+// General variables
+// Host prefix
+$host: "http://localhost:8000";
+
 // Mobile
 $font-size-base: 16px;
 $font-size-h1: 2rem;
