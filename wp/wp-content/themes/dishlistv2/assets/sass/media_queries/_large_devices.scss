@@ -1,0 +1,150 @@
+/*--------------------------------------------------------------
+Media Queries - large devices
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+larger than 1200px 
+--------------------------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+    body {
+
+        /*--------------------------------------------------------------
+        Main
+        --------------------------------------------------------------*/
+        >main {
+
+            /*--------------------------------------------------------------
+            Page FAQ
+            --------------------------------------------------------------*/
+            &.faq {
+                section {
+
+                    /* Popular Questions */
+                    &.faq-popular-questions {
+                        width: 1024px;
+                        margin: 0 auto;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: auto;
+                        background-position: right center;
+                        grid-gap: 20px;
+
+                        >h2 {
+                            grid-column: 1/4;
+                        }
+
+                        /* Format content using grid */
+                        >.faq-popular-questions-content {
+                            grid-column: 1/3;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: auto;
+                        }
+                    }
+
+                    &.faq-help-topics {
+                        background-size: 150px;
+
+                        >.strawberry-plate {
+                            width: 200px;
+                            height: 110px;
+                            top: -55px;
+                        }
+
+                        >.faq-help-topics-content {
+                            width: 1024px;
+                            margin: 0 auto;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-template-rows: auto;
+                            grid-gap: 20px;
+                        }
+                    }
+                }
+            }
+
+            /*--------------------------------------------------------------
+            Page FAQ - Single
+            --------------------------------------------------------------*/
+            &.faq-single {
+
+                /* Answer */
+                >article {
+                    width: 1024px;
+                    margin: 0 auto;
+                    grid-template-columns: 2fr 1fr;
+                    grid-template-rows: auto;
+                    background-position: right top;
+
+
+                    >h2,
+                    .faq-single-content {
+                        grid-column: 1/1;
+                    }
+
+                    .faq-single-content {
+                        min-height: 290px;
+                    }
+
+                    >.faq-single-img {
+                        background-position: right top;
+                    }
+
+                    >.faq-single-footer {
+                        padding: 30px 30px 30px 0;
+                    }
+
+                }
+            }
+        }
+
+        /*--------------------------------------------------------------
+        Footer
+        --------------------------------------------------------------*/
+        >footer {
+            &.footer {
+
+                /* Footer CTA */
+                >.footer-cta {
+                    background-position: 0px -830px;
+                    background-size: cover;
+
+                    >.footer-cta-container {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr 1fr;
+                        width: 1024px;
+                        margin: 0 auto;
+                        padding: 0 30px;
+
+                        >h2 {
+                            padding: 120px 0 0 0;
+                            text-align: left;
+                        }
+
+                        >div.footer-cta-img {
+                            grid-row: 1/3;
+                            text-align: center;
+                        }
+
+                        >div.footer-cta-btns {
+                            text-align: left;
+                        }
+                    }
+                }
+
+                /* Footer Social Media Links */
+                >.footer-social-links-menu {
+                    ul {
+                        margin-top: 30px;
+
+                        li {
+                            >a {
+                                margin: 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,61 @@
+/*--------------------------------------------------------------
+Page Our Team
+--------------------------------------------------------------*/
+.our-team-users {
+  >.our-team-users-container {
+    .user-box {
+      padding: 0 30px 30px;
+      display: flex;
+      flex-direction: column;
+
+      >.user-box-photo {
+        width: 250px;
+        height: 250px;
+        border: 1px solid $font-black;
+        text-align: center;
+        background: url("assets/images/our-team-photo-bg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding-top: 40px;
+        margin: 0 auto 40px;
+        flex-shrink: 0;
+
+        >img {
+          max-width: 120px;
+          max-height: 120px;
+          border-radius: 50%;
+          border: 3px solid $font-black;
+        }
+      }
+
+      >.user-box-description {
+        position: relative;
+        border: 1px solid $font-black;
+        background-color: $secondary-color;
+        padding-top: 40px;
+
+        >img {
+          position: absolute;
+          max-width: 57px;
+          max-height: 57px;
+          top: 10px;
+          left: 20px;
+        }
+
+        >p {
+          padding: 30px;
+          background-color: $font-white;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
 /*
  * Mobile configuration
  */
@@ -32,7 +90,7 @@
 
       .photo-frame {
         position: absolute;
-        background: url($host+"/wp-content/uploads/2019/11/userframe.png");
+        background: url("/wp-content/uploads/2019/11/userframe.png");
         background-size: cover;
         width: 230px;
         height: 230px;
@@ -75,6 +133,7 @@
       border: 2px solid $secondary-color;
       border-top: 50px solid $secondary-color;
       margin-bottom: 30px;
+
       .user-food {
         position: absolute;
         top: -24px;
@@ -92,19 +151,73 @@
 /*--------------------------------------------------------------
 larger than 768 px (small devices, tablets)
 --------------------------------------------------------------*/
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-}
+@media only screen and (min-width: 768px) and (max-width: 992px) {}
 
 /*--------------------------------------------------------------
 larger than 992 px (medium devices)
 --------------------------------------------------------------*/
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
 
 /*--------------------------------------------------------------
 larger than 1200px (large devices)
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
+  .our-team-users {
+    width: 1024px;
+    margin: 0 auto;
+
+    >.our-team-users-container {
+      .user-box {
+        &:nth-child(odd) {
+          flex-direction: row;
+
+          >.user-box-photo {
+            margin-right: 30px;
+          }
+
+          >.user-box-description {
+            padding: 0 0 0 40px;
+
+            >img {
+              left: 15px;
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+
+          >.user-box-photo {
+            margin-left: 30px;
+          }
+
+          >.user-box-description {
+            padding: 0 40px 0 0;
+
+            >img {
+              right: 15px;
+            }
+          }
+        }
+
+        >.user-box-photo {
+          margin: 0;
+        }
+
+        >.user-box-description {
+          >img {
+            top: auto;
+            left: auto;
+            bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
   .our-team {
     width: 1024px;
     margin: 0 auto;
@@ -135,12 +248,14 @@ larger than 1200px (large devices)
         height: 230px;
         flex-shrink: 0;
       }
+
       .user-description {
         display: flex;
         align-items: center;
         margin: 0;
         border: 2px solid $secondary-color;
         border-left: 50px solid $secondary-color;
+
         .user-food {
           position: absolute;
           bottom: 16px;
@@ -148,6 +263,7 @@ larger than 1200px (large devices)
           left: -28px;
           top: unset;
         }
+
         .user-description-text {
           margin: auto 45px;
         }

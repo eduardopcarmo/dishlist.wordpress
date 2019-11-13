@@ -187,6 +187,15 @@ input[type="submit"] {
     }
 }
 
+/**/
+.badge {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: $primary-color;
+    padding: 5px 10px;
+    color: $font-white;
+}
+
 /* Remove WP Block Separator class */
 .wp-block-separator {
     display: none;

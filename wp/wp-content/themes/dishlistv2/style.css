@@ -33,6 +33,10 @@ Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
     5.3 About Us
     5.3 FAQ
     5.4 Our Team
+6.0 Media Queries
+    6.1 Small Devices, Tablets
+    6.2 Medium Devices
+    6.3 Large Devices
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 0.0 Sass Variables
@@ -682,7 +686,7 @@ Header
   height: 50px;
   font-size: 80%;
   text-transform: uppercase;
-  background-image: url("http://localhost:8000/wp-content/uploads/2019/10/menu-icon-1.png");
+  background-image: url(assets/images/menu-icon.png);
   background-size: cover;
   /* <------ */
   background-repeat: no-repeat;
@@ -698,6 +702,14 @@ Header
 /*--------------------------------------------------------------
 Footer
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Main - Footer
+--------------------------------------------------------------*/
+footer.footer {
+  /* Footer CTA */
+  /* Footer Social Media Links */
+  /* Footer Copyright */
+}
 footer.footer > .footer-cta {
   background-image: url("assets/images/get_the_app_bg_1.jpg");
   background-position: -280px -150px;
@@ -745,46 +757,6 @@ footer.footer > .footer-copyright {
   text-align: center;
 }
 
-/*--------------------------------------------------------------
-larger than 768 px (small devices, tablets)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-larger than 992 px (medium devices)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-larger than 1200px (large devices)
---------------------------------------------------------------*/
-@media only screen and (min-width: 1200px) {
-  body > footer.footer > .footer-cta {
-    background-position: 0px -830px;
-    background-size: cover;
-  }
-  body > footer.footer > .footer-cta > .footer-cta-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 1024px;
-    margin: 0 auto;
-    padding: 0 30px;
-  }
-  body > footer.footer > .footer-cta > .footer-cta-container > h2 {
-    padding: 120px 0 0 0;
-    text-align: left;
-  }
-  body > footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-img {
-    grid-row: 1/3;
-    text-align: center;
-  }
-  body > footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-btns {
-    text-align: left;
-  }
-  body > footer.footer > .footer-social-links-menu ul {
-    margin-top: 30px;
-  }
-  body > footer.footer > .footer-social-links-menu ul li > a {
-    margin: 0 10px;
-  }
-}
 /*--------------------------------------------------------------
 Main
 --------------------------------------------------------------*/
@@ -965,6 +937,15 @@ input[type=submit]:active {
 .box > img {
   float: left;
   margin-right: 10px;
+}
+
+/**/
+.badge {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #EA0024;
+  padding: 5px 10px;
+  color: #fff;
 }
 
 /* Remove WP Block Separator class */
@@ -1285,6 +1266,10 @@ larger than 1200px (large devices)
 /*--------------------------------------------------------------
 Page FAQ
 --------------------------------------------------------------*/
+.faq section {
+  /* Popular Questions */
+  /* All Questions */
+}
 .faq section.faq-popular-questions {
   display: grid;
   grid-template-columns: 1fr;
@@ -1324,11 +1309,20 @@ Page FAQ
   padding-bottom: 10px;
 }
 
+/*--------------------------------------------------------------
+Page FAQ - Single
+--------------------------------------------------------------*/
+.faq-single {
+  /* Answer */
+}
 .faq-single article {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 290px auto;
   padding: 30px;
+  /* Answer - Content */
+  /* Answer - Image Left */
+  /* Answer - Footer + Back Button */
 }
 .faq-single article > h2 {
   margin-bottom: 20px;
@@ -1362,72 +1356,53 @@ Page FAQ
 }
 
 /*--------------------------------------------------------------
-larger than 768 px (small devices, tablets)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-larger than 992 px (medium devices)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-larger than 1200px (large devices)
---------------------------------------------------------------*/
-@media only screen and (min-width: 1200px) {
-  body > main.faq section.faq-popular-questions {
-    width: 1024px;
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    background-position: right center;
-    grid-gap: 20px;
-  }
-  body > main.faq section.faq-popular-questions > h2 {
-    grid-column: 1/4;
-  }
-  body > main.faq section.faq-popular-questions > .faq-popular-questions-content {
-    grid-column: 1/3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-  body > main.faq section.faq-help-topics {
-    background-size: 150px;
-  }
-  body > main.faq section.faq-help-topics > .strawberry-plate {
-    width: 200px;
-    height: 110px;
-    top: -55px;
-  }
-  body > main.faq section.faq-help-topics > .faq-help-topics-content {
-    width: 1024px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 20px;
-  }
-  body > main.faq-single > article {
-    width: 1024px;
-    margin: 0 auto;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-    background-position: right top;
-  }
-  body > main.faq-single > article > h2,
-body > main.faq-single > article .faq-single-content {
-    grid-column: 1/1;
-  }
-  body > main.faq-single > article .faq-single-content {
-    min-height: 290px;
-  }
-  body > main.faq-single > article > .faq-single-img {
-    background-position: right top;
-  }
-  body > main.faq-single > article > .faq-single-footer {
-    padding: 30px 30px 30px 0;
-  }
-}
-/*--------------------------------------------------------------
 5.4 OUR TEAM
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Page Our Team
+--------------------------------------------------------------*/
+.our-team-users > .our-team-users-container .user-box {
+  padding: 0 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.our-team-users > .our-team-users-container .user-box > .user-box-photo {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #000;
+  text-align: center;
+  background: url("assets/images/our-team-photo-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 40px;
+  margin: 0 auto 40px;
+  flex-shrink: 0;
+}
+.our-team-users > .our-team-users-container .user-box > .user-box-photo > img {
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 50%;
+  border: 3px solid #000;
+}
+.our-team-users > .our-team-users-container .user-box > .user-box-description {
+  position: relative;
+  border: 1px solid #000;
+  background-color: #ADADAD;
+  padding-top: 40px;
+}
+.our-team-users > .our-team-users-container .user-box > .user-box-description > img {
+  position: absolute;
+  max-width: 57px;
+  max-height: 57px;
+  top: 10px;
+  left: 20px;
+}
+.our-team-users > .our-team-users-container .user-box > .user-box-description > p {
+  padding: 30px;
+  background-color: #fff;
+  height: 100%;
+}
+
 /*
  * Mobile configuration
  */
@@ -1457,7 +1432,7 @@ body > main.faq-single > article .faq-single-content {
 }
 .our-team .user-container .photo-container .photo-frame {
   position: absolute;
-  background: url("http://localhost:8000/wp-content/uploads/2019/11/userframe.png");
+  background: url("/wp-content/uploads/2019/11/userframe.png");
   background-size: cover;
   width: 230px;
   height: 230px;
@@ -1516,6 +1491,43 @@ larger than 992 px (medium devices)
 larger than 1200px (large devices)
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
+  .our-team-users {
+    width: 1024px;
+    margin: 0 auto;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(odd) {
+    flex-direction: row;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-photo {
+    margin-right: 30px;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-description {
+    padding: 0 0 0 40px;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-description > img {
+    left: 15px;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-photo {
+    margin-left: 30px;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-description {
+    padding: 0 40px 0 0;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-description > img {
+    right: 15px;
+  }
+  .our-team-users > .our-team-users-container .user-box > .user-box-photo {
+    margin: 0;
+  }
+  .our-team-users > .our-team-users-container .user-box > .user-box-description > img {
+    top: auto;
+    left: auto;
+    bottom: 10px;
+  }
+
   .our-team {
     width: 1024px;
     margin: 0 auto;
@@ -1558,6 +1570,147 @@ larger than 1200px (large devices)
   }
   .our-team .user-container .user-description .user-description-text {
     margin: auto 45px;
+  }
+}
+/*--------------------------------------------------------------
+6.0 Media Queries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+6.1 Small Devices, Tablets 
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Media Queries - small devices, tablets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+larger than 768 px
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+6.2 Medium Devices 
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Media Queries - medium devices
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+larger than 992 px
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+6.3 Large Devices
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+Media Queries - large devices
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+larger than 1200px 
+--------------------------------------------------------------*/
+@media only screen and (min-width: 1200px) {
+  body {
+    /*--------------------------------------------------------------
+    Main
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    Footer
+    --------------------------------------------------------------*/
+  }
+  body > main {
+    /*--------------------------------------------------------------
+    Page FAQ
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    Page FAQ - Single
+    --------------------------------------------------------------*/
+  }
+  body > main.faq section {
+    /* Popular Questions */
+  }
+  body > main.faq section.faq-popular-questions {
+    width: 1024px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    background-position: right center;
+    grid-gap: 20px;
+    /* Format content using grid */
+  }
+  body > main.faq section.faq-popular-questions > h2 {
+    grid-column: 1/4;
+  }
+  body > main.faq section.faq-popular-questions > .faq-popular-questions-content {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  body > main.faq section.faq-help-topics {
+    background-size: 150px;
+  }
+  body > main.faq section.faq-help-topics > .strawberry-plate {
+    width: 200px;
+    height: 110px;
+    top: -55px;
+  }
+  body > main.faq section.faq-help-topics > .faq-help-topics-content {
+    width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+  body > main.faq-single {
+    /* Answer */
+  }
+  body > main.faq-single > article {
+    width: 1024px;
+    margin: 0 auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    background-position: right top;
+  }
+  body > main.faq-single > article > h2,
+body > main.faq-single > article .faq-single-content {
+    grid-column: 1/1;
+  }
+  body > main.faq-single > article .faq-single-content {
+    min-height: 290px;
+  }
+  body > main.faq-single > article > .faq-single-img {
+    background-position: right top;
+  }
+  body > main.faq-single > article > .faq-single-footer {
+    padding: 30px 30px 30px 0;
+  }
+  body > footer.footer {
+    /* Footer CTA */
+    /* Footer Social Media Links */
+  }
+  body > footer.footer > .footer-cta {
+    background-position: 0px -830px;
+    background-size: cover;
+  }
+  body > footer.footer > .footer-cta > .footer-cta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 1024px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  body > footer.footer > .footer-cta > .footer-cta-container > h2 {
+    padding: 120px 0 0 0;
+    text-align: left;
+  }
+  body > footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-img {
+    grid-row: 1/3;
+    text-align: center;
+  }
+  body > footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-btns {
+    text-align: left;
+  }
+  body > footer.footer > .footer-social-links-menu ul {
+    margin-top: 30px;
+  }
+  body > footer.footer > .footer-social-links-menu ul li > a {
+    margin: 0 10px;
   }
 }
 
