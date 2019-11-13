@@ -2,26 +2,26 @@
 get_header();?>
 	<main id="main" class="home-container">
         <section id="home-main">
-            <span class="main-animation"></span>
-            <div class="main-area">
-                <h1>Digital Menu</h1>
-                <p class="first">
-                    Lorem Ipsum is simply dummy text of the 
-                    printing and typesetting industry.
-                </p>
-                <p class="last">
-                    Lorem Ipsum is simply dummy text of the 
-                    printing and typesetting industry.
-                </p>
-                <button class="btn btn-primary ">App Store</button>
-                <button class="btn btn-primary ">Android</button>
+            <div class="home-main-container">
+                <span class="main-dish-1"></span>
+                <span class="main-dish-2"></span>
+                <span class="main-dish-3"></span>
+                <div class="main-area">
+                    <h1>Digital Menu</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the 
+                        printing and typesetting industry.
+                    </p>                
+                    <a class="btn btn-primary" href="https://play.google.com/store/" target="_blank">Android</a>
+                    <a class="btn btn-primary" href="https://www.apple.com/ios/app-store/" target="_blank">Appstore</a>
+                </div>
             </div>
+            <div class="home-main-container-null"></div>
         </section><!-- #home-main section -->
         <!-- #Feature Posts -->
         <section id="feature">
             <span class="home-sb-plate"></span>
-            <span class="home-dish-plate"></span>
-            <h2>Features</h2>
+            <h1 class="title">Features</h1>
             <?php
                 $args = array(
                     'post_type' => 'post',
@@ -71,16 +71,15 @@ get_header();?>
                         echo '</div>'; // close poat-area-row tag
                     endif;?>
 
-                    <!-- The FQA Link -->
-            <section id="faq-area">
-                <div class="faq-box">
-                    <h2>Do you have any question?</h2>
-                    <a class="btn btn-primary ">Go to FAQ</a>
-                </div> 
-            </section><!--#faq-area section-->
-            <span class="faq-area-bg"></span> 
+                    
         </section><!-- #feature section -->     
-
+        <!-- The FQA Link -->
+        <section id="faq-area">
+            <div class="faq-box">
+                <h2>Do you have any question?</h2>
+                <a class="btn btn-primary ">Go to FAQ</a>
+            </div> 
+        </section><!--#faq-area section-->
 	</main>
 <?php
 get_footer();

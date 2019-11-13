@@ -9,13 +9,15 @@
 ?>
     <footer class="footer">
         <div class="footer-cta">
-            <h2>Get the App Now!</h2>
-            <div class="footer-cta-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/get_the_app_bg_2.png" width="352" height="295" alt="" />
-            </div>
-            <div class="footer-cta-btns">
-                <a class="btn btn-primary" href="https://play.google.com/store/" target="_blank">Android</a>
-                <a class="btn btn-primary" href="https://www.apple.com/ios/app-store/" target="_blank">Appstore</a>
+            <div class="footer-cta-container">
+                <h2>Get the App Now!</h2>
+                <div class="footer-cta-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/get_the_app_bg_2.png" width="352" height="295" alt="" />
+                </div>
+                <div class="footer-cta-btns">
+                    <a class="btn btn-primary" href="https://play.google.com/store/" target="_blank">Android</a>
+                    <a class="btn btn-primary" href="https://www.apple.com/ios/app-store/" target="_blank">Appstore</a>
+                </div>
             </div>
         </div>
         <?php 

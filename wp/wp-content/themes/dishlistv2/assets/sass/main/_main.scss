@@ -56,6 +56,7 @@ input[type="submit"] {
     margin: 10px 0;
     /* softens or eases the motion - makes it smoother */
     transition: all 0.5s;
+    text-align: center;
 
     /* Remove the default "highlight"*/
     outline: none;
@@ -184,6 +185,11 @@ input[type="submit"] {
         float: left;
         margin-right: 10px;
     }
+}
+
+/* Remove WP Block Separator class */
+.wp-block-separator {
+    display: none;
 }
 
 /* Primary Container */
