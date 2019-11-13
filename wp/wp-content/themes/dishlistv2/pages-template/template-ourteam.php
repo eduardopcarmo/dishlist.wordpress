@@ -1,5 +1,22 @@
 <?php /* Template Name: Our Team */?>
 
+<?php
+   // Marcos
+   update_user_meta( 2, 'user_photo', '/wp-content/uploads/2019/11/Marcos_Cavalcanti.jpg');
+   // Eduardo
+   update_user_meta( 3, 'user_photo', '/wp-content/uploads/2019/11/Eduardo_Pereira_do_Carmo.jpg');
+   // Heloysa
+   update_user_meta( 4, 'user_photo', '/wp-content/uploads/2019/11/Heloysa_B_T_Guerreiro.jpg');
+   // Walter
+   update_user_meta( 5, 'user_photo', '/wp-content/uploads/2019/11/Walter_Barros_G_Neto.jpg');
+   // Jyot
+   update_user_meta( 6, 'user_photo', '/wp-content/uploads/2019/11/Jyot_Sarup_Kaur.jpg');
+   // Nazi
+   update_user_meta( 7, 'user_photo', '/wp-content/uploads/2019/11/Zeinab_Ahmadi.jpg');
+   // Harry
+   update_user_meta( 8, 'user_photo', '/wp-content/uploads/2019/11/Tung_Duong_Tran.jpg');
+?>
+
 <?php get_header(); ?>
 
 

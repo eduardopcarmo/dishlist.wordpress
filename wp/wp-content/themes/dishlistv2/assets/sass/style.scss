@@ -29,15 +29,15 @@ Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
 3.0 Typography
 4.0 Generic (Main)
 5.0 Pages
-    5.1 Front-Page
+    5.1 Front-Page (Home)
     5.2 Contact Page
     5.3 About Us
     5.3 FAQ
     5.4 Our Team
 6.0 Media Queries
-    6.1 Small Devices, Tablets
-    6.2 Medium Devices
-    6.3 Large Devices
+    6.1 Small Devices, Tablets (larger than 768 px)
+    6.2 Medium Devices (larger than 992 px)
+    6.3 large devices (larger than 1200px)
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -102,16 +102,16 @@ Styles based on Typography @link https://medium.com/@elad/normalize-css-or-css-r
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-6.1 Small Devices, Tablets 
+6.1 Small Devices, Tablets (larger than 768 px)
 --------------------------------------------------------------*/
 @import "media_queries/_small_devices_tablets.scss";
 
 /*--------------------------------------------------------------
-6.2 Medium Devices 
+6.2 Medium Devices (larger than 992 px)
 --------------------------------------------------------------*/
 @import "media_queries/_medium_devices.scss";
 
 /*--------------------------------------------------------------
-6.3 Large Devices
+6.3 large devices (larger than 1200px)
 --------------------------------------------------------------*/
 @import "media_queries/_large_devices.scss";

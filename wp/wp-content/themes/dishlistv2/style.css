@@ -28,15 +28,15 @@ Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
 3.0 Typography
 4.0 Generic (Main)
 5.0 Pages
-    5.1 Front-Page
+    5.1 Front-Page (Home)
     5.2 Contact Page
     5.3 About Us
     5.3 FAQ
     5.4 Our Team
 6.0 Media Queries
-    6.1 Small Devices, Tablets
-    6.2 Medium Devices
-    6.3 Large Devices
+    6.1 Small Devices, Tablets (larger than 768 px)
+    6.2 Medium Devices (larger than 992 px)
+    6.3 large devices (larger than 1200px)
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 0.0 Sass Variables
@@ -1442,6 +1442,7 @@ Page Our Team
   width: auto;
   height: 100px;
   transform: translate(65%, 26%);
+  position: relative;
   z-index: -2;
 }
 .our-team .user-container .photo-container .username-badge {
@@ -1576,31 +1577,22 @@ larger than 1200px (large devices)
 6.0 Media Queries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-6.1 Small Devices, Tablets 
+6.1 Small Devices, Tablets (larger than 768 px)
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-Media Queries - small devices, tablets
+Media Queries - small devices, tablets (larger than 768 px)
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-larger than 768 px
+6.2 Medium Devices (larger than 992 px)
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-6.2 Medium Devices 
+Media Queries - medium devices (larger than 992 px)
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-Media Queries - medium devices
+6.3 large devices (larger than 1200px)
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-larger than 992 px
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-6.3 Large Devices
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-Media Queries - large devices
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-larger than 1200px 
+Media Queries - large devices (larger than 1200px)
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
   body {
