@@ -1091,6 +1091,11 @@ Page Home
   height: 80px;
   margin-right: 1.5rem;
   margin-top: -2rem;
+  text-align: center;
+}
+.home-container section#feature article > .post-row > .post-thumb > img {
+  max-width: 80px;
+  max-height: 80px;
 }
 .home-container section#feature article > .post-row > .entry-header {
   grid-column: 2/3;
@@ -1318,10 +1323,11 @@ Page FAQ - Single
 .faq-single article {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 290px auto;
+  grid-template-rows: auto auto auto auto;
   padding: 30px;
   /* Answer - Content */
   /* Answer - Image Left */
+  /* Feature - Phone */
   /* Answer - Footer + Back Button */
 }
 .faq-single article > h2 {
@@ -1343,7 +1349,43 @@ Page FAQ - Single
   background-image: url("assets/images/faq_solution.png");
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: 220px;
+  background-size: contain;
+  height: 300px;
+}
+.faq-single article > .feature-phone-img {
+  height: 450px;
+  width: 100%;
+  position: relative;
+}
+.faq-single article > .feature-phone-img > .feature-phone-turnoff,
+.faq-single article > .feature-phone-img > .feature-phone-open,
+.faq-single article > .feature-phone-img > .feature-phone-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.faq-single article > .feature-phone-img > .feature-phone-turnoff {
+  background-image: url("assets/images/feature_phone_turnoff.png");
+  background-size: 210px;
+  z-index: 2;
+}
+.faq-single article > .feature-phone-img > .feature-phone-open {
+  background-image: url("assets/images/feature_phone_main_page.png");
+  background-size: 210px;
+  z-index: 4;
+  animation-name: feature-phone-open-grow;
+  animation-duration: 2.2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+.faq-single article > .feature-phone-img > .feature-phone-border {
+  background-image: url("assets/images/feature_phone_border.png");
+  background-size: 218px;
+  z-index: 6;
 }
 .faq-single article > .faq-single-footer {
   padding: 30px;
@@ -1355,6 +1397,21 @@ Page FAQ - Single
   text-align: center;
 }
 
+/* Feature - Phone - Animation */
+@keyframes feature-phone-open-grow {
+  0% {
+    top: 50%;
+    left: 50%;
+    height: 0%;
+    width: 0%;
+  }
+  100% {
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+  }
+}
 /*--------------------------------------------------------------
 5.4 OUR TEAM
 --------------------------------------------------------------*/

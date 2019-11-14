@@ -113,6 +113,12 @@ Page Home
                         height: 80px;
                         margin-right: 1.5rem;
                         margin-top: -2rem;
+                        text-align: center;
+
+                        >img {
+                            max-width: 80px;
+                            max-height: 80px;
+                        }
                     }
 
                     >.entry-header {

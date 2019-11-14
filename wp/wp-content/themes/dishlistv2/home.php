@@ -46,21 +46,23 @@ get_header();?>
                                 // Choose the post class based on what number post we are 
                                 echo '<div class="'.$postClass.'">';?>
                                 <article id="post-<?php the_ID(); ?>" class="postshow" <?php post_class(); ?>>
-                                <?php
-                                    if ( has_post_thumbnail() ) :?>
-                                        <div class="post-row">
+                                    <div class="post-row">
+                                        <div class="post-thumb">
                                         <?php
-                                            echo '<div class="post-thumb">';
-                                            the_post_thumbnail();
-                                            echo '</div>';
-                                    endif;?>
-                                            <header class="entry-header">
+                                            if ( has_post_thumbnail() ) {
+                                                ?>
+                                                <img  src="<?= get_the_post_thumbnail_url(); ?>" alt="<?= the_title(); ?>">
+                                                <?php
+                                            }
+                                        ?>
+                                        </div>
+                                        <header class="entry-header">
                                             <h3 class="entry-title"><?php the_title(); ?></h3>
-                                            </header>
-                                            <div class="entry-content">
+                                        </header>
+                                        <div class="entry-content">
                                             <?php the_excerpt(); ?>
-                                            </div>
-                                        </div><!-- post-row -->
+                                        </div>
+                                    </div><!-- post-row -->
                                 </article>
                                 <?php
                                     echo "</div>";
