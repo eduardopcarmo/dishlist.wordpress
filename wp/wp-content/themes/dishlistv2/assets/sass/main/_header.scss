@@ -1,137 +1,106 @@
-/* Logo and Title
-   ========================================================================== */
-.site-header {
-    position: relative;
-    padding-top: 1rem;
-    padding-bottom: .1rem;
-    box-shadow: -1px 4px 19px -1px rgba(0, 0, 0, 0.11);
+/*--------------------------------------------------------------
+>>> HEADER
+----------------------------------------------------------------
+Author: Zeinab Ahmadi
+Date: 2019-11-14
+Description: Main Header of our Template
+----------------------------------------------------------------
 
-    h1 {
-        font-size: 2rem;
-    }
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Zeinab Ahmadi (2019-11-14)
+File created and set style for header
+----------------------------------------------------------------
 
-    @media only screen and (min-width: 768px) {
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Logo and Title
+2.0 Navigation
+--------------------------------------------------------------*/
 
-        h1 {
-            font-size: 3rem;
-        }
-    }
+header {
+    &.site-header {
+        position: relative;
+        padding-top: 1rem;
+        padding-bottom: .1rem;
+        box-shadow: -1px 4px 19px -1px rgba(0, 0, 0, 0.11);
 
-}
-
-.site-branding {
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-}
-
-.custom-logo-link {
-    margin-right: 1rem;
-
-    img {
-        display: block;
-        height: 42px;
-        width: auto;
-
-        @media only screen and (min-width: 768px) {
-            height: 80px;
-            width: auto;
-        }
-    }
-}
-
-.site-title-clr {
-    //first word of title style
-    color: $primary-color;
-}
-
-/* Menu
-   ========================================================================== */
-.main-navigation {
-
-    align-self: center;
-
-    ul {
-        margin-top: 1rem;
-    }
-
-    .menu-item {
-        display: none;
-        text-align: center;
-        margin-top: .1rem;
-        padding: .7rem;
-        background-color: $tertiary-bg-color;
-        color: white;
-        border: 1px solid $tertiary-bg-color;
-        border-radius: 2px;
-
-
-    }
-
-    .menu-item:hover {
-        background-color: white;
-        color: $tertiary-color;
-        box-shadow: inset -1px 4px 19px -1px rgba(0, 0, 0, 0.2);
-
-        @media only screen and (min-width: 768px) {
-            background-color: white;
-            color: $primary-color;
-            box-shadow: none;
-            text-decoration: underlin;
-        }
-    }
-
-
-    @media only screen and (min-width: 768px) {
-
-
-        ul {
+        /*--------------------------------------------------------------
+        1.0 Logo and Title
+        --------------------------------------------------------------*/
+        >.site-branding {
             display: flex;
+            align-items: center;
+            padding: 0 1rem;
 
-            .menu-item {
-                display: inline-block;
-                padding-left: 1rem;
-                background-color: white;
-                color: $tertiary-color;
-                border: none;
+            >.custom-logo-link {
+                margin-right: 1rem;
+
+                >img {
+                    display: block;
+                    height: 42px;
+                    width: auto;
+                }
+            }
+
+            h1 {
+                font-size: 2rem;
+
+                .site-title-clr {
+                    color: $primary-color;
+                }
             }
         }
 
+        /*--------------------------------------------------------------
+        2.0 Navigation
+        --------------------------------------------------------------*/
 
-    }
-}
+        >.main-navigation {
 
-.menu-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    margin: 1rem 1.2rem 0 0;
-    padding: .6rem .8rem;
-    width: 50px;
-    height: 50px;
-    font-size: 80%;
-    text-transform: uppercase;
+            align-self: center;
 
-    // border: 1px solid hsla(354, 11%, 18%, 0.2);
-    // border-radius: 5px;
-    background-image: url(assets/images/menu-icon.png);
-    background-size: cover;
-    /* <------ */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: white;
+            ul {
+                margin-top: 1rem;
+            }
 
-    // transition: all 0.5s;
-    // box-shadow: 0 4px 10px rgba(173, 173, 173, 0.2);
-    // &:hover {
-    //     transform: translateY(-4px);
-    // }
+            .menu-item {
+                display: none;
+                text-align: center;
+                margin-top: .1rem;
+                padding: .7rem;
+                background-color: $tertiary-bg-color;
+                color: $font-white;
+                border: 1px solid $tertiary-bg-color;
+                border-radius: 2px;
+            }
 
-    @media only screen and (min-width: 768px) {
-        display: none;
+            .menu-item:hover {
+                background-color: $font-white;
+                color: $tertiary-color;
+                box-shadow: inset -1px 4px 19px -1px rgba(0, 0, 0, 0.2);
+            }
+
+            .menu-toggle {
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                margin: 1rem 1.2rem 0 0;
+                padding: .6rem .8rem;
+                width: 50px;
+                height: 50px;
+                font-size: 80%;
+                text-transform: uppercase;
+
+                background-image: url(assets/images/menu-icon.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-color: $font-white;
+            }
+        }
     }
 }
