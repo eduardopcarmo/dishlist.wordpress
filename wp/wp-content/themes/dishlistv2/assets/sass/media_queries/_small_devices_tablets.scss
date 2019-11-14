@@ -1,19 +1,54 @@
 /*--------------------------------------------------------------
-Media Queries - small devices, tablets (larger than 768 px)
---------------------------------------------------------------*/
+>>>Media Queries - small devices, tablets (larger than 768 px)
+----------------------------------------------------------------
+Author: Eduardo Pereira do Carmo
+Date: 2019-11-14
+Description: Media Queries for small devices and tablets
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-11-14)
+File created and set the size of the device
+
+- Eduardo Pereira do Carmo (2019-11-14) 
+Add Generic (Main) media queries
+----------------------------------------------------------------
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-0.0 Generic (All pages can use)
-    0.1 Header
-    0.2 Footer
-1.0 Home
-2.0 FAQ
-    2.1 List Page
-    2.2 Single Page
-3.0 Our Team
-4.0 Contact Us
+0.0 Generic (All pages)
+    0.1 Footer 
+        0.1.1 Footer CTA 
+        0.1.2 Footer Social Media Links
 --------------------------------------------------------------*/
 //and (max-width: 992px)
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+    /*--------------------------------------------------------------
+    0.0 Generic (All pages)
+        0.1 Footer 
+            0.1.1 Footer CTA 
+    --------------------------------------------------------------*/
+
+    /*--------------------------------------------------------------
+    0.1 Footer
+    --------------------------------------------------------------*/
+    footer {
+        &.footer {
+
+            /*--------------------------------------------------------------
+        0.1.1 Footer CTA
+        --------------------------------------------------------------*/
+            >.footer-cta {
+                >.footer-cta-container {
+                    >div.footer-cta-img {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -22,6 +22,8 @@ File created and set style for footer
 --------------------------------------------------------------*/
 
 footer {
+    overflow: hidden;
+
     &.footer {
 
         /*--------------------------------------------------------------
@@ -29,8 +31,7 @@ footer {
         --------------------------------------------------------------*/
         >.footer-cta {
             background-image: url("assets/images/get_the_app_bg_1.jpg");
-            background-position: -280px -150px;
-            background-size: 810px;
+            background-size: cover;
             background-repeat: no-repeat;
             padding: 30px;
 

@@ -729,6 +729,9 @@ File created and set style for footer
 2.0 Footer Social Media Links
 3.0 Footer Copyright
 --------------------------------------------------------------*/
+footer {
+  overflow: hidden;
+}
 footer.footer {
   /*--------------------------------------------------------------
   1.0 Footer CTA
@@ -742,8 +745,7 @@ footer.footer {
 }
 footer.footer > .footer-cta {
   background-image: url("assets/images/get_the_app_bg_1.jpg");
-  background-position: -280px -150px;
-  background-size: 810px;
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 30px;
 }
@@ -1480,21 +1482,49 @@ larger than 1200px (large devices)
 6.1 Small Devices, Tablets (larger than 768 px)
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-Media Queries - small devices, tablets (larger than 768 px)
---------------------------------------------------------------*/
+>>>Media Queries - small devices, tablets (larger than 768 px)
+----------------------------------------------------------------
+Author: Eduardo Pereira do Carmo
+Date: 2019-11-14
+Description: Media Queries for small devices and tablets
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-11-14)
+File created and set the size of the device
+
+- Eduardo Pereira do Carmo (2019-11-14) 
+Add Generic (Main) media queries
+----------------------------------------------------------------
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-0.0 Generic (All pages can use)
-    0.1 Header
-    0.2 Footer
-1.0 Home
-2.0 FAQ
-    2.1 List Page
-    2.2 Single Page
-3.0 Our Team
-4.0 Contact Us
+0.0 Generic (All pages)
+    0.1 Footer 
+        0.1.1 Footer CTA 
+        0.1.2 Footer Social Media Links
 --------------------------------------------------------------*/
+@media only screen and (min-width: 768px) {
+  /*--------------------------------------------------------------
+  0.0 Generic (All pages)
+      0.1 Footer 
+          0.1.1 Footer CTA 
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  0.1 Footer
+  --------------------------------------------------------------*/
+  footer.footer {
+    /*--------------------------------------------------------------
+    0.1.1 Footer CTA
+    --------------------------------------------------------------*/
+  }
+  footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-img {
+    text-align: center;
+  }
+}
 /*--------------------------------------------------------------
 6.2 Medium Devices (larger than 992 px)
 --------------------------------------------------------------*/
@@ -1522,13 +1552,16 @@ Add Generic (Main) media queries
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-0.0 Generic (All pages can use)
+0.0 Generic (All pages)
     0.1 Header
         0.0.1 Logo and Title
         0.0.2 Navigation
     0.2 Generic (Main)
         0.2.1 Element - Button
         0.2.2 Element - Box
+    0.3 Footer 
+        0.3.1 Footer CTA 
+        0.3.2 Footer Social Media Links
 1.0 Home
 2.0 FAQ
     2.1 List Page
@@ -1545,6 +1578,9 @@ Add Generic (Main) media queries
       0.2 Generic (Main) 
           0.2.1 Element - Button 
           0.2.2 Element - Box
+      0.3 Footer
+          0.3.1 Footer CTA
+          0.3.2 Footer Social Media Links
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
   0.1 Header
@@ -1612,6 +1648,43 @@ Add Generic (Main) media queries
     float: left;
     margin-right: 10px;
   }
+
+  /*--------------------------------------------------------------
+  0.3 Footer
+  --------------------------------------------------------------*/
+  footer.footer {
+    /*--------------------------------------------------------------
+    0.3.1 Footer CTA 
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    0.3.2 Footer Social Media Links
+    --------------------------------------------------------------*/
+  }
+  footer.footer > .footer-cta > .footer-cta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 1024px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  footer.footer > .footer-cta > .footer-cta-container > h2 {
+    padding: 120px 0 0 0;
+    text-align: left;
+  }
+  footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-img {
+    grid-row: 1/3;
+    text-align: center;
+  }
+  footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-btns {
+    text-align: left;
+  }
+  footer.footer > .footer-social-links-menu ul {
+    margin-top: 30px;
+  }
+  footer.footer > .footer-social-links-menu ul li > a {
+    margin: 0 10px;
+  }
 }
 /*--------------------------------------------------------------
 6.3 large devices (larger than 1200px)
@@ -1652,11 +1725,6 @@ Media Queries - large devices (larger than 1200px)
   /*--------------------------------------------------------------
   4.0 Contact Us
   --------------------------------------------------------------*/
-  body {
-    /*--------------------------------------------------------------
-    Footer
-    --------------------------------------------------------------*/
-  }
   body > main {
     /*--------------------------------------------------------------
     Page FAQ
@@ -1724,39 +1792,6 @@ body > main.faq-single > article .faq-single-content {
   }
   body > main.faq-single > article > .faq-single-footer {
     padding: 30px 30px 30px 0;
-  }
-  body > footer.footer {
-    /* Footer CTA */
-    /* Footer Social Media Links */
-  }
-  body > footer.footer > .footer-cta {
-    background-position: 0px -830px;
-    background-size: cover;
-  }
-  body > footer.footer > .footer-cta > .footer-cta-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 1024px;
-    margin: 0 auto;
-    padding: 0 30px;
-  }
-  body > footer.footer > .footer-cta > .footer-cta-container > h2 {
-    padding: 120px 0 0 0;
-    text-align: left;
-  }
-  body > footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-img {
-    grid-row: 1/3;
-    text-align: center;
-  }
-  body > footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-btns {
-    text-align: left;
-  }
-  body > footer.footer > .footer-social-links-menu ul {
-    margin-top: 30px;
-  }
-  body > footer.footer > .footer-social-links-menu ul li > a {
-    margin: 0 10px;
   }
 }
 

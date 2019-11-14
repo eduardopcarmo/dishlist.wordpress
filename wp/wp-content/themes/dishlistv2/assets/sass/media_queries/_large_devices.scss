@@ -135,55 +135,5 @@ Media Queries - large devices (larger than 1200px)
                 }
             }
         }
-
-        /*--------------------------------------------------------------
-        Footer
-        --------------------------------------------------------------*/
-        >footer {
-            &.footer {
-
-                /* Footer CTA */
-                >.footer-cta {
-                    background-position: 0px -830px;
-                    background-size: cover;
-
-                    >.footer-cta-container {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        grid-template-rows: 1fr 1fr;
-                        width: 1024px;
-                        margin: 0 auto;
-                        padding: 0 30px;
-
-                        >h2 {
-                            padding: 120px 0 0 0;
-                            text-align: left;
-                        }
-
-                        >div.footer-cta-img {
-                            grid-row: 1/3;
-                            text-align: center;
-                        }
-
-                        >div.footer-cta-btns {
-                            text-align: left;
-                        }
-                    }
-                }
-
-                /* Footer Social Media Links */
-                >.footer-social-links-menu {
-                    ul {
-                        margin-top: 30px;
-
-                        li {
-                            >a {
-                                margin: 0 10px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }
