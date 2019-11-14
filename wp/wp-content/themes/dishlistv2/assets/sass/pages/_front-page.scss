@@ -89,55 +89,6 @@ Page Home
                 height: 100px;
                 width: 100px;
             }
-
-            >h2 {
-                color: $primary-color;
-                margin: 20px;
-            }
-
-            article {
-
-                // Style for each post on home page
-                >.post-row {
-                    display: grid;
-                    grid-template-columns: repeat(1fr, 2fr);
-                    grid-template-rows: repeat(1fr, 2fr);
-                    justify-content: center;
-                    text-align: center;
-                    margin-top: 50px;
-
-                    >.post-thumb {
-                        grid-column: 1/2;
-                        grid-row: 2/3;
-                        width: 80px;
-                        height: 80px;
-                        margin-right: 1.5rem;
-                        margin-top: -2rem;
-                        text-align: center;
-
-                        >img {
-                            max-width: 80px;
-                            max-height: 80px;
-                        }
-                    }
-
-                    >.entry-header {
-                        grid-column: 2/3;
-                        grid-row: 1/2;
-                        text-align: left;
-
-                    }
-
-                    >.entry-content {
-                        grid-column: 2/3;
-                        grid-row: 2/3;
-                        text-align: left;
-                        padding-top: 10px;
-                    }
-                }
-            }
-
-
         }
 
         /*-----------------FQA area on Home page--------------------*/
@@ -205,10 +156,6 @@ larger than 1200px (large devices)
                     &#home-main {
                         display: grid;
                         grid-template-columns: auto 1024px auto;
-                        background-image: url("assets/images/circle_white_bottom_left.png");
-                        background-repeat: no-repeat;
-                        background-position: left 0 bottom 0;
-                        background-size: 150px;
 
                         >.home-main-container {
                             grid-column: 2/3;
@@ -265,54 +212,32 @@ larger than 1200px (large devices)
                     }
 
                     &#feature {
-                        background-size: 150px;
+                        padding: 30px 0px;
+                        text-align: left;
 
                         >.home-sb-plate {
                             display: none;
                         }
 
-                        >.home-dish-plate {
-                            background-image: url("assets/images/home_dish_plate.png");
-                            background-repeat: no-repeat;
-                            position: absolute;
-                            top: -18%;
-                            right: 0;
-                            background-size: auto 300px;
-                            height: 300px;
-                            width: 121px;
-                        }
-
-                        >.post-area-row {
-
-                            display: grid;
-                            grid-template-columns: repeat(3, 1fr);
-                            grid-template-rows: auto;
+                        >.feature-container {
                             width: 1024px;
                             margin: 0 auto;
+                            display: grid;
+                            grid-template-columns: 300px auto;
+                            grid-template-rows: auto;
+                            background-image: url("assets/images/mobile_dishlist_icon.png");
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-position: center left;
 
-                            >.post-col-1 {
-                                grid-column: 1/2;
-                                grid-row: 1/4;
-                                background-image: url("assets/images/mobile_dishlist_icon.png");
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                min-height: 600px;
-                            }
-
-                            >.post-col-2 {
+                            >.feature-container-list {
                                 grid-column: 2/3;
-                                align-self: center;
-                                margin: 20px;
-                            }
-
-                            >.post-col-3 {
-                                grid-column: 3/4;
-                                align-self: center;
-                                margin: 20px;
+                                display: grid;
+                                grid-template-columns: auto auto;
+                                grid-template-rows: auto;
+                                gap: 30px;
                             }
                         }
-
-
                     }
 
                     &#faq-area {
