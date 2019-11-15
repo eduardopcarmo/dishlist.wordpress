@@ -1,14 +1,14 @@
 /*!
 Theme Name: Dishlist V2
 Theme URI: https://github.com/eduardopcarmo/dishlist.wordpress
-Author: Team4-Dishlist
+Author: Team4 => Eduardo Carmo, Heloysa Tancredo, Jyot Sarup, Marcos Cavalcanti, Tran Tung Duong, Walter Galvão, Zeinab Ahmadi
 Author URI: http://dishlist.wmdd.ca
-Description: A new theme for a new time,A custom theme for dishlist project.
-Version: 0.1.0
+Description: A custom theme for dishlist project.
+Version: 2.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dishlist
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-logo, custom-menu, featured-images
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -21,6 +21,13 @@ Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
 */
 
 /*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-11-14)
+File created and add all imports
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 0.0 Sass Variables
@@ -29,11 +36,10 @@ Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
 3.0 Typography
 4.0 Generic (Main)
 5.0 Pages
-    5.1 Front-Page (Home)
-    5.2 Contact Page
-    5.3 About Us
-    5.3 FAQ
-    5.4 Our Team
+    5.1 Home
+    5.2 FAQ
+    5.3 Our Team
+    5.2 Contact Us
 6.0 Media Queries
     6.1 Small Devices, Tablets (larger than 768 px)
     6.2 Medium Devices (larger than 992 px)
@@ -70,35 +76,37 @@ Styles based on Typography @link https://medium.com/@elad/normalize-css-or-css-r
 
 /*--------------------------------------------------------------
 5.0 Pages
+    5.1 Home 
+    5.2 FAQ 
+    5.3 Our Team 
+    5.2 Contact Us
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-5.1 Front-Page
+5.1 Home
 --------------------------------------------------------------*/
 @import "pages/_front-page.scss";
 
 /*--------------------------------------------------------------
-5.2 Contact Page
---------------------------------------------------------------*/
-@import "pages/_contact-page.scss";
-
-/*--------------------------------------------------------------
-5.3 About Us
---------------------------------------------------------------*/
-@import "pages/_about_us-page.scss";
-
-/*--------------------------------------------------------------
-5.3 FAQ
+5.2 FAQ
 --------------------------------------------------------------*/
 @import "pages/_faq-page.scss";
 
 /*--------------------------------------------------------------
-5.4 OUR TEAM
+5.3 Our Team
 --------------------------------------------------------------*/
 @import "pages/_our_team-page.scss";
 
 /*--------------------------------------------------------------
+5.4 Contact Us
+--------------------------------------------------------------*/
+@import "pages/_contact-page.scss";
+
+/*--------------------------------------------------------------
 6.0 Media Queries
+    6.1 Small Devices, Tablets (larger than 768 px) 
+    6.2 Medium Devices (larger than 992 px) 
+    6.3 large devices (larger than 1200px)
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------

@@ -1,10 +1,46 @@
 /*--------------------------------------------------------------
-Page FAQ
+>>>FAQ and FAQ/Features Single
+----------------------------------------------------------------
+Author: Eduardo Pereira do Carmo 
+Date: 2019-11-14
+Description: FAQ and FAQ/Feature Single page of our theme
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-11-14)
+File created and FAQ page styles
+
+- Walter Galvão (2019-11-14)
+FAQ/Feature Single page styles
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 FAQ
+    1.1 Popular Questions
+    1.2 All Questions
+2.0 FAQ/Features Single
+    2.1 Answer Content
+    2.2 Answer - Image Left
+    2.3 Answer - Footer+Back Button
+    2.4 Feature - Phone
+    2.5 Feature - Phone - Animation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 FAQ
+    1.1 Popular Questions
+    1.2 All Questions
 --------------------------------------------------------------*/
 .faq {
     section {
 
-        /* Popular Questions */
+        /*--------------------------------------------------------------
+        1.1 Popular Questions
+        --------------------------------------------------------------*/
         &.faq-popular-questions {
             display: grid;
             grid-template-columns: 1fr;
@@ -24,7 +60,9 @@ Page FAQ
             }
         }
 
-        /* All Questions */
+        /*--------------------------------------------------------------
+        1.2 All Questions
+        --------------------------------------------------------------*/
         &.faq-help-topics {
             background-color: $secondary-bg-color;
             background-image: url("assets/images/circle_white_bottom_right.png"),
@@ -58,22 +96,28 @@ Page FAQ
 }
 
 /*--------------------------------------------------------------
-Page FAQ - Single
+2.0 FAQ/Features Single
+    2.1 Answer Content
+    2.2 Answer - Image Left
+    2.3 Answer - Footer+Back Button
+    2.4 Feature - Phone
+    2.5 Feature - Phone - Animation
 --------------------------------------------------------------*/
 .faq-single {
+    margin: 0 30px;
 
-    /* Answer */
     article {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
-        padding: 30px;
 
         >h2 {
             margin-bottom: 20px;
         }
 
-        /* Answer - Content */
+        /*--------------------------------------------------------------
+        2.1 Answer Content
+        --------------------------------------------------------------*/
         >.faq-single-content {
             img {
                 width: 100%;
@@ -91,7 +135,9 @@ Page FAQ - Single
             }
         }
 
-        /* Answer - Image Left */
+        /*--------------------------------------------------------------
+        2.2 Answer - Image Left
+        --------------------------------------------------------------*/
         >.faq-single-img {
             background-image: url("assets/images/faq_solution.png");
             background-position: center bottom;
@@ -100,7 +146,23 @@ Page FAQ - Single
             height: 300px;
         }
 
-        /* Feature - Phone */
+        /*--------------------------------------------------------------
+        2.3 Answer - Footer+Back Button
+        --------------------------------------------------------------*/
+        >.faq-single-footer {
+            margin: 30px 0;
+
+            .btn {
+                width: 100%;
+                margin: 0;
+                display: inline-block;
+                text-align: center;
+            }
+        }
+
+        /*--------------------------------------------------------------
+        2.4 Feature - Phone
+        --------------------------------------------------------------*/
         >.feature-phone-img {
             height: 450px;
             width: 100%;
@@ -142,23 +204,12 @@ Page FAQ - Single
                 z-index: 6;
             }
         }
-
-
-        /* Answer - Footer + Back Button */
-        >.faq-single-footer {
-            padding: 30px;
-
-            .btn {
-                width: 100%;
-                margin: 0;
-                display: inline-block;
-                text-align: center;
-            }
-        }
     }
 }
 
-/* Feature - Phone - Animation */
+/*--------------------------------------------------------------
+2.5 Feature - Phone - Animation
+--------------------------------------------------------------*/
 @keyframes feature-phone-open-grow {
     0% {
         top: 50%;

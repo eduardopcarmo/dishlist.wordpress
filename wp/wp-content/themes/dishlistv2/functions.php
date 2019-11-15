@@ -37,19 +37,19 @@ function dishlist_styles_and_scripts()
 * @link https://developer.wordpress.org/reference/hooks/excerpt_length/
 */
 function dishlist_excerpt_length( $length ) {
-    return 10;
+    return 50;
 }
 add_filter( 'excerpt_length', 'dishlist_excerpt_length', 999 );
 
-/**
-* Change this default excerpt more and add link to the post / page
-* @link https://developer.wordpress.org/reference/hooks/excerpt_more/
-*/
-function dishlist_excerpt_more( $more ) {
-    return sprintf( ' ... <br ><a href="%1$s" class="btn-link">See more >></a>',
-        esc_url( get_permalink( get_the_ID() ) ));
-}
-add_filter( 'excerpt_more', 'dishlist_excerpt_more' );
+///**
+//* Change this default excerpt more and add link to the post / page
+//* @link https://developer.wordpress.org/reference/hooks/excerpt_more/
+//*/
+//function dishlist_excerpt_more( $more ) {
+//    return sprintf( ' ... <br ><a href="%1$s" class="btn-link">See more >></a>',
+//        esc_url( get_permalink( get_the_ID() ) ));
+//}
+//add_filter( 'excerpt_more', 'dishlist_excerpt_more' );
 
 /**
 * Sets up theme defaults and registers support for various WordPress features.

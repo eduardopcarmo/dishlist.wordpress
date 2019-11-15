@@ -1,5 +1,30 @@
 /*--------------------------------------------------------------
-Page Our Team
+>>>Our Team
+----------------------------------------------------------------
+Author: Marcos Cavalcanti
+Date: 2019-11-14
+Description: Our Team page of our theme
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Marcos Cavalcanti (2019-11-14)
+File created and styles
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Our Team
+    1.1 Box Photo
+    1.2 Box Description
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Our Team
+    1.1 Box Photo
+    1.2 Box Description
 --------------------------------------------------------------*/
 .our-team-users {
   >.our-team-users-container {
@@ -8,6 +33,9 @@ Page Our Team
       display: flex;
       flex-direction: column;
 
+      /*--------------------------------------------------------------
+      1.1 Box Photo
+      --------------------------------------------------------------*/
       >.user-box-photo {
         width: 250px;
         height: 250px;
@@ -28,6 +56,9 @@ Page Our Team
         }
       }
 
+      /*--------------------------------------------------------------
+      1.2 Box Description
+      --------------------------------------------------------------*/
       >.user-box-description {
         position: relative;
         border: 1px solid $font-black;
@@ -46,74 +77,6 @@ Page Our Team
           padding: 30px;
           background-color: $font-white;
           height: 100%;
-        }
-      }
-    }
-  }
-}
-
-/*--------------------------------------------------------------
-larger than 768 px (small devices, tablets)
---------------------------------------------------------------*/
-@media only screen and (min-width: 768px) and (max-width: 992px) {}
-
-/*--------------------------------------------------------------
-larger than 992 px (medium devices)
---------------------------------------------------------------*/
-@media only screen and (min-width: 992px) and (max-width: 1200px) {}
-
-/*--------------------------------------------------------------
-larger than 1200px (large devices)
---------------------------------------------------------------*/
-@media only screen and (min-width: 1200px) {
-  .our-team-users {
-    width: 1024px;
-    margin: 0 auto;
-
-    >.our-team-users-container {
-      .user-box {
-        &:nth-child(odd) {
-          flex-direction: row;
-
-          >.user-box-photo {
-            margin-right: 30px;
-          }
-
-          >.user-box-description {
-            padding: 0 0 0 40px;
-
-            >img {
-              left: 15px;
-            }
-          }
-        }
-
-        &:nth-child(even) {
-          flex-direction: row-reverse;
-
-          >.user-box-photo {
-            margin-left: 30px;
-          }
-
-          >.user-box-description {
-            padding: 0 40px 0 0;
-
-            >img {
-              right: 15px;
-            }
-          }
-        }
-
-        >.user-box-photo {
-          margin: 0;
-        }
-
-        >.user-box-description {
-          >img {
-            top: auto;
-            left: auto;
-            bottom: 10px;
-          }
         }
       }
     }

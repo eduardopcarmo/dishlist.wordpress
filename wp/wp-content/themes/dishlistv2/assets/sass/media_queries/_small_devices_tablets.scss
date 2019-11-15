@@ -13,39 +13,90 @@ Description: Media Queries for small devices and tablets
 File created and set the size of the device
 
 - Eduardo Pereira do Carmo (2019-11-14) 
-Add Generic (Main) media queries
+Add Footer media queries
+
+- Zeinab Ahmadi (2019-11-14)
+Add Home media queries
 ----------------------------------------------------------------
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 0.0 Generic (All pages)
-    0.1 Footer 
-        0.1.1 Footer CTA 
-        0.1.2 Footer Social Media Links
+    0.1 Generic (Main) 
+        0.1.1 Element - Box
+    0.2 Footer 
+        0.2.1 Footer CTA 
+1.0 Home
 --------------------------------------------------------------*/
 //and (max-width: 992px)
 @media only screen and (min-width: 768px) {
 
     /*--------------------------------------------------------------
     0.0 Generic (All pages)
-        0.1 Footer 
-            0.1.1 Footer CTA 
+        0.1 Generic (Main) 
+            0.1.1 Element - Box
+        0.2 Footer 
+            0.2.1 Footer CTA 
     --------------------------------------------------------------*/
 
     /*--------------------------------------------------------------
-    0.1 Footer
+    0.1 Generic (Main) 
+        0.1.1 Element - Box
+    --------------------------------------------------------------*/
+
+    /*--------------------------------------------------------------
+    0.1.1 Element - Box
+    --------------------------------------------------------------*/
+    .box {
+        h3 {
+            text-align: left;
+        }
+
+        img {
+            float: left;
+            margin-right: 10px;
+        }
+    }
+
+    /*--------------------------------------------------------------
+    0.2 Footer 
+        .2.1 Footer CTA
     --------------------------------------------------------------*/
     footer {
         &.footer {
 
             /*--------------------------------------------------------------
-        0.1.1 Footer CTA
+        0.2.1 Footer CTA
         --------------------------------------------------------------*/
             >.footer-cta {
                 >.footer-cta-container {
                     >div.footer-cta-img {
                         text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    /*--------------------------------------------------------------
+    1.0 Home
+    --------------------------------------------------------------*/
+    .home-container {
+        section {
+            &#feature {
+                >.feature-container {
+                    >.feature-container-list {
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        grid-template-rows: auto;
+                        gap: 30px;
+
+                        >.box {
+                            p {
+                                text-align: left;
+                            }
+                        }
                     }
                 }
             }

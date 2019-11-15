@@ -1,14 +1,15 @@
+@charset "UTF-8";
 /*!
 Theme Name: Dishlist V2
 Theme URI: https://github.com/eduardopcarmo/dishlist.wordpress
-Author: Team4-Dishlist
+Author: Team4 => Eduardo Carmo, Heloysa Tancredo, Jyot Sarup, Marcos Cavalcanti, Tran Tung Duong, Walter Galvão, Zeinab Ahmadi
 Author URI: http://dishlist.wmdd.ca
-Description: A new theme for a new time,A custom theme for dishlist project.
-Version: 0.1.0
+Description: A custom theme for dishlist project.
+Version: 2.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dishlist
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-logo, custom-menu, featured-images
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -20,6 +21,13 @@ Local reset and Typography styles have been helped along thanks to the fine work
 Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
 */
 /*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-11-14)
+File created and add all imports
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 0.0 Sass Variables
@@ -28,11 +36,10 @@ Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
 3.0 Typography
 4.0 Generic (Main)
 5.0 Pages
-    5.1 Front-Page (Home)
-    5.2 Contact Page
-    5.3 About Us
-    5.3 FAQ
-    5.4 Our Team
+    5.1 Home
+    5.2 FAQ
+    5.3 Our Team
+    5.2 Contact Us
 6.0 Media Queries
     6.1 Small Devices, Tablets (larger than 768 px)
     6.2 Medium Devices (larger than 992 px)
@@ -42,11 +49,42 @@ Elad Shechter https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e
 0.0 Sass Variables
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-Font-size
-Based on https: //www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/
+>>>Variables
+----------------------------------------------------------------
+Author: Eduardo Pereira do Carmo
+Date: 2019-11-14
+Description: All variables used in our theme, this variables are
+inspired on https: //www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-11-14)
+File created and add all variables
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Font-size and Line size
+    1.1 Mobile
+    1.2 Desktop
+2.0 Colors
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-Colors
+1.0 Font-size 
+    1.1 Mobile 
+    1.2 Desktop
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.1 Mobile
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.2 Desktop
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.0 Colors
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Normalize
@@ -609,6 +647,7 @@ File created and all the new styles
     3.5 Box
     3.6 Badge
     3.7 Remove WP Block Separator class
+    3.8 Text Truncate
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Header
@@ -616,7 +655,7 @@ File created and all the new styles
 /*--------------------------------------------------------------
 >>> HEADER
 ----------------------------------------------------------------
-Author: Zeinab Ahmadi
+Author: Jyot Sarup
 Date: 2019-11-14
 Description: Main Header of our Template
 ----------------------------------------------------------------
@@ -624,7 +663,7 @@ Description: Main Header of our Template
 /*--------------------------------------------------------------
 >>> Log
 ----------------------------------------------------------------
-- Zeinab Ahmadi (2019-11-14)
+- Jyot Sarup (2019-11-14)
 File created and set style for header
 ----------------------------------------------------------------
 
@@ -791,6 +830,14 @@ footer.footer > .footer-copyright {
 
 /*--------------------------------------------------------------
 3.0 Elements
+    3.1 Title
+    3.2 Subtitle
+    3.3 Button
+    3.4 Form
+    3.5 Box
+    3.6 Badge
+    3.7 Remove WP Block Separator class
+    3.8 Text Truncate
 --------------------------------------------------------------*/
 main {
   display: grid;
@@ -979,12 +1026,23 @@ input[type=submit]:active {
 --------------------------------------------------------------*/
 .box {
   margin: 20px 0;
+  background-image: url(assets/images/link-icon.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: right center;
+  padding-right: 25px;
 }
 .box h3 {
   text-align: center;
 }
-.box > img {
+.box img {
   max-width: 80px;
+}
+.box:hover {
+  transform: translateY(-4px);
+}
+.box:active {
+  transform: translateY(-2px);
 }
 
 /*--------------------------------------------------------------
@@ -1006,20 +1064,62 @@ input[type=submit]:active {
 }
 
 /*--------------------------------------------------------------
+3.8 Text Truncate
+Based on https: //dev.to/adrianbdesigns/you-can-create-these-elements-without-javascript-525a
+--------------------------------------------------------------*/
+.text-truncated {
+  overflow: hidden;
+  line-clamp: 2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/*--------------------------------------------------------------
 5.0 Pages
+    5.1 Home 
+    5.2 FAQ 
+    5.3 Our Team 
+    5.2 Contact Us
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-5.1 Front-Page
+5.1 Home
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-Page Home
+>>> Home
+----------------------------------------------------------------
+Author: Zeinab Ahmadi 
+Date: 2019-11-14
+Description: Home page of our theme
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Zeinab Ahmadi (2019-11-14)
+File created and all the new styles
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Hero
+2.0 Features
+3.0 FAQ
 --------------------------------------------------------------*/
 .home-container {
   margin: auto 0;
 }
 .home-container section {
-  /*-----------------Feature area--------------------*/
-  /*-----------------FQA area on Home page--------------------*/
+  /*--------------------------------------------------------------
+  1.0 Hero
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  2.0 Features
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  3.0 FAQ
+  --------------------------------------------------------------*/
 }
 .home-container section#home-main {
   background-image: url("assets/images/circle_white_bottom_left.png");
@@ -1034,8 +1134,6 @@ Page Home
   background-position: right 0 top 0;
   background-size: auto;
   padding-bottom: 30px;
-  /*-----------------Animation plate--------------*/
-  /*-----------------Main area--------------------*/
 }
 .home-container section#home-main > .home-main-container > .main-dish-1 {
   background-image: url("assets/images/home_dish_1.png");
@@ -1099,7 +1197,7 @@ Page Home
 .home-container section#faq-area {
   background-image: url("assets/images/home_fqa_bg_small.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   background-position: center;
 }
 .home-container section#faq-area > .faq-box {
@@ -1108,140 +1206,51 @@ Page Home
 }
 
 /*--------------------------------------------------------------
-larger than 768 px (small devices, tablets) to 1200 px (medium devices)
---------------------------------------------------------------*/
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  body > main.home-container section#feature > .post-area-row {
-    min-height: 700px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
-  body > main.home-container section#feature > .post-area-row > .post-col-1 {
-    display: none;
-  }
-  body > main.home-container section#feature > .post-area-row > .post-col-2 {
-    grid-column: 1/2;
-    align-self: center;
-    margin: 10px;
-  }
-  body > main.home-container section#feature > .post-area-row .post-col-3 {
-    grid-column: 2/3;
-    align-self: center;
-    margin: 10px;
-  }
-}
-/*--------------------------------------------------------------
-larger than 1200px (large devices)
---------------------------------------------------------------*/
-@media only screen and (min-width: 1200px) {
-  body > main.home-container section#home-main {
-    display: grid;
-    grid-template-columns: auto 1024px auto;
-  }
-  body > main.home-container section#home-main > .home-main-container {
-    grid-column: 2/3;
-    background-image: url("assets/images/home_main_bg.png");
-    background-repeat: no-repeat;
-    height: 550px;
-    background-position: right 0 top 0;
-    background-size: auto 550px;
-    /*-----------------Animation plate--------------*/
-    /*-----------------Main area--------------------*/
-  }
-  body > main.home-container section#home-main > .home-main-container > .main-dish-1 {
-    background-size: 300px 300px;
-    height: 300px;
-    width: 300px;
-    top: 125px;
-    right: 110px;
-  }
-  body > main.home-container section#home-main > .home-main-container > .main-dish-2 {
-    background-size: 180px 180px;
-    height: 180px;
-    width: 180px;
-    top: 463px;
-    left: auto;
-    right: -60px;
-  }
-  body > main.home-container section#home-main > .home-main-container > .main-dish-3 {
-    background-size: 60px 60px;
-    height: 60px;
-    width: 60px;
-    top: 440px;
-    right: 150px;
-    left: auto;
-  }
-  body > main.home-container section#home-main > .home-main-container > .main-area {
-    text-align: left;
-    padding-top: 170px;
-  }
-  body > main.home-container section#home-main > .home-main-container > .main-area > h1 {
-    text-align: left;
-  }
-  body > main.home-container section#home-main > .home-main-container-null {
-    grid-column: 3/4;
-    background-color: #ea0024;
-  }
-  body > main.home-container section#feature {
-    padding: 30px 0px;
-    text-align: left;
-  }
-  body > main.home-container section#feature > .home-sb-plate {
-    display: none;
-  }
-  body > main.home-container section#feature > .feature-container {
-    width: 1024px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 300px auto;
-    grid-template-rows: auto;
-    background-image: url("assets/images/mobile_dishlist_icon.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center left;
-  }
-  body > main.home-container section#feature > .feature-container > .feature-container-list {
-    grid-column: 2/3;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    gap: 30px;
-  }
-  body > main.home-container section#faq-area {
-    background-image: none;
-  }
-  body > main.home-container section#faq-area > .faq-box {
-    background-image: url("assets/images/home_fqa_bg_big.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    width: 1024px;
-    height: 380px;
-    margin: 0 auto;
-    text-align: left;
-    padding-left: 230px;
-  }
-  body > main.home-container section#faq-area > .faq-box > h2 {
-    margin-top: 125px;
-    font-size: 2.5rem;
-  }
-}
-/*--------------------------------------------------------------
-5.2 Contact Page
+5.2 FAQ
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-5.3 About Us
+>>>FAQ and FAQ/Features Single
+----------------------------------------------------------------
+Author: Eduardo Pereira do Carmo 
+Date: 2019-11-14
+Description: FAQ and FAQ/Feature Single page of our theme
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-11-14)
+File created and FAQ page styles
+
+- Walter Galvão (2019-11-14)
+FAQ/Feature Single page styles
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 FAQ
+    1.1 Popular Questions
+    1.2 All Questions
+2.0 FAQ/Features Single
+    2.1 Answer Content
+    2.2 Answer - Image Left
+    2.3 Answer - Footer+Back Button
+    2.4 Feature - Phone
+    2.5 Feature - Phone - Animation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-5.3 FAQ
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-Page FAQ
+1.0 FAQ
+    1.1 Popular Questions
+    1.2 All Questions
 --------------------------------------------------------------*/
 .faq section {
-  /* Popular Questions */
-  /* All Questions */
+  /*--------------------------------------------------------------
+  1.1 Popular Questions
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  1.2 All Questions
+  --------------------------------------------------------------*/
 }
 .faq section.faq-popular-questions {
   display: grid;
@@ -1283,20 +1292,32 @@ Page FAQ
 }
 
 /*--------------------------------------------------------------
-Page FAQ - Single
+2.0 FAQ/Features Single
+    2.1 Answer Content
+    2.2 Answer - Image Left
+    2.3 Answer - Footer+Back Button
+    2.4 Feature - Phone
+    2.5 Feature - Phone - Animation
 --------------------------------------------------------------*/
 .faq-single {
-  /* Answer */
+  margin: 0 30px;
 }
 .faq-single article {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
-  padding: 30px;
-  /* Answer - Content */
-  /* Answer - Image Left */
-  /* Feature - Phone */
-  /* Answer - Footer + Back Button */
+  /*--------------------------------------------------------------
+  2.1 Answer Content
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  2.2 Answer - Image Left
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  2.3 Answer - Footer+Back Button
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  2.4 Feature - Phone
+  --------------------------------------------------------------*/
 }
 .faq-single article > h2 {
   margin-bottom: 20px;
@@ -1319,6 +1340,15 @@ Page FAQ - Single
   background-repeat: no-repeat;
   background-size: contain;
   height: 300px;
+}
+.faq-single article > .faq-single-footer {
+  margin: 30px 0;
+}
+.faq-single article > .faq-single-footer .btn {
+  width: 100%;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
 }
 .faq-single article > .feature-phone-img {
   height: 450px;
@@ -1355,17 +1385,10 @@ Page FAQ - Single
   background-size: 218px;
   z-index: 6;
 }
-.faq-single article > .faq-single-footer {
-  padding: 30px;
-}
-.faq-single article > .faq-single-footer .btn {
-  width: 100%;
-  margin: 0;
-  display: inline-block;
-  text-align: center;
-}
 
-/* Feature - Phone - Animation */
+/*--------------------------------------------------------------
+2.5 Feature - Phone - Animation
+--------------------------------------------------------------*/
 @keyframes feature-phone-open-grow {
   0% {
     top: 50%;
@@ -1381,15 +1404,45 @@ Page FAQ - Single
   }
 }
 /*--------------------------------------------------------------
-5.4 OUR TEAM
+5.3 Our Team
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-Page Our Team
+>>>Our Team
+----------------------------------------------------------------
+Author: Marcos Cavalcanti
+Date: 2019-11-14
+Description: Our Team page of our theme
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Marcos Cavalcanti (2019-11-14)
+File created and styles
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Our Team
+    1.1 Box Photo
+    1.2 Box Description
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Our Team
+    1.1 Box Photo
+    1.2 Box Description
 --------------------------------------------------------------*/
 .our-team-users > .our-team-users-container .user-box {
   padding: 0 30px 30px;
   display: flex;
   flex-direction: column;
+  /*--------------------------------------------------------------
+  1.1 Box Photo
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  1.2 Box Description
+  --------------------------------------------------------------*/
 }
 .our-team-users > .our-team-users-container .user-box > .user-box-photo {
   width: 250px;
@@ -1429,54 +1482,13 @@ Page Our Team
 }
 
 /*--------------------------------------------------------------
-larger than 768 px (small devices, tablets)
+5.4 Contact Us
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-larger than 992 px (medium devices)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-larger than 1200px (large devices)
---------------------------------------------------------------*/
-@media only screen and (min-width: 1200px) {
-  .our-team-users {
-    width: 1024px;
-    margin: 0 auto;
-  }
-  .our-team-users > .our-team-users-container .user-box:nth-child(odd) {
-    flex-direction: row;
-  }
-  .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-photo {
-    margin-right: 30px;
-  }
-  .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-description {
-    padding: 0 0 0 40px;
-  }
-  .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-description > img {
-    left: 15px;
-  }
-  .our-team-users > .our-team-users-container .user-box:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-  .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-photo {
-    margin-left: 30px;
-  }
-  .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-description {
-    padding: 0 40px 0 0;
-  }
-  .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-description > img {
-    right: 15px;
-  }
-  .our-team-users > .our-team-users-container .user-box > .user-box-photo {
-    margin: 0;
-  }
-  .our-team-users > .our-team-users-container .user-box > .user-box-description > img {
-    top: auto;
-    left: auto;
-    bottom: 10px;
-  }
-}
 /*--------------------------------------------------------------
 6.0 Media Queries
+    6.1 Small Devices, Tablets (larger than 768 px) 
+    6.2 Medium Devices (larger than 992 px) 
+    6.3 large devices (larger than 1200px)
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 6.1 Small Devices, Tablets (larger than 768 px)
@@ -1496,33 +1508,69 @@ Description: Media Queries for small devices and tablets
 File created and set the size of the device
 
 - Eduardo Pereira do Carmo (2019-11-14) 
-Add Generic (Main) media queries
+Add Footer media queries
+
+- Zeinab Ahmadi (2019-11-14)
+Add Home media queries
 ----------------------------------------------------------------
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 0.0 Generic (All pages)
-    0.1 Footer 
-        0.1.1 Footer CTA 
-        0.1.2 Footer Social Media Links
+    0.1 Generic (Main) 
+        0.1.1 Element - Box
+    0.2 Footer 
+        0.2.1 Footer CTA 
+1.0 Home
 --------------------------------------------------------------*/
 @media only screen and (min-width: 768px) {
   /*--------------------------------------------------------------
   0.0 Generic (All pages)
-      0.1 Footer 
-          0.1.1 Footer CTA 
+      0.1 Generic (Main) 
+          0.1.1 Element - Box
+      0.2 Footer 
+          0.2.1 Footer CTA 
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
-  0.1 Footer
+  0.1 Generic (Main) 
+      0.1.1 Element - Box
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  0.1.1 Element - Box
+  --------------------------------------------------------------*/
+  .box h3 {
+    text-align: left;
+  }
+  .box img {
+    float: left;
+    margin-right: 10px;
+  }
+
+  /*--------------------------------------------------------------
+  0.2 Footer 
+      .2.1 Footer CTA
   --------------------------------------------------------------*/
   footer.footer {
     /*--------------------------------------------------------------
-    0.1.1 Footer CTA
+    0.2.1 Footer CTA
     --------------------------------------------------------------*/
   }
   footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-img {
     text-align: center;
+  }
+
+  /*--------------------------------------------------------------
+  1.0 Home
+  --------------------------------------------------------------*/
+  .home-container section#feature > .feature-container > .feature-container-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+  .home-container section#feature > .feature-container > .feature-container-list > .box p {
+    text-align: left;
   }
 }
 /*--------------------------------------------------------------
@@ -1542,11 +1590,23 @@ Description: Media Queries for medium devices
 - Eduardo Pereira do Carmo (2019-11-14)
 File created and set the size of the device
 
-- Zeinab Ahmadi (2019-11-14)
+- Jyot Sarup (2019-11-14)
 Add Header media queries
+
+- Zeinab Ahmadi (2019-11-14)
+Add Home media queries
 
 - Eduardo Pereira do Carmo (2019-11-14) 
 Add Generic (Main) media queries
+
+- Eduardo Pereira do Carmo (2019-11-14) 
+FAQ media queries
+
+- Walter Galvão (2019-11-14) 
+FAQ/Feature Sigle media queries
+
+- Marcos Cavalcanti (2019-11-14)
+Add Out Team media queries
 ----------------------------------------------------------------
 
 /*--------------------------------------------------------------
@@ -1563,11 +1623,20 @@ Add Generic (Main) media queries
         0.3.1 Footer CTA 
         0.3.2 Footer Social Media Links
 1.0 Home
+    1.1 Hero
+    1.2 Features
+    1.3 FAQ
 2.0 FAQ
-    2.1 List Page
-    2.2 Single Page
-3.0 Our Team
-4.0 Contact Us
+    2.1 Popular Questions 
+    2.2 All Questions
+3.0 FAQ/Features Single
+    3.1 Answer Content
+    3.2 Answer - Image Left
+    3.3 Answer - Footer+Back Button
+4.0 Our Team
+    4.1 Box Odd and Even
+    4.3 Box Photo
+    4.4 Box Description
 --------------------------------------------------------------*/
 @media only screen and (min-width: 992px) {
   /*--------------------------------------------------------------
@@ -1577,7 +1646,6 @@ Add Generic (Main) media queries
           0.0.2 Navigation
       0.2 Generic (Main) 
           0.2.1 Element - Button 
-          0.2.2 Element - Box
       0.3 Footer
           0.3.1 Footer CTA
           0.3.2 Footer Social Media Links
@@ -1624,7 +1692,8 @@ Add Generic (Main) media queries
   }
 
   /*--------------------------------------------------------------
-  0.2 Generic (Main)
+  0.2 Generic (Main) 
+      0.2.1 Element - Button
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
   0.2.1 Element - Button
@@ -1636,17 +1705,6 @@ Add Generic (Main) media queries
     width: auto;
     display: inline-block;
     padding: 10px 50px;
-  }
-
-  /*--------------------------------------------------------------
-  0.2.2 Element - Box
-  --------------------------------------------------------------*/
-  .box h3 {
-    text-align: left;
-  }
-  .box > img {
-    float: left;
-    margin-right: 10px;
   }
 
   /*--------------------------------------------------------------
@@ -1685,84 +1743,331 @@ Add Generic (Main) media queries
   footer.footer > .footer-social-links-menu ul li > a {
     margin: 0 10px;
   }
+
+  /*--------------------------------------------------------------
+  1.0 Home 
+      1.1 Hero 
+      1.2 Features
+      1.3 FAQ
+  --------------------------------------------------------------*/
+  .home-container section {
+    /*--------------------------------------------------------------
+    1.1 Hero
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    1.2 Features
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    1.3 FAQ
+    --------------------------------------------------------------*/
+  }
+  .home-container section#home-main > .home-main-container {
+    background-image: url("assets/images/home_main_bg.png");
+    background-repeat: no-repeat;
+    height: 550px;
+    background-position: right 0 top 0;
+    background-size: auto 550px;
+  }
+  .home-container section#home-main > .home-main-container > .main-dish-1 {
+    background-size: 300px 300px;
+    height: 300px;
+    width: 300px;
+    top: 125px;
+    right: 110px;
+  }
+  .home-container section#home-main > .home-main-container > .main-dish-2 {
+    background-size: 180px 180px;
+    height: 180px;
+    width: 180px;
+    top: 463px;
+    left: auto;
+    right: -60px;
+  }
+  .home-container section#home-main > .home-main-container > .main-dish-3 {
+    background-size: 60px 60px;
+    height: 60px;
+    width: 60px;
+    top: 440px;
+    right: 150px;
+    left: auto;
+  }
+  .home-container section#home-main > .home-main-container > .main-area {
+    text-align: left;
+    padding-top: 170px;
+  }
+  .home-container section#home-main > .home-main-container > .main-area > h1 {
+    text-align: left;
+  }
+  .home-container section#feature > .home-sb-plate {
+    display: none;
+  }
+  .home-container section#faq-area {
+    background-image: none;
+  }
+  .home-container section#faq-area > .faq-box {
+    background-image: url("assets/images/home_fqa_bg_big.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 380px;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 230px;
+  }
+  .home-container section#faq-area > .faq-box > h2 {
+    margin-top: 125px;
+    font-size: 2.5rem;
+  }
+
+  /*--------------------------------------------------------------
+  2.0 FAQ 
+      2.1 Popular Questions 
+      2.2 All Questions
+  --------------------------------------------------------------*/
+  .faq section {
+    /*--------------------------------------------------------------
+    2.1 Popular Questions 
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    2.2 All Questions
+    --------------------------------------------------------------*/
+  }
+  .faq section.faq-popular-questions > .faq-popular-questions-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  .faq section.faq-popular-questions > .faq-popular-questions-content .box {
+    margin: 0;
+  }
+  .faq section.faq-help-topics > .faq-help-topics-content > .faq-help-topics-content-col {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+  .faq section.faq-help-topics > .faq-help-topics-content > .faq-help-topics-content-col > h4 {
+    grid-column: 1/3;
+  }
+
+  /*--------------------------------------------------------------
+  3.0 FAQ/Features Single
+      3.1 Answer Content
+      3.2 Answer - Image Left
+      3.3 Answer - Footer+Back Button
+  --------------------------------------------------------------*/
+  .faq-single > article {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    background-position: right top;
+    /*--------------------------------------------------------------
+    3.1 Answer Content
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    3.2 Answer - Image Left
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    3.3 Answer - Footer+Back Button
+    --------------------------------------------------------------*/
+  }
+  .faq-single > article > h2,
+.faq-single > article .faq-single-content {
+    grid-column: 1/1;
+  }
+  .faq-single > article .faq-single-content {
+    min-height: 290px;
+  }
+  .faq-single > article > .faq-single-img {
+    background-position: right top;
+  }
+  .faq-single > article > .faq-single-footer {
+    padding: 30px 30px 30px 0;
+  }
+
+  /*--------------------------------------------------------------
+  4.0 Our Team
+      4.1 Box Odd and Even
+      4.3 Box Photo
+      4.4 Box Description
+  --------------------------------------------------------------*/
+  .our-team-users > .our-team-users-container .user-box {
+    /*--------------------------------------------------------------
+    4.1 Box Odd and Even
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    4.2 Box Photo
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    4.3 Box Description
+    --------------------------------------------------------------*/
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(odd) {
+    flex-direction: row;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-photo {
+    margin-right: 30px;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-description {
+    padding: 0 0 0 40px;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-description > img {
+    left: 15px;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-photo {
+    margin-left: 30px;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-description {
+    padding: 0 40px 0 0;
+  }
+  .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-description > img {
+    right: 15px;
+  }
+  .our-team-users > .our-team-users-container .user-box > .user-box-photo {
+    margin: 0;
+  }
+  .our-team-users > .our-team-users-container .user-box > .user-box-description > img {
+    top: auto;
+    left: auto;
+    bottom: 10px;
+  }
 }
 /*--------------------------------------------------------------
 6.3 large devices (larger than 1200px)
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-Media Queries - large devices (larger than 1200px)
---------------------------------------------------------------*/
+>>>Media Queries - large devices (larger than 992 px)
+----------------------------------------------------------------
+Author: Eduardo Pereira do Carmo
+Date: 2019-11-14
+Description: Media Queries for large devices
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-11-14)
+File created and set the size of the device
+
+- Zeinab Ahmadi (2019-11-14)
+Add Home media queries
+
+- Eduardo Pereira do Carmo (2019-11-14) 
+FAQ media queries
+
+- Walter Galvão (2019-11-14) 
+FAQ/Feature Sigle media queries
+
+- Marcos Cavalcanti (2019-11-14)
+Add Out Team media queries
+----------------------------------------------------------------
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-0.0 Generic (All pages can use)
-    0.1 Header
-    0.2 Footer
 1.0 Home
-2.0 FAQ
-    2.1 List Page
-    2.2 Single Page
-3.0 Our Team
-4.0 Contact Us
+    1.1 Hero
+    1.2 Features
+    1.3 FAQ
+2.0 FAQ 
+    2.1 Popular Questions 
+    2.2 All Questions
+3.0 FAQ/Features Single
+4.0 Our Team
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
   /*--------------------------------------------------------------
-  0.0 Generic (All pages can use)
-      - 0.1 Header 
-      - 0.2 Footer
-  --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
   1.0 Home
+      1.1 Hero
+      1.2 Features
+      1.3 FAQ
   --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-  2.0 FAQ
-      - 2.1 List Page
-      - 2.2 Single Page
-  --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-  3.0 Our Team
-  --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-  4.0 Contact Us
-  --------------------------------------------------------------*/
-  body > main {
+  .home-container section {
     /*--------------------------------------------------------------
-    Page FAQ
+    1.1 Hero
     --------------------------------------------------------------*/
     /*--------------------------------------------------------------
-    Page FAQ - Single
+    1.2 Features
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    1.3 FAQ
     --------------------------------------------------------------*/
   }
-  body > main.faq section {
-    /* Popular Questions */
+  .home-container section#home-main {
+    display: grid;
+    grid-template-columns: auto 1024px auto;
   }
-  body > main.faq section.faq-popular-questions {
+  .home-container section#home-main > .home-main-container {
+    grid-column: 2/3;
+  }
+  .home-container section#home-main > .home-main-container-null {
+    grid-column: 3/4;
+    background-color: #EA0024;
+  }
+  .home-container section#feature {
+    padding: 30px 0px;
+    text-align: left;
+  }
+  .home-container section#feature > .feature-container {
+    width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: auto;
+    background-image: url("assets/images/mobile_dishlist_icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center left;
+  }
+  .home-container section#feature > .feature-container > .feature-container-list {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+  .home-container section#faq-area > .faq-box {
+    width: 1024px;
+  }
+
+  /*--------------------------------------------------------------
+  2.0 FAQ 
+      2.1 Popular Questions 
+      2.2 All Questions
+  --------------------------------------------------------------*/
+  .faq section {
+    /*--------------------------------------------------------------
+    2.1 Popular Questions 
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    2.2 All Questions
+    --------------------------------------------------------------*/
+  }
+  .faq section.faq-popular-questions {
     width: 1024px;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     background-position: right center;
-    grid-gap: 20px;
-    /* Format content using grid */
   }
-  body > main.faq section.faq-popular-questions > h2 {
+  .faq section.faq-popular-questions > h2 {
     grid-column: 1/4;
   }
-  body > main.faq section.faq-popular-questions > .faq-popular-questions-content {
+  .faq section.faq-popular-questions > .faq-popular-questions-content {
     grid-column: 1/3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
   }
-  body > main.faq section.faq-help-topics {
+  .faq section.faq-help-topics {
     background-size: 150px;
   }
-  body > main.faq section.faq-help-topics > .strawberry-plate {
+  .faq section.faq-help-topics > .strawberry-plate {
     width: 200px;
     height: 110px;
     top: -55px;
   }
-  body > main.faq section.faq-help-topics > .faq-help-topics-content {
+  .faq section.faq-help-topics > .faq-help-topics-content {
     width: 1024px;
     margin: 0 auto;
     display: grid;
@@ -1770,28 +2075,27 @@ Media Queries - large devices (larger than 1200px)
     grid-template-rows: auto;
     grid-gap: 20px;
   }
-  body > main.faq-single {
-    /* Answer */
+  .faq section.faq-help-topics > .faq-help-topics-content > .faq-help-topics-content-col {
+    display: inline;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    gap: unset;
   }
-  body > main.faq-single > article {
+
+  /*--------------------------------------------------------------
+  3.0 FAQ/Features Single
+  --------------------------------------------------------------*/
+  .faq-single > article {
     width: 1024px;
     margin: 0 auto;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-    background-position: right top;
   }
-  body > main.faq-single > article > h2,
-body > main.faq-single > article .faq-single-content {
-    grid-column: 1/1;
-  }
-  body > main.faq-single > article .faq-single-content {
-    min-height: 290px;
-  }
-  body > main.faq-single > article > .faq-single-img {
-    background-position: right top;
-  }
-  body > main.faq-single > article > .faq-single-footer {
-    padding: 30px 30px 30px 0;
+
+  /*--------------------------------------------------------------
+  4.0 Our Team
+  --------------------------------------------------------------*/
+  .our-team-users {
+    width: 1024px;
+    margin: 0 auto;
   }
 }
 

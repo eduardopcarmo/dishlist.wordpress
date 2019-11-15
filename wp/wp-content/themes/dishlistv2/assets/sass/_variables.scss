@@ -1,11 +1,37 @@
 /*--------------------------------------------------------------
-Font-size
-Based on https: //www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/
+>>>Variables
+----------------------------------------------------------------
+Author: Eduardo Pereira do Carmo
+Date: 2019-11-14
+Description: All variables used in our theme, this variables are
+inspired on https: //www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-11-14)
+File created and add all variables
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Font-size and Line size
+    1.1 Mobile
+    1.2 Desktop
+2.0 Colors
 --------------------------------------------------------------*/
 
-// General variables
+/*--------------------------------------------------------------
+1.0 Font-size 
+    1.1 Mobile 
+    1.2 Desktop
+--------------------------------------------------------------*/
 
-// Mobile
+/*--------------------------------------------------------------
+1.1 Mobile
+--------------------------------------------------------------*/
 $font-size-base: 16px;
 $font-size-h1: 2rem;
 $font-size-h2: 1.38rem;
@@ -26,8 +52,10 @@ $line-size-btn: $line-size-base;
 $line-size-dt: $line-size-base;
 
 
-// Desktop
-$desktop_font-size-base: $font-size-base; //30px;
+/*--------------------------------------------------------------
+1.2 Desktop
+--------------------------------------------------------------*/
+$desktop_font-size-base: $font-size-base;
 $desktop_font-size-h1: $font-size-h1;
 $desktop_font-size-h2: $font-size-h2;
 $desktop_font-size-h3: $font-size-h3;
@@ -47,9 +75,8 @@ $desktop_line-size-btn: $desktop_line-size-base;
 $desktop_line-size-dt: $desktop_line-size-base;
 
 /*--------------------------------------------------------------
-Colors
+2.0 Colors
 --------------------------------------------------------------*/
-// Mobile
 $font-black: #000;
 $font-white: #fff;
 $font-color-header: $font-black;

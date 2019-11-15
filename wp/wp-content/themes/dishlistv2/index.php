@@ -26,8 +26,10 @@ get_header();
                         $arr_posts->the_post();
                         ?>
                         <div class="box">
-                            <h3><?php the_title(); ?></h3>
-                            <p><?= get_the_excerpt(); ?></p>
+                            <a href="<?= esc_url( get_permalink() ) ?>">
+                                <h3><?= the_title(); ?></h3>
+                                <p class="text-truncated"><?= get_the_excerpt(); ?></p>
+                            </a>
                         </div>
                         <?php
                     }
@@ -66,8 +68,10 @@ get_header();
                                 $query_posts->the_post();
                                 ?>
                                 <div class="box">
-                                    <h3><?php the_title(); ?></h3>
-                                    <p><?= get_the_excerpt(); ?></p>
+                                    <a href="<?= esc_url( get_permalink() ) ?>">
+                                        <h3><?= the_title(); ?></h3>
+                                        <p class="text-truncated"><?= get_the_excerpt(); ?></p>
+                                    </a>
                                 </div>
                                 <?php
                             }

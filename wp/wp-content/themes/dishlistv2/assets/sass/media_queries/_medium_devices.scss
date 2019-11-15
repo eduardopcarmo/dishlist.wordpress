@@ -12,11 +12,23 @@ Description: Media Queries for medium devices
 - Eduardo Pereira do Carmo (2019-11-14)
 File created and set the size of the device
 
-- Zeinab Ahmadi (2019-11-14)
+- Jyot Sarup (2019-11-14)
 Add Header media queries
+
+- Zeinab Ahmadi (2019-11-14)
+Add Home media queries
 
 - Eduardo Pereira do Carmo (2019-11-14) 
 Add Generic (Main) media queries
+
+- Eduardo Pereira do Carmo (2019-11-14) 
+FAQ media queries
+
+- Walter Galvão (2019-11-14) 
+FAQ/Feature Sigle media queries
+
+- Marcos Cavalcanti (2019-11-14)
+Add Out Team media queries
 ----------------------------------------------------------------
 
 /*--------------------------------------------------------------
@@ -33,11 +45,20 @@ Add Generic (Main) media queries
         0.3.1 Footer CTA 
         0.3.2 Footer Social Media Links
 1.0 Home
+    1.1 Hero
+    1.2 Features
+    1.3 FAQ
 2.0 FAQ
-    2.1 List Page
-    2.2 Single Page
-3.0 Our Team
-4.0 Contact Us
+    2.1 Popular Questions 
+    2.2 All Questions
+3.0 FAQ/Features Single
+    3.1 Answer Content
+    3.2 Answer - Image Left
+    3.3 Answer - Footer+Back Button
+4.0 Our Team
+    4.1 Box Odd and Even
+    4.3 Box Photo
+    4.4 Box Description
 --------------------------------------------------------------*/
 //and (max-width: 1200px)
 @media only screen and (min-width: 992px) {
@@ -49,7 +70,6 @@ Add Generic (Main) media queries
             0.0.2 Navigation
         0.2 Generic (Main) 
             0.2.1 Element - Button 
-            0.2.2 Element - Box
         0.3 Footer
             0.3.1 Footer CTA
             0.3.2 Footer Social Media Links
@@ -112,7 +132,8 @@ Add Generic (Main) media queries
     }
 
     /*--------------------------------------------------------------
-    0.2 Generic (Main)
+    0.2 Generic (Main) 
+        0.2.1 Element - Button
     --------------------------------------------------------------*/
 
     /*--------------------------------------------------------------
@@ -125,20 +146,6 @@ Add Generic (Main) media queries
         width: auto;
         display: inline-block;
         padding: 10px 50px;
-    }
-
-    /*--------------------------------------------------------------
-    0.2.2 Element - Box
-    --------------------------------------------------------------*/
-    .box {
-        h3 {
-            text-align: left;
-        }
-
-        >img {
-            float: left;
-            margin-right: 10px;
-        }
     }
 
     /*--------------------------------------------------------------
@@ -186,6 +193,248 @@ Add Generic (Main) media queries
                         >a {
                             margin: 0 10px;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    /*--------------------------------------------------------------
+    1.0 Home 
+        1.1 Hero 
+        1.2 Features
+        1.3 FAQ
+    --------------------------------------------------------------*/
+    .home-container {
+        section {
+
+            /*--------------------------------------------------------------
+            1.1 Hero
+            --------------------------------------------------------------*/
+            &#home-main {
+                >.home-main-container {
+                    background-image: url("assets/images/home_main_bg.png");
+                    background-repeat: no-repeat;
+                    height: 550px;
+                    background-position: right 0 top 0;
+                    background-size: auto 550px;
+
+                    >.main-dish-1 {
+                        background-size: 300px 300px;
+                        height: 300px;
+                        width: 300px;
+                        top: 125px;
+                        right: 110px;
+                    }
+
+                    >.main-dish-2 {
+                        background-size: 180px 180px;
+                        height: 180px;
+                        width: 180px;
+                        top: 463px;
+                        left: auto;
+                        right: -60px;
+                    }
+
+                    >.main-dish-3 {
+                        background-size: 60px 60px;
+                        height: 60px;
+                        width: 60px;
+                        top: 440px;
+                        right: 150px;
+                        left: auto;
+                    }
+
+                    >.main-area {
+                        text-align: left;
+                        padding-top: 170px;
+
+                        >h1 {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            /*--------------------------------------------------------------
+            1.2 Features
+            --------------------------------------------------------------*/
+            &#feature {
+                >.home-sb-plate {
+                    display: none;
+                }
+            }
+
+            /*--------------------------------------------------------------
+            1.3 FAQ
+            --------------------------------------------------------------*/
+            &#faq-area {
+                background-image: none;
+
+                >.faq-box {
+                    background-image: url("assets/images/home_fqa_bg_big.jpg");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: center;
+                    height: 380px;
+                    margin: 0 auto;
+                    text-align: left;
+                    padding-left: 230px;
+
+                    >h2 {
+                        margin-top: 125px;
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /*--------------------------------------------------------------
+    2.0 FAQ 
+        2.1 Popular Questions 
+        2.2 All Questions
+    --------------------------------------------------------------*/
+    .faq {
+        section {
+
+            /*--------------------------------------------------------------
+            2.1 Popular Questions 
+            --------------------------------------------------------------*/
+            &.faq-popular-questions {
+                >.faq-popular-questions-content {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto;
+                    gap: 20px;
+
+                    .box {
+                        margin: 0;
+                    }
+                }
+            }
+
+            /*--------------------------------------------------------------
+            2.2 All Questions
+            --------------------------------------------------------------*/
+            &.faq-help-topics {
+                >.faq-help-topics-content {
+                    >.faq-help-topics-content-col {
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        grid-template-rows: auto;
+                        gap: 20px;
+
+                        >h4 {
+                            grid-column: 1/3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*--------------------------------------------------------------
+    3.0 FAQ/Features Single
+        3.1 Answer Content
+        3.2 Answer - Image Left
+        3.3 Answer - Footer+Back Button
+    --------------------------------------------------------------*/
+    .faq-single {
+        >article {
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto;
+            background-position: right top;
+
+            /*--------------------------------------------------------------
+            3.1 Answer Content
+            --------------------------------------------------------------*/
+            >h2,
+            .faq-single-content {
+                grid-column: 1/1;
+            }
+
+            .faq-single-content {
+                min-height: 290px;
+            }
+
+            /*--------------------------------------------------------------
+            3.2 Answer - Image Left
+            --------------------------------------------------------------*/
+            >.faq-single-img {
+                background-position: right top;
+            }
+
+            /*--------------------------------------------------------------
+            3.3 Answer - Footer+Back Button
+            --------------------------------------------------------------*/
+            >.faq-single-footer {
+                padding: 30px 30px 30px 0;
+            }
+
+        }
+    }
+
+    /*--------------------------------------------------------------
+    4.0 Our Team
+        4.1 Box Odd and Even
+        4.3 Box Photo
+        4.4 Box Description
+    --------------------------------------------------------------*/
+    .our-team-users {
+        >.our-team-users-container {
+            .user-box {
+
+                /*--------------------------------------------------------------
+                4.1 Box Odd and Even
+                --------------------------------------------------------------*/
+                &:nth-child(odd) {
+                    flex-direction: row;
+
+                    >.user-box-photo {
+                        margin-right: 30px;
+                    }
+
+                    >.user-box-description {
+                        padding: 0 0 0 40px;
+
+                        >img {
+                            left: 15px;
+                        }
+                    }
+                }
+
+                &:nth-child(even) {
+                    flex-direction: row-reverse;
+
+                    >.user-box-photo {
+                        margin-left: 30px;
+                    }
+
+                    >.user-box-description {
+                        padding: 0 40px 0 0;
+
+                        >img {
+                            right: 15px;
+                        }
+                    }
+                }
+
+                /*--------------------------------------------------------------
+                4.2 Box Photo
+                --------------------------------------------------------------*/
+                >.user-box-photo {
+                    margin: 0;
+                }
+
+                /*--------------------------------------------------------------
+                4.3 Box Description
+                --------------------------------------------------------------*/
+                >.user-box-description {
+                    >img {
+                        top: auto;
+                        left: auto;
+                        bottom: 10px;
                     }
                 }
             }
