@@ -19,6 +19,7 @@ File created and all the new styles
 1.0 Hero
 2.0 Features
 3.0 FAQ
+4.0 Animation
 --------------------------------------------------------------*/
 
 .home-container {
@@ -52,6 +53,8 @@ File created and all the new styles
                     position: absolute;
                     top: 70px;
                     right: -41px;
+                    /*---Add Animation---*/
+                    animation: slideup-rotate 5s ease-out;
                 }
 
                 >.main-dish-2 {
@@ -131,3 +134,16 @@ File created and all the new styles
         }
     }
 }
+
+/*--------------------------------------------------------------
+    4.0 Animation
+--------------------------------------------------------------*/
+@keyframes slideup-rotate{
+    50%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateX(0) rotate(360deg);
+    }
+}
+
