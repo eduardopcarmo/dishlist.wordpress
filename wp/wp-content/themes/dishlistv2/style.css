@@ -1106,6 +1106,7 @@ File created and all the new styles
 1.0 Hero
 2.0 Features
 3.0 FAQ
+4.0 Animation
 --------------------------------------------------------------*/
 .home-container {
   margin: auto 0;
@@ -1144,6 +1145,8 @@ File created and all the new styles
   position: absolute;
   top: 70px;
   right: -41px;
+  /*---Add Animation---*/
+  animation: slideup-rotate 5s ease-out;
 }
 .home-container section#home-main > .home-main-container > .main-dish-2 {
   background-image: url(assets/images/home_dish_2.png);
@@ -1205,6 +1208,17 @@ File created and all the new styles
   padding: 30px;
 }
 
+/*--------------------------------------------------------------
+    4.0 Animation
+--------------------------------------------------------------*/
+@keyframes slideup-rotate {
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
 /*--------------------------------------------------------------
 5.2 FAQ
 --------------------------------------------------------------*/
@@ -1637,6 +1651,7 @@ Add Out Team media queries
     4.1 Box Odd and Even
     4.3 Box Photo
     4.4 Box Description
+5.0 Animation
 --------------------------------------------------------------*/
 @media only screen and (min-width: 992px) {
   /*--------------------------------------------------------------
@@ -1774,6 +1789,7 @@ Add Out Team media queries
     width: 300px;
     top: 125px;
     right: 110px;
+    animation: slidedown 2s linear;
   }
   .home-container section#home-main > .home-main-container > .main-dish-2 {
     background-size: 180px 180px;
@@ -1933,6 +1949,17 @@ Add Out Team media queries
     top: auto;
     left: auto;
     bottom: 10px;
+  }
+}
+/*--------------------------------------------------------------
+5.0 Animation
+--------------------------------------------------------------*/
+@keyframes slidedown {
+  from {
+    transform: translate(110px, -300px) rotate(0deg);
+  }
+  to {
+    transform: translate(0, 0) rotate(360deg);
   }
 }
 /*--------------------------------------------------------------
