@@ -1,0 +1,50 @@
+.contact {
+  display: grid;
+  grid-template-rows: repeat (3, auto);
+  grid-template-columns: 1fr;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.contact {
+  .form-group input[type="submit"] {
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(234, 0, 36, 0.2);
+    transition: all 0.5s;
+    outline: none;
+    color: #fff;
+    background-color: #ea0024;
+    width: 100%;
+    font-size: 1.15rem;
+    margin-top: -10px;
+  }
+
+  .contactDetails {
+    margin: 10px;
+    height: 522px;
+    background-image: url("assets/images/contact_page.png");
+    background-repeat: no-repeat;
+    background-position-x: 18px;
+  }
+
+  .contactTitle {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  .contactForm {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+
+  .contactDetails {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+
+  hr {
+    width: 218px;
+    margin: 10px 0 10px 0;
+  }
+}
