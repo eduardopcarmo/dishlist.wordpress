@@ -23,6 +23,9 @@ FAQ/Feature Sigle media queries
 
 - Marcos Cavalcanti (2019-11-14)
 Add Out Team media queries
+
+- Heloysa Tancredo (2019-11-18)
+Add Contact Us media queries
 ----------------------------------------------------------------
 
 /*--------------------------------------------------------------
@@ -37,6 +40,7 @@ Add Out Team media queries
     2.2 All Questions
 3.0 FAQ/Features Single
 4.0 Our Team
+5.0 Contact Us
 --------------------------------------------------------------*/
 
 @media only screen and (min-width: 1200px) {
@@ -181,5 +185,12 @@ Add Out Team media queries
         width: 1024px;
         margin: 0 auto;
     }
-}
 
+    /*--------------------------------------------------------------
+    5.0 Contact Us
+    --------------------------------------------------------------*/
+    .contact {
+        width: 1024px;
+        margin: 0 auto;
+    }
+}

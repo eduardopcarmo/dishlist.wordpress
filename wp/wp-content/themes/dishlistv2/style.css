@@ -1498,6 +1498,47 @@ File created and styles
 /*--------------------------------------------------------------
 5.4 Contact Us
 --------------------------------------------------------------*/
+.contact {
+  display: grid;
+  grid-template-rows: repeat 3, auto;
+  grid-template-columns: 1fr;
+}
+.contact .form-group input[type=submit] {
+  padding: 10px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(234, 0, 36, 0.2);
+  transition: all 0.5s;
+  outline: none;
+  color: #fff;
+  background-color: #ea0024;
+  width: 100%;
+  font-size: 1.15rem;
+  margin-top: -10px;
+}
+.contact .contactDetails {
+  margin: 10px;
+  height: 522px;
+  background-image: url("assets/images/contact_page.png");
+  background-repeat: no-repeat;
+  background-position-x: 18px;
+}
+.contact .contactTitle {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.contact .contactForm {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.contact .contactDetails {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+.contact hr {
+  width: 218px;
+  margin: 10px 0 10px 0;
+}
+
 /*--------------------------------------------------------------
 6.0 Media Queries
     6.1 Small Devices, Tablets (larger than 768 px) 
@@ -1621,6 +1662,9 @@ FAQ/Feature Sigle media queries
 
 - Marcos Cavalcanti (2019-11-14)
 Add Out Team media queries
+
+- Heloysa Tancredo (2019-11-18)
+Add Contact Us media queries
 ----------------------------------------------------------------
 
 /*--------------------------------------------------------------
@@ -1651,7 +1695,8 @@ Add Out Team media queries
     4.1 Box Odd and Even
     4.3 Box Photo
     4.4 Box Description
-5.0 Animation
+5.0 Contact Us
+6.0 Animation
 --------------------------------------------------------------*/
 @media only screen and (min-width: 992px) {
   /*--------------------------------------------------------------
@@ -1950,6 +1995,30 @@ Add Out Team media queries
     left: auto;
     bottom: 10px;
   }
+
+  /*--------------------------------------------------------------
+  5.0 Contact Us
+  --------------------------------------------------------------*/
+  .contact {
+    grid-template-rows: auto, 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact .form-group textarea {
+    height: 142px;
+  }
+  .contact .contactForm {
+    margin-right: 40px;
+  }
+  .contact .contactTitle {
+    grid-column: 1/3;
+  }
+  .contact .contactDetails {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin: 10px 0 0 40px;
+    background-size: contain;
+    background-position: bottom right;
+  }
 }
 /*--------------------------------------------------------------
 5.0 Animation
@@ -1990,6 +2059,9 @@ FAQ/Feature Sigle media queries
 
 - Marcos Cavalcanti (2019-11-14)
 Add Out Team media queries
+
+- Heloysa Tancredo (2019-11-18)
+Add Contact Us media queries
 ----------------------------------------------------------------
 
 /*--------------------------------------------------------------
@@ -2004,6 +2076,7 @@ Add Out Team media queries
     2.2 All Questions
 3.0 FAQ/Features Single
 4.0 Our Team
+5.0 Contact Us
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
   /*--------------------------------------------------------------
@@ -2121,6 +2194,14 @@ Add Out Team media queries
   4.0 Our Team
   --------------------------------------------------------------*/
   .our-team-users {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  /*--------------------------------------------------------------
+  5.0 Contact Us
+  --------------------------------------------------------------*/
+  .contact {
     width: 1024px;
     margin: 0 auto;
   }
