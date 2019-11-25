@@ -2,19 +2,12 @@
     display: grid;
     grid-template-rows: repeat (3, auto);
     grid-template-columns: 1fr;
+    padding: 0 22px;
 
 
     .form-group input[type="submit"] {
-        padding: 10px 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(234, 0, 36, 0.2);
-        transition: all 0.5s;
-        outline: none;
-        color: #fff;
-        background-color: #ea0024;
-        width: 100%;
-        font-size: 1.15rem;
         margin-top: -10px;
+        border: none;
     }
 
     .contactDetails {
