@@ -282,7 +282,7 @@ Add Contact Us media queries
                     background-repeat: no-repeat;
                     background-size: 100%;
                     background-position: center;
-                    height: 380px;
+                    height: 450px;/*heloysa*/
                     margin: 0 auto;
                     text-align: left;
                     padding-left: 230px;
@@ -315,7 +315,8 @@ Add Contact Us media queries
                     gap: 20px;
 
                     .box {
-                        margin: 0;
+                        margin: 0 0 15px 15px;/*heloysa*/
+                        padding-right: 40px;/*heloysa*/
                     }
                 }
             }
@@ -455,7 +456,7 @@ Add Contact Us media queries
         grid-template-columns: 1fr 1fr;
 
         .form-group textarea {
-            height: 142px;
+            height: 168px;/*heloysa*/
         }
 
         .contactForm {
