@@ -44,11 +44,11 @@ FAQ/Feature Single page styles
         &.faq-popular-questions {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 340px auto;
+            grid-template-rows: 180px auto;
             background-image: url("assets/images/faq_question_mark.png");
             background-position: center top;
             background-repeat: no-repeat;
-            background-size: 220px;
+            background-size: 120px;
             padding: 30px;
 
             >h2 {
