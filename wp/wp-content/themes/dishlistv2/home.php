@@ -63,7 +63,7 @@ get_header();?>
         <section id="faq-area">
             <div class="faq-box">
                 <h2>Do you have any question?</h2>
-                <a class="btn btn-primary ">Go to FAQ</a>
+                <a class="btn btn-primary" href="<?= get_permalink( get_page_by_path( 'faq' ) ) ?>">Go to FAQ</a>
             </div> 
         </section>
 	</main>
