@@ -856,9 +856,13 @@ main {
 3.1 Title
 --------------------------------------------------------------*/
 h1.title {
-  color: #EA0024;
+  color: transparent;
   text-align: center;
   margin: 20px 0;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to bottom right, #EA0024, #ff8497);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*--------------------------------------------------------------
@@ -867,10 +871,14 @@ h1.title {
 h2.subtitle,
 h3.subtitle,
 h4.subtitle {
-  color: #EA0024;
+  color: transparent;
   margin: 0 0 20px 0;
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to bottom right, #EA0024, #ff8497);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h4.subtitle {

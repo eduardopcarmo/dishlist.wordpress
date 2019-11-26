@@ -65,9 +65,14 @@ main {
 --------------------------------------------------------------*/
 h1 {
     &.title {
-        color: $primary-color;
+        color: transparent;
         text-align: center;
         margin: 20px 0;
+
+        letter-spacing: 2px;
+        background-image: linear-gradient(to bottom right, $primary-color, lighten($primary-color, 30%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
@@ -78,10 +83,15 @@ h2,
 h3,
 h4 {
     &.subtitle {
-        color: $primary-color;
+        color: transparent;
         margin: 0 0 20px 0;
         text-transform: uppercase;
         text-align: center;
+
+        letter-spacing: 2px;
+        background-image: linear-gradient(to bottom right, $primary-color, lighten($primary-color, 30%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
