@@ -11,7 +11,7 @@
             ?>
             <div class="user-box">
                <div class="user-box-photo">
-                  <img src=<?= get_user_meta($user->ID, 'user_photo', true);?>>
+                  <img src=<?= get_user_meta($user->ID, 'user_photo', true);?> alt="<?= $user->first_name . ' ' . $user->last_name; ?>">
                   <h2><?= $user->first_name . ' ' . $user->last_name;?></h2>
                   <p>
                      <?= get_user_meta($user->ID, 'user_position', true); ?>
