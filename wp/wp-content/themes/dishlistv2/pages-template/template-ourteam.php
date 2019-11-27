@@ -5,7 +5,7 @@
    <div class="our-team-users-container">
       <?php 
          // Get all Users (type = subscriber | Order by = name)
-         $blogusers = get_users('role=subscriber&orderby=name');
+         $blogusers = get_users('role=editor&orderby=name');
          // Array of WP_User objects.
          foreach ($blogusers as $user) {
             ?>

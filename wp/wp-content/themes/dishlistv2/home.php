@@ -8,7 +8,7 @@ get_header();?>
                 <span class="main-dish-2"></span>
                 <span class="main-dish-3"></span>
                 <div class="main-area">
-                    <h1>Digital Menu</h1>
+                    <h1>Digital Menu for Restaurants</h1>
                     <p>
                         Lorem Ipsum is simply dummy text of the 
                         printing and typesetting industry.
