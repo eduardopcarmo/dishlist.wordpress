@@ -21,7 +21,7 @@
             </div>
             <div class="footer-bgVid-container">
                 <video class="footer-bgVid" autoplay muted loop>
-                    <source src="<?php echo get_template_directory_uri(); ?>/assets/images/video.mp4" type="video/mp4">
+                    <source src="<?php echo get_template_directory_uri(); ?>/assets/images/video_-_from_pexels_-_converted_with_clipchamp.mp4" type="video/mp4">
                 </video>
             </div>
         </div>

@@ -788,8 +788,9 @@ footer.footer {
   --------------------------------------------------------------*/
 }
 footer.footer > .footer-cta {
-  background-image: url("assets/images/get_the_app_bg_1.jpg");
-  background-size: cover;
+  background-image: linear-gradient(to right, white, #ff9999);
+  z-index: -2;
+  position: relative;
   background-repeat: no-repeat;
   padding: 30px;
 }
@@ -799,6 +800,20 @@ footer.footer > .footer-cta > .footer-cta-container > h2 {
 }
 footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-img {
   margin-bottom: 30px;
+}
+footer.footer > .footer-cta > .footer-bgVid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  z-index: -1;
+}
+footer.footer > .footer-cta > .footer-bgVid-container > .footer-bgVid {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 footer.footer > .footer-social-links-menu ul {
   text-align: center;
