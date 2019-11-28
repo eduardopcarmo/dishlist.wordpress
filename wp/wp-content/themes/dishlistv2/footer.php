@@ -19,6 +19,11 @@
                     <a class="btn btn-primary" href="https://www.apple.com/ios/app-store/" target="_blank">Appstore</a>
                 </div>
             </div>
+            <div class="footer-bgVid-container">
+                <video class="footer-bgVid" autoplay muted loop>
+                    <source src="<?php echo get_template_directory_uri(); ?>/assets/images/video.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
         <?php 
             wp_nav_menu( 
