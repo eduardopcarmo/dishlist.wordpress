@@ -21,11 +21,11 @@
         <div class="site-branding">
             <?php 
             the_custom_logo();?>
-            <h1>
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <span class="site-title-clr">DISH</span>LIST
-                </a>
-            </h1>	
+            
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="site-title">
+            <span class="site-title-clr">DISH</span>LIST
+            </a>
+            
         </div><!-- .site-branding -->
             
         <nav id="site-navigation" class="main-navigation">
