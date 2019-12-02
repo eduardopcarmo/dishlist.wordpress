@@ -81,3 +81,20 @@ add_theme_support( 'post-thumbnails' );
 * @link https://developer.wordpress.org/reference/functions/add_post_type_support/
 */
 add_post_type_support( 'post', 'excerpt' );
+
+
+/**
+ * the reference of removing type attribute from Style and Script tags is :
+ * https://wordpress.stackexchange.com/questions/287830/remove-type-attribute-from-script-and-style-tags-added-by-wordpress
+ */
+/* Remove the attribute " 'type=text/css' " from stylesheet  */
+function wp_hide_type($src) {
+    return str_replace("type='text/css'", '', $src);
+}
+add_filter('dishlist_styles_and_scripts', 'wp_hide_type');
+
+//* Remove type tag from script 
+function codeless_remove_type_attr($tag, $handle) {
+    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
+}
+add_filter('dishlist_styles_and_scripts', 'codeless_remove_type_attr', 10, 2);
