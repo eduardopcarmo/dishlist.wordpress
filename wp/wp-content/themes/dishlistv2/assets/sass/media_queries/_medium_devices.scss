@@ -474,6 +474,12 @@ Add Contact Us media queries
             background-size: contain;
             background-position: bottom right;
         }
+
+        // Animation - Address Title
+        .address:hover {
+            transform: scale(1.2) translateY(2rem) translateX(4rem);
+            transition: 1s ease-in-out;
+        }
     }
 }
 
