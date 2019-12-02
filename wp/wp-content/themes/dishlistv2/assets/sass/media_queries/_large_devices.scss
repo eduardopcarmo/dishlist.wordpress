@@ -200,5 +200,11 @@ Add Contact Us media queries
     .contact {
         width: 1024px;
         margin: 0 auto;
+
+        // Animation - Address Title
+        .address:hover {
+            transform: scale(1.2) translateY(2rem) translateX(4rem);
+            transition: 1s ease-in-out;
+        }
     }
 }
