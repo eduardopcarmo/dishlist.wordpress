@@ -43,11 +43,15 @@ get_header();
         <h2 class="subtitle">Help Topics</h2>
         <div class="faq-help-topics-content">
             <?php
+            // Get category id by slug
+            $categoryFAQ = get_term_by( "slug", "faq", "category" );
+
+            // Search by category ID
             $terms = get_terms( array(
                 "taxonomy" => "category",
                 "orderby" => "name",
                 "order" => "ASC",
-                "child_of" => "11"
+                "child_of" => $categoryFAQ->term_id
             ) );
             foreach ($terms as $term) {
                 if($term->term_id !== 6){

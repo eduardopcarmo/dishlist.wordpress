@@ -30,7 +30,7 @@ if(have_posts()==true)
                     ?>
                     <div class="feature-phone-img">
                         <div class="feature-phone-turnoff"></div>    
-                        <div class="feature-phone-open"></div>
+                        <div class="feature-phone-open" style="background-image: url(<?= get_template_directory_uri() . '/assets/images/feature_phone_' . $post->post_name . '.jpg'; ?>"></div>
                         <div class="feature-phone-border"></div>
                     </div>
                     <?php
@@ -41,7 +41,7 @@ if(have_posts()==true)
                 }
             ?>
             <div class="faq-single-footer">
-                <a class="btn btn-primary" href="<?= $categories[0]->category_parent === 0 ? esc_url( get_home_url() ) : esc_url( get_page_link( 96 ) ); ?>">Back</a>
+                <a class="btn btn-primary" href="<?= $categories[0]->category_parent === 0 ? esc_url( get_home_url() . "#feature") : esc_url( get_page_link( 96 ) ); ?>">Back</a>
             </div>
         </article>
         <?php
