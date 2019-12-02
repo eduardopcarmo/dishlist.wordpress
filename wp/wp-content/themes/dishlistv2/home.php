@@ -22,7 +22,7 @@ get_header();?>
         <!-- Features -->
         <section id="feature">
             <span class="home-sb-plate"></span>
-            <h1 class="title">Features</h1>
+            <h2 class="subtitle">Features</h2>
             <div class="feature-container">
                 <div class="feature-container-list">
                     <?php
