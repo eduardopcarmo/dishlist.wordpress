@@ -2,7 +2,7 @@
 <?php get_header();?>
 
 <main class="contact">
-<?php echo '<h1 class= "title contactTitle">Contact Us</h1>';?>
+<h1 class= "title contactTitle">Contact Us</h1>
     <div class="contactForm">
         <?php echo do_shortcode('[contact-form-7 id="249" title="Contact form 1"]');?>
     </div>
