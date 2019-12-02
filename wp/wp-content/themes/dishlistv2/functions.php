@@ -91,10 +91,3 @@ add_post_type_support( 'post', 'excerpt' );
 function wp_hide_type($src) {
     return str_replace("type='text/css'", '', $src);
 }
-add_filter('dishlist_styles_and_scripts', 'wp_hide_type');
-
-//* Remove type tag from script 
-function codeless_remove_type_attr($tag, $handle) {
-    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
-}
-add_filter('dishlist_styles_and_scripts', 'codeless_remove_type_attr', 10, 2);
