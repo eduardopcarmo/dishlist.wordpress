@@ -18,7 +18,7 @@
                   </p>
                </div>
                <div class="user-box-description">
-                  <img src=<?= get_user_meta($user->ID, 'user_dish', true);?> alt="<?= $user->first_name . ' favorite-food' ?>">
+                  <img src=<?= get_user_meta($user->ID, 'user_dish', true);?> alt="<?= $user->first_name . '-favorite-food' ?>">
                   <p><?= $user->description; ?></p>
                </div>
             </div>
