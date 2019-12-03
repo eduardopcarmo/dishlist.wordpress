@@ -39,7 +39,8 @@ File created and add all imports
     5.1 Home
     5.2 FAQ
     5.3 Our Team
-    5.2 Contact Us
+    5.4 Contact Us
+    5.5 References and Credits
 6.0 Media Queries
     6.1 Small Devices, Tablets (larger than 768 px)
     6.2 Medium Devices (larger than 992 px)
@@ -79,7 +80,8 @@ Styles based on Typography @link https://medium.com/@elad/normalize-css-or-css-r
     5.1 Home 
     5.2 FAQ 
     5.3 Our Team 
-    5.2 Contact Us
+    5.4 Contact Us
+    5.5 References and Credits
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -101,6 +103,11 @@ Styles based on Typography @link https://medium.com/@elad/normalize-css-or-css-r
 5.4 Contact Us
 --------------------------------------------------------------*/
 @import "pages/_contact-page.scss";
+
+/*--------------------------------------------------------------
+5.5 References and Credits
+--------------------------------------------------------------*/
+@import "pages/_references-and-credits-page.scss";
 
 /*--------------------------------------------------------------
 6.0 Media Queries

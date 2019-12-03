@@ -39,7 +39,8 @@ File created and add all imports
     5.1 Home
     5.2 FAQ
     5.3 Our Team
-    5.2 Contact Us
+    5.4 Contact Us
+    5.5 References and Credits
 6.0 Media Queries
     6.1 Small Devices, Tablets (larger than 768 px)
     6.2 Medium Devices (larger than 992 px)
@@ -1108,7 +1109,8 @@ Based on https: //dev.to/adrianbdesigns/you-can-create-these-elements-without-ja
     5.1 Home 
     5.2 FAQ 
     5.3 Our Team 
-    5.2 Contact Us
+    5.4 Contact Us
+    5.5 References and Credits
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 5.1 Home
@@ -1610,6 +1612,42 @@ File created and FAQ page styles
     transform: translateX(0);
   }
 }
+/*--------------------------------------------------------------
+5.5 References and Credits
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>>References and Credits
+----------------------------------------------------------------
+Author: Eduardo Pereira do Carmo 
+Date: 2019-12-02
+Description: References and Credits page of our theme
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-12-02)
+File created and add styles
+
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 References and Credits
+--------------------------------------------------------------*/
+.references-and-credits {
+  padding: 30px;
+}
+.references-and-credits table {
+  border-collapse: collapse;
+}
+.references-and-credits table,
+.references-and-credits th,
+.references-and-credits td {
+  border: 1px solid #33292A;
+}
+
 /*--------------------------------------------------------------
 6.0 Media Queries
     6.1 Small Devices, Tablets (larger than 768 px) 
@@ -2158,6 +2196,7 @@ Add Contact Us media queries
 3.0 FAQ/Features Single
 4.0 Our Team
 5.0 Contact Us
+6.0 References and Credits
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
   /*--------------------------------------------------------------
@@ -2299,6 +2338,14 @@ Add Contact Us media queries
   .contact .address:hover {
     transform: scale(1.2) translateY(2rem) translateX(4rem);
     transition: 1s ease-in-out;
+  }
+
+  /*--------------------------------------------------------------
+  6.0 References and Credits
+  --------------------------------------------------------------*/
+  .references-and-credits {
+    width: 1024px;
+    margin: 0 auto;
   }
 }
 
