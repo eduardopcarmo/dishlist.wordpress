@@ -31,17 +31,13 @@ File created and all the new styles
         1.0 Hero
         --------------------------------------------------------------*/
         &#home-main {
-            background-image: url("assets/images/circle_white_bottom_left.png");
-            background-repeat: no-repeat;
-            background-position: left 0 bottom 0;
-            background-size: 130px 150px;
+            background-image: url("assets/images/circle_white_bottom_left.png"),url("assets/images/home_bg_1.png");
+            background-repeat: no-repeat,no-repeat;
+            background-position: left 0 bottom 0, right 0 top 0;
+            background-size: 130px 150px,auto;
 
             >.home-main-container {
                 position: relative;
-                background-image: url("assets/images/home_bg_1.png");
-                background-repeat: no-repeat;
-                background-position: right 0 top 00;
-                background-size: auto;
                 padding-bottom: 30px;
 
                 >.main-dish-1 {
