@@ -41,6 +41,7 @@ Add Contact Us media queries
 3.0 FAQ/Features Single
 4.0 Our Team
 5.0 Contact Us
+6.0 References and Credits
 --------------------------------------------------------------*/
 
 @media only screen and (min-width: 1200px) {
@@ -206,5 +207,13 @@ Add Contact Us media queries
             transform: scale(1.2) translateY(2rem) translateX(4rem);
             transition: 1s ease-in-out;
         }
+    }
+
+    /*--------------------------------------------------------------
+    6.0 References and Credits
+    --------------------------------------------------------------*/
+    .references-and-credits {
+        width: 1024px;
+        margin: 0 auto;
     }
 }
