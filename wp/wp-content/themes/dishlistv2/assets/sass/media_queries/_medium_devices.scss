@@ -349,12 +349,12 @@ Add Contact Us media queries
     .our-team-users {
         >.our-team-users-container {
             .user-box {
-
                 /*--------------------------------------------------------------
                 3.1 Box Odd and Even
                 --------------------------------------------------------------*/
                 &:nth-child(odd) {
                     flex-direction: row;
+                    align-items: stretch;
 
                     >.user-box-photo {
                         margin-right: 30px;
@@ -362,6 +362,7 @@ Add Contact Us media queries
 
                     >.user-box-description {
                         padding: 0 0 0 40px;
+                        max-height: 250px;
 
                         >img {
                             left: 15px;
@@ -371,6 +372,7 @@ Add Contact Us media queries
 
                 &:nth-child(even) {
                     flex-direction: row-reverse;
+                    align-items: stretch;
 
                     >.user-box-photo {
                         margin-left: 30px;
@@ -378,6 +380,7 @@ Add Contact Us media queries
 
                     >.user-box-description {
                         padding: 0 40px 0 0;
+                        max-height: 250px;
 
                         >img {
                             right: 15px;

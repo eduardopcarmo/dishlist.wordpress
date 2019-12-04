@@ -1,4 +1,5 @@
-/*--------------------------------------------------------------
+/*
+--------------------------------------------------------------
 >>>Our Team
 ----------------------------------------------------------------
 Author: Marcos Cavalcanti
@@ -6,79 +7,156 @@ Date: 2019-11-14
 Description: Our Team page of our theme
 ----------------------------------------------------------------
 
-/*--------------------------------------------------------------
+--------------------------------------------------------------
 >>> Log
 ----------------------------------------------------------------
 - Marcos Cavalcanti (2019-11-14)
-File created and styles
+  File created and styles
 ----------------------------------------------------------------
-
+- Marcos Cavalcanti (2019-11-14)
+  Changing to meet requirements - Clippath and rotating box
 ----------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Our Team
     1.1 Box Photo
     1.2 Box Description
---------------------------------------------------------------*/
+--------------------------------------------------------------
+*/
 
-/*--------------------------------------------------------------
+/*
+--------------------------------------------------------------
 1.0 Our Team
     1.1 Box Photo
     1.2 Box Description
---------------------------------------------------------------*/
+--------------------------------------------------------------
+*/
 .our-team-users {
-  >.our-team-users-container {
-    .user-box {
-      padding: 0 30px 30px;
-      display: flex;
-      flex-direction: column;
 
-      /*--------------------------------------------------------------
-      1.1 Box Photo
-      --------------------------------------------------------------*/
-      >.user-box-photo {
-        width: 250px;
-        height: 250px;
-        border: 1px solid $font-black;
-        text-align: center;
-        background: url("assets/images/our-team-photo-bg.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        padding-top: 40px;
-        margin: 0 auto 40px;
-        flex-shrink: 0;
+   /*
+    .our-team-users-container --> Contains all users
+  */
+   >.our-team-users-container {
 
-        >img {
-          max-width: 120px;
-          max-height: 120px;
-          border-radius: 50%;
-          border: 3px solid $font-black;
-        }
+      /*
+        .user-box -> each line
+      */
+      .user-box {
+         padding: 0 30px 30px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         /*
+      --------------------------------------------------------------
+      1.1 Box Photo - This element will hold the image and member description
+      --------------------------------------------------------------
+      */
+         >.user-box-photo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $font-black;
+            text-align: center;
+            background: url("assets/images/our-team-photo-bg.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 250px;
+            height: 250px;
+            flex-shrink: 0;
+            margin-bottom: 30px;
+
+            /*
+              .img-card -> container that flips.
+              It uses CSS Backface-Visibility Feature as required by WMDD 4835 – HTML/CSS II
+            */
+            >.img-card {
+               display: grid;
+
+               /*
+                This image container will make the clip-path using a polygon, creating a border around the image
+               */
+               >.img-container-card {
+                  grid-row: 1/2;
+                  grid-column: 1/2;
+                  /*                    
+                    Polygon from https://bennettfeely.com/clippy/
+                    This variable will hold the polygon shape that is going to be used for the clip-path.
+                    It is used in this container, and its child. The first container will be a div with a black background,
+                    and the other will be the photo. The first one will be a little bit bigger, in order to simulate a "border"
+                    It makes it easy to change the polygon using a variable, because there will be an only point of change.
+                  */
+
+                  /* CSS Clip-Path as required by WMDD 4835 – HTML/CSS II */
+                  --polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+                  -webkit-clip-path: var(--polygon-shape);
+                  clip-path: var(--polygon-shape);
+
+                  background: $tertiary-color;
+                  width: 130px;
+                  height: 130px;
+                  /* CSS Backface-Visibility as required by WMDD 4835 – HTML/CSS II */
+                  backface-visibility: hidden;
+                  transition: all 0.9s ease;
+                  perspective: 150rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+               }
+
+               >.img-container {
+                  >img {
+                     -webkit-clip-path: var(--polygon-shape);
+                     clip-path: var(--polygon-shape);
+                     width: 120px;
+                     height: 120px;
+                  }
+               }
+
+               >.img-container-back {
+                  color: $font-white;
+                  background-image: linear-gradient(to right bottom, #f33131, #731010);
+                  transform: rotateY(180deg);
+               }
+
+               &:hover {
+                  >.img-container {
+                     transform: rotateY(180deg);
+                  }
+
+                  >.img-container-back {
+                     transform: rotateY(360deg);
+                  }
+               }
+            }
+         }
+
+         /*
+      --------------------------------------------------------------
+      1.2 Box Description -> This contains the user info and favorite dish
+      --------------------------------------------------------------
+      */
+         >.user-box-description {
+            position: relative;
+            border: 1px solid $font-black;
+            background-color: $secondary-color;
+            padding-top: 40px;
+
+            >img {
+               position: absolute;
+               max-width: 57px;
+               max-height: 57px;
+               top: 10px;
+               left: 20px;
+            }
+
+            >p {
+               padding: 30px;
+               background-color: $font-white;
+               height: 100%;
+            }
+         }
       }
-
-      /*--------------------------------------------------------------
-      1.2 Box Description
-      --------------------------------------------------------------*/
-      >.user-box-description {
-        position: relative;
-        border: 1px solid $font-black;
-        background-color: $secondary-color;
-        padding-top: 40px;
-
-        >img {
-          position: absolute;
-          max-width: 57px;
-          max-height: 57px;
-          top: 10px;
-          left: 20px;
-        }
-
-        >p {
-          padding: 30px;
-          background-color: $font-white;
-          height: 100%;
-        }
-      }
-    }
-  }
+   }
 }
