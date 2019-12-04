@@ -798,6 +798,20 @@ footer.footer > .footer-cta {
 footer.footer > .footer-cta > .footer-cta-container > h2 {
   text-align: center;
   padding: 0 0 30px 0;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to bottom right, #000000, #ed0024);
+  -webkit-background-clip: text;
+  /*text doi mau thanh gradient (gradient text)*/
+  color: transparent;
+  transition: all 0.2s;
+}
+footer.footer > .footer-cta > .footer-cta-container > h2:hover {
+  transform: skewY(2deg) skewX(-2deg);
+  /* scaleX(1.2)  make text bigger*/
+  text-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
 }
 footer.footer > .footer-cta > .footer-cta-container > div.footer-cta-img {
   margin-bottom: 30px;
@@ -831,6 +845,13 @@ footer.footer > .footer-social-links-menu ul li > a {
   height: 39px;
   width: 39px;
   background-size: 39px;
+  transition: all 0.2s;
+  outline-offset: 8px;
+}
+footer.footer > .footer-social-links-menu ul li > a:hover {
+  outline: 3px solid #ed0024;
+  transform: scale(1.1) translateY(-0.75rem);
+  z-index: 1;
 }
 footer.footer > .footer-social-links-menu ul li.icon-facebook a {
   background-image: url("assets/images/icon_facebook.png");
