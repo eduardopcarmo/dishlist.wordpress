@@ -1390,12 +1390,6 @@ FAQ/Feature Single page styles
 .faq-single article > .faq-single-footer {
   margin: 30px 0;
 }
-.faq-single article > .faq-single-footer .btn {
-  width: 100%;
-  margin: 0;
-  display: inline-block;
-  text-align: center;
-}
 .faq-single article > .feature-phone-img {
   height: 450px;
   width: 100%;
@@ -1452,7 +1446,8 @@ FAQ/Feature Single page styles
 /*--------------------------------------------------------------
 5.3 Our Team
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
+/*
+--------------------------------------------------------------
 >>>Our Team
 ----------------------------------------------------------------
 Author: Marcos Cavalcanti
@@ -1460,53 +1455,121 @@ Date: 2019-11-14
 Description: Our Team page of our theme
 ----------------------------------------------------------------
 
-/*--------------------------------------------------------------
+--------------------------------------------------------------
 >>> Log
 ----------------------------------------------------------------
 - Marcos Cavalcanti (2019-11-14)
-File created and styles
+  File created and styles
 ----------------------------------------------------------------
-
+- Marcos Cavalcanti (2019-11-14)
+  Changing to meet requirements - Clippath and rotating box
 ----------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Our Team
     1.1 Box Photo
     1.2 Box Description
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
+--------------------------------------------------------------
+*/
+/*
+--------------------------------------------------------------
 1.0 Our Team
     1.1 Box Photo
     1.2 Box Description
---------------------------------------------------------------*/
+--------------------------------------------------------------
+*/
+.our-team-users {
+  /*
+    .our-team-users-container --> Contains all users
+  */
+}
+.our-team-users > .our-team-users-container {
+  /*
+    .user-box -> each line
+  */
+}
 .our-team-users > .our-team-users-container .user-box {
   padding: 0 30px 30px;
   display: flex;
   flex-direction: column;
-  /*--------------------------------------------------------------
-  1.1 Box Photo
-  --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-  1.2 Box Description
-  --------------------------------------------------------------*/
+  align-items: center;
+  /*
+  --------------------------------------------------------------
+  1.1 Box Photo - This element will hold the image and member description
+  --------------------------------------------------------------
+  */
+  /*
+  --------------------------------------------------------------
+  1.2 Box Description -> This contains the user info and favorite dish
+  --------------------------------------------------------------
+  */
 }
 .our-team-users > .our-team-users-container .user-box > .user-box-photo {
-  width: 250px;
-  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #000;
   text-align: center;
   background: url("assets/images/our-team-photo-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
-  padding-top: 40px;
-  margin: 0 auto 40px;
+  width: 250px;
+  height: 250px;
   flex-shrink: 0;
+  margin-bottom: 30px;
+  /*
+    .img-card -> container that flips.
+    It uses CSS Backface-Visibility Feature as required by WMDD 4835 – HTML/CSS II
+  */
 }
-.our-team-users > .our-team-users-container .user-box > .user-box-photo > img {
-  max-width: 120px;
-  max-height: 120px;
-  border-radius: 50%;
-  border: 3px solid #000;
+.our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card {
+  display: grid;
+  /*
+   This image container will make the clip-path using a polygon, creating a border around the image
+  */
+}
+.our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card > .img-container-card {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  /*                    
+    Polygon from https://bennettfeely.com/clippy/
+    This variable will hold the polygon shape that is going to be used for the clip-path.
+    It is used in this container, and its child. The first container will be a div with a black background,
+    and the other will be the photo. The first one will be a little bit bigger, in order to simulate a "border"
+    It makes it easy to change the polygon using a variable, because there will be an only point of change.
+  */
+  /* CSS Clip-Path as required by WMDD 4835 – HTML/CSS II */
+  --polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  -webkit-clip-path: var(--polygon-shape);
+  clip-path: var(--polygon-shape);
+  background: #33292A;
+  width: 130px;
+  height: 130px;
+  /* CSS Backface-Visibility as required by WMDD 4835 – HTML/CSS II */
+  backface-visibility: hidden;
+  transition: all 0.9s ease;
+  perspective: 150rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card > .img-container > img {
+  -webkit-clip-path: var(--polygon-shape);
+  clip-path: var(--polygon-shape);
+  width: 120px;
+  height: 120px;
+}
+.our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card > .img-container-back {
+  color: #fff;
+  background-image: linear-gradient(to right bottom, #f33131, #731010);
+  transform: rotateY(180deg);
+}
+.our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card:hover > .img-container {
+  transform: rotateY(180deg);
+}
+.our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card:hover > .img-container-back {
+  transform: rotateY(360deg);
 }
 .our-team-users > .our-team-users-container .user-box > .user-box-description {
   position: relative;
@@ -1692,6 +1755,7 @@ Add Home media queries
     0.2 Footer 
         0.2.1 Footer CTA 
 1.0 Home
+2.0 FAQ/Features Single
 --------------------------------------------------------------*/
 @media only screen and (min-width: 768px) {
   /*--------------------------------------------------------------
@@ -1741,6 +1805,40 @@ Add Home media queries
   }
   .home-container section#feature > .feature-container > .feature-container-list > .box p {
     text-align: left;
+  }
+
+  /*--------------------------------------------------------------
+  2.0 FAQ/Features Single
+      2.1 Answer Content
+      2.2 Answer - Image Left
+      2.3 Answer - Footer+Back Button
+  --------------------------------------------------------------*/
+  .faq-single > article {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    background-position: right top;
+    /*--------------------------------------------------------------
+    2.1 Answer Content
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    2.2 Answer - Image Left
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    2.3 Answer - Footer+Back Button
+    --------------------------------------------------------------*/
+  }
+  .faq-single > article > h2,
+.faq-single > article .faq-single-content {
+    grid-column: 1/1;
+  }
+  .faq-single > article .faq-single-content {
+    min-height: 290px;
+  }
+  .faq-single > article > .faq-single-img {
+    background-position: right top;
+  }
+  .faq-single > article > .faq-single-footer {
+    padding: 0;
   }
 }
 /*--------------------------------------------------------------
@@ -1802,16 +1900,12 @@ Add Contact Us media queries
 2.0 FAQ
     2.1 Popular Questions 
     2.2 All Questions
-3.0 FAQ/Features Single
-    3.1 Answer Content
-    3.2 Answer - Image Left
-    3.3 Answer - Footer+Back Button
-4.0 Our Team
-    4.1 Box Odd and Even
-    4.3 Box Photo
-    4.4 Box Description
-5.0 Contact Us
-6.0 Animation
+3.0 Our Team
+    3.1 Box Odd and Even
+    3.3 Box Photo
+    3.4 Box Description
+4.0 Contact Us
+5.0 Animation
 --------------------------------------------------------------*/
 @media only screen and (min-width: 992px) {
   /*--------------------------------------------------------------
@@ -2035,76 +2129,46 @@ Add Contact Us media queries
   }
 
   /*--------------------------------------------------------------
-  3.0 FAQ/Features Single
-      3.1 Answer Content
-      3.2 Answer - Image Left
-      3.3 Answer - Footer+Back Button
-  --------------------------------------------------------------*/
-  .faq-single > article {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-    background-position: right top;
-    /*--------------------------------------------------------------
-    3.1 Answer Content
-    --------------------------------------------------------------*/
-    /*--------------------------------------------------------------
-    3.2 Answer - Image Left
-    --------------------------------------------------------------*/
-    /*--------------------------------------------------------------
-    3.3 Answer - Footer+Back Button
-    --------------------------------------------------------------*/
-  }
-  .faq-single > article > h2,
-.faq-single > article .faq-single-content {
-    grid-column: 1/1;
-  }
-  .faq-single > article .faq-single-content {
-    min-height: 290px;
-  }
-  .faq-single > article > .faq-single-img {
-    background-position: right top;
-  }
-  .faq-single > article > .faq-single-footer {
-    padding: 30px 30px 30px 0;
-  }
-
-  /*--------------------------------------------------------------
-  4.0 Our Team
-      4.1 Box Odd and Even
-      4.3 Box Photo
-      4.4 Box Description
+  3.0 Our Team
+      3.1 Box Odd and Even
+      3.3 Box Photo
+      3.4 Box Description
   --------------------------------------------------------------*/
   .our-team-users > .our-team-users-container .user-box {
     /*--------------------------------------------------------------
-    4.1 Box Odd and Even
+    3.1 Box Odd and Even
     --------------------------------------------------------------*/
     /*--------------------------------------------------------------
-    4.2 Box Photo
+    3.2 Box Photo
     --------------------------------------------------------------*/
     /*--------------------------------------------------------------
-    4.3 Box Description
+    3.3 Box Description
     --------------------------------------------------------------*/
   }
   .our-team-users > .our-team-users-container .user-box:nth-child(odd) {
     flex-direction: row;
+    align-items: stretch;
   }
   .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-photo {
     margin-right: 30px;
   }
   .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-description {
     padding: 0 0 0 40px;
+    max-height: 250px;
   }
   .our-team-users > .our-team-users-container .user-box:nth-child(odd) > .user-box-description > img {
     left: 15px;
   }
   .our-team-users > .our-team-users-container .user-box:nth-child(even) {
     flex-direction: row-reverse;
+    align-items: stretch;
   }
   .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-photo {
     margin-left: 30px;
   }
   .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-description {
     padding: 0 40px 0 0;
+    max-height: 250px;
   }
   .our-team-users > .our-team-users-container .user-box:nth-child(even) > .user-box-description > img {
     right: 15px;
@@ -2119,7 +2183,7 @@ Add Contact Us media queries
   }
 
   /*--------------------------------------------------------------
-  5.0 Contact Us
+  4.0 Contact Us
   --------------------------------------------------------------*/
   .contact {
     grid-template-rows: auto, 1fr;
