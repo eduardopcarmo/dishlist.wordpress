@@ -28,6 +28,7 @@ Add Home media queries
     0.2 Footer 
         0.2.1 Footer CTA 
 1.0 Home
+2.0 FAQ/Features Single
 --------------------------------------------------------------*/
 //and (max-width: 992px)
 @media only screen and (min-width: 768px) {
@@ -101,6 +102,47 @@ Add Home media queries
                     }
                 }
             }
+        }
+    }
+
+    /*--------------------------------------------------------------
+    2.0 FAQ/Features Single
+        2.1 Answer Content
+        2.2 Answer - Image Left
+        2.3 Answer - Footer+Back Button
+    --------------------------------------------------------------*/
+    .faq-single {
+        >article {
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto;
+            background-position: right top;
+
+            /*--------------------------------------------------------------
+            2.1 Answer Content
+            --------------------------------------------------------------*/
+            >h2,
+            .faq-single-content {
+                grid-column: 1/1;
+            }
+
+            .faq-single-content {
+                min-height: 290px;
+            }
+
+            /*--------------------------------------------------------------
+            2.2 Answer - Image Left
+            --------------------------------------------------------------*/
+            >.faq-single-img {
+                background-position: right top;
+            }
+
+            /*--------------------------------------------------------------
+            2.3 Answer - Footer+Back Button
+            --------------------------------------------------------------*/
+            >.faq-single-footer {
+                padding: 0;
+            }
+
         }
     }
 }

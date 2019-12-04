@@ -1385,12 +1385,6 @@ FAQ/Feature Single page styles
 .faq-single article > .faq-single-footer {
   margin: 30px 0;
 }
-.faq-single article > .faq-single-footer .btn {
-  width: 100%;
-  margin: 0;
-  display: inline-block;
-  text-align: center;
-}
 .faq-single article > .feature-phone-img {
   height: 450px;
   width: 100%;
@@ -1687,6 +1681,7 @@ Add Home media queries
     0.2 Footer 
         0.2.1 Footer CTA 
 1.0 Home
+2.0 FAQ/Features Single
 --------------------------------------------------------------*/
 @media only screen and (min-width: 768px) {
   /*--------------------------------------------------------------
@@ -1736,6 +1731,40 @@ Add Home media queries
   }
   .home-container section#feature > .feature-container > .feature-container-list > .box p {
     text-align: left;
+  }
+
+  /*--------------------------------------------------------------
+  2.0 FAQ/Features Single
+      2.1 Answer Content
+      2.2 Answer - Image Left
+      2.3 Answer - Footer+Back Button
+  --------------------------------------------------------------*/
+  .faq-single > article {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    background-position: right top;
+    /*--------------------------------------------------------------
+    2.1 Answer Content
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    2.2 Answer - Image Left
+    --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+    2.3 Answer - Footer+Back Button
+    --------------------------------------------------------------*/
+  }
+  .faq-single > article > h2,
+.faq-single > article .faq-single-content {
+    grid-column: 1/1;
+  }
+  .faq-single > article .faq-single-content {
+    min-height: 290px;
+  }
+  .faq-single > article > .faq-single-img {
+    background-position: right top;
+  }
+  .faq-single > article > .faq-single-footer {
+    padding: 0;
   }
 }
 /*--------------------------------------------------------------
@@ -1797,16 +1826,12 @@ Add Contact Us media queries
 2.0 FAQ
     2.1 Popular Questions 
     2.2 All Questions
-3.0 FAQ/Features Single
-    3.1 Answer Content
-    3.2 Answer - Image Left
-    3.3 Answer - Footer+Back Button
-4.0 Our Team
-    4.1 Box Odd and Even
-    4.3 Box Photo
-    4.4 Box Description
-5.0 Contact Us
-6.0 Animation
+3.0 Our Team
+    3.1 Box Odd and Even
+    3.3 Box Photo
+    3.4 Box Description
+4.0 Contact Us
+5.0 Animation
 --------------------------------------------------------------*/
 @media only screen and (min-width: 992px) {
   /*--------------------------------------------------------------
@@ -2027,54 +2052,20 @@ Add Contact Us media queries
   }
 
   /*--------------------------------------------------------------
-  3.0 FAQ/Features Single
-      3.1 Answer Content
-      3.2 Answer - Image Left
-      3.3 Answer - Footer+Back Button
-  --------------------------------------------------------------*/
-  .faq-single > article {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: auto;
-    background-position: right top;
-    /*--------------------------------------------------------------
-    3.1 Answer Content
-    --------------------------------------------------------------*/
-    /*--------------------------------------------------------------
-    3.2 Answer - Image Left
-    --------------------------------------------------------------*/
-    /*--------------------------------------------------------------
-    3.3 Answer - Footer+Back Button
-    --------------------------------------------------------------*/
-  }
-  .faq-single > article > h2,
-.faq-single > article .faq-single-content {
-    grid-column: 1/1;
-  }
-  .faq-single > article .faq-single-content {
-    min-height: 290px;
-  }
-  .faq-single > article > .faq-single-img {
-    background-position: right top;
-  }
-  .faq-single > article > .faq-single-footer {
-    padding: 30px 30px 30px 0;
-  }
-
-  /*--------------------------------------------------------------
-  4.0 Our Team
-      4.1 Box Odd and Even
-      4.3 Box Photo
-      4.4 Box Description
+  3.0 Our Team
+      3.1 Box Odd and Even
+      3.3 Box Photo
+      3.4 Box Description
   --------------------------------------------------------------*/
   .our-team-users > .our-team-users-container .user-box {
     /*--------------------------------------------------------------
-    4.1 Box Odd and Even
+    3.1 Box Odd and Even
     --------------------------------------------------------------*/
     /*--------------------------------------------------------------
-    4.2 Box Photo
+    3.2 Box Photo
     --------------------------------------------------------------*/
     /*--------------------------------------------------------------
-    4.3 Box Description
+    3.3 Box Description
     --------------------------------------------------------------*/
   }
   .our-team-users > .our-team-users-container .user-box:nth-child(odd) {
@@ -2111,7 +2102,7 @@ Add Contact Us media queries
   }
 
   /*--------------------------------------------------------------
-  5.0 Contact Us
+  4.0 Contact Us
   --------------------------------------------------------------*/
   .contact {
     grid-template-rows: auto, 1fr;
