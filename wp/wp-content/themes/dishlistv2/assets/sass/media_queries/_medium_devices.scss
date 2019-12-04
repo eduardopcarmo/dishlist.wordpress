@@ -54,16 +54,12 @@ Add Contact Us media queries
 2.0 FAQ
     2.1 Popular Questions 
     2.2 All Questions
-3.0 FAQ/Features Single
-    3.1 Answer Content
-    3.2 Answer - Image Left
-    3.3 Answer - Footer+Back Button
-4.0 Our Team
-    4.1 Box Odd and Even
-    4.3 Box Photo
-    4.4 Box Description
-5.0 Contact Us
-6.0 Animation
+3.0 Our Team
+    3.1 Box Odd and Even
+    3.3 Box Photo
+    3.4 Box Description
+4.0 Contact Us
+5.0 Animation
 --------------------------------------------------------------*/
 //and (max-width: 1200px)
 @media only screen and (min-width: 992px) {
@@ -286,7 +282,8 @@ Add Contact Us media queries
                     background-repeat: no-repeat;
                     background-size: 100%;
                     background-position: center;
-                    height: 450px;/*heloysa*/
+                    height: 450px;
+                    /*heloysa*/
                     margin: 0 auto;
                     text-align: left;
                     padding-left: 230px;
@@ -319,8 +316,10 @@ Add Contact Us media queries
                     gap: 20px;
 
                     .box {
-                        margin: 0 0 15px 15px;/*heloysa*/
-                        padding-right: 40px;/*heloysa*/
+                        margin: 0 0 15px 15px;
+                        /*heloysa*/
+                        padding-right: 40px;
+                        /*heloysa*/
                     }
                 }
             }
@@ -346,61 +345,20 @@ Add Contact Us media queries
     }
 
     /*--------------------------------------------------------------
-    3.0 FAQ/Features Single
-        3.1 Answer Content
-        3.2 Answer - Image Left
-        3.3 Answer - Footer+Back Button
-    --------------------------------------------------------------*/
-    .faq-single {
-        >article {
-            grid-template-columns: 2fr 1fr;
-            grid-template-rows: auto;
-            background-position: right top;
-
-            /*--------------------------------------------------------------
-            3.1 Answer Content
-            --------------------------------------------------------------*/
-            >h2,
-            .faq-single-content {
-                grid-column: 1/1;
-            }
-
-            .faq-single-content {
-                min-height: 290px;
-            }
-
-            /*--------------------------------------------------------------
-            3.2 Answer - Image Left
-            --------------------------------------------------------------*/
-            >.faq-single-img {
-                background-position: right top;
-            }
-
-            /*--------------------------------------------------------------
-            3.3 Answer - Footer+Back Button
-            --------------------------------------------------------------*/
-            >.faq-single-footer {
-                padding: 30px 30px 30px 0;
-            }
-
-        }
-    }
-
-    /*--------------------------------------------------------------
-    4.0 Our Team
-        4.1 Box Odd and Even
-        4.3 Box Photo
-        4.4 Box Description
+    3.0 Our Team
+        3.1 Box Odd and Even
+        3.3 Box Photo
+        3.4 Box Description
     --------------------------------------------------------------*/
     .our-team-users {
         >.our-team-users-container {
             .user-box {
-
                 /*--------------------------------------------------------------
-                4.1 Box Odd and Even
+                3.1 Box Odd and Even
                 --------------------------------------------------------------*/
                 &:nth-child(odd) {
                     flex-direction: row;
+                    align-items: stretch;
 
                     >.user-box-photo {
                         margin-right: 30px;
@@ -408,6 +366,7 @@ Add Contact Us media queries
 
                     >.user-box-description {
                         padding: 0 0 0 40px;
+                        max-height: 250px;
 
                         >img {
                             left: 15px;
@@ -417,6 +376,7 @@ Add Contact Us media queries
 
                 &:nth-child(even) {
                     flex-direction: row-reverse;
+                    align-items: stretch;
 
                     >.user-box-photo {
                         margin-left: 30px;
@@ -424,6 +384,7 @@ Add Contact Us media queries
 
                     >.user-box-description {
                         padding: 0 40px 0 0;
+                        max-height: 250px;
 
                         >img {
                             right: 15px;
@@ -432,14 +393,14 @@ Add Contact Us media queries
                 }
 
                 /*--------------------------------------------------------------
-                4.2 Box Photo
+                3.2 Box Photo
                 --------------------------------------------------------------*/
                 >.user-box-photo {
                     margin: 0;
                 }
 
                 /*--------------------------------------------------------------
-                4.3 Box Description
+                3.3 Box Description
                 --------------------------------------------------------------*/
                 >.user-box-description {
                     >img {
@@ -453,14 +414,15 @@ Add Contact Us media queries
     }
 
     /*--------------------------------------------------------------
-    5.0 Contact Us
+    4.0 Contact Us
     --------------------------------------------------------------*/
     .contact {
         grid-template-rows: auto, 1fr;
         grid-template-columns: 1fr 1fr;
 
         .form-group textarea {
-            height: 168px;/*heloysa*/
+            height: 168px;
+            /*heloysa*/
         }
 
         .contactForm {
