@@ -2,41 +2,46 @@
 <?php 
 // UPDATE USER META TO ADD EXTRA INFORMATION
 //   // Marcos
-//   update_user_meta( 2, 'user_position', 'Lead QA & Developer');
-//   update_user_meta( 2, 'user_photo', '/wp-content/uploads/2019/11/marcos.jpg');
-//   update_user_meta( 2, 'user_dish', '/wp-content/uploads/2019/11/dish_marcos.png');
-//   update_user_meta( 2, 'user_war_cry', 'Cowabunga!');
+//   update_user_meta( 6, 'user_position', 'Lead QA & Developer');
+//   update_user_meta( 6, 'user_photo', '/wp-content/uploads/2019/11/marcos.jpg');
+//   update_user_meta( 6, 'user_dish', '/wp-content/uploads/2019/11/dish_marcos.png');
+ //  update_user_meta( 6, 'user_war_cry', 'Cowabunga!');
 
 //   // Eduardo
-//   update_user_meta( 3, 'user_position', 'Developer');
-//   update_user_meta( 3, 'user_photo', '/wp-content/uploads/2019/11/Eduardo_Pereira_do_Carmo.jpg');
-//   update_user_meta( 3, 'user_dish', '/wp-content/uploads/2019/11/dish_eduardo.png');
-//   update_user_meta( 3, 'user_war_cry', 'Let\'s rock!');
+//   update_user_meta( 2, 'user_position', 'Developer');
+//   update_user_meta( 2, 'user_photo', '/wp-content/uploads/2019/11/Eduardo_Pereira_do_Carmo.jpg');
+//   update_user_meta( 2, 'user_dish', '/wp-content/uploads/2019/11/dish_eduardo.png');
+//   update_user_meta( 2, 'user_war_cry', 'Great Scott!');
+
 //   // Heloysa
 //   update_user_meta( 4, 'user_position', 'Project Manager');
 //   update_user_meta( 4, 'user_photo', '/wp-content/uploads/2019/12/Heloysa_B_T_Guerreiro.jpg');
 //   update_user_meta( 4, 'user_dish', '/wp-content/uploads/2019/12/dish_helo.png');
-//   update_user_meta( 4, 'user_war_cry', 'Let\'s go team!');
-//   // Walter
-//   update_user_meta( 5, 'user_position', 'Lead Developer');
-//   update_user_meta( 5, 'user_photo', '/wp-content/uploads/2019/11/walter.png');
-//   update_user_meta( 5, 'user_dish', '/wp-content/uploads/2019/11/dish_walter.png');
-//   update_user_meta( 5, 'user_war_cry', 'Gimme some water');
-//   // Jyot
-//   update_user_meta( 6, 'user_position', 'Developer');
-//   update_user_meta( 6, 'user_photo', '/wp-content/uploads/2019/11/jyot.png');
-//   update_user_meta( 6, 'user_dish', '/wp-content/uploads/2019/11/dish_jyot.png');
-//   update_user_meta( 6, 'user_war_cry', 'Yay!');
-//   // Nazi
+ //  update_user_meta( 4, 'user_war_cry', 'Merry Christmas!');
+
+   //   // Walter
+//   update_user_meta( 8, 'user_position', 'Lead Developer');
+//   update_user_meta( 8, 'user_photo', '/wp-content/uploads/2019/11/walter.png');
+//   update_user_meta( 8, 'user_dish', '/wp-content/uploads/2019/11/dish_walter.png');
+//   update_user_meta( 8, 'user_war_cry', 'Pickle Rick!');
+
+   //   // Jyot
+//   update_user_meta( 5, 'user_position', 'Developer');
+//   update_user_meta( 5, 'user_photo', '/wp-content/uploads/2019/11/jyot.png');
+//   update_user_meta( 5, 'user_dish', '/wp-content/uploads/2019/11/dish_jyot.png');
+//   update_user_meta( 5, 'user_war_cry', 'Yay!');
+
+   //   // Nazi
 //   update_user_meta( 7, 'user_position', 'Designer & Developer');
 //   update_user_meta( 7, 'user_photo', '/wp-content/uploads/2019/11/nazi.png');
 //   update_user_meta( 7, 'user_dish', '/wp-content/uploads/2019/11/dish_nazi.png');
-//   update_user_meta( 7, 'user_war_cry', 'Test tomorrow!');
-//   // Harry
-//   update_user_meta( 8, 'user_position', 'Lead Designer');
-//   update_user_meta( 8, 'user_photo', '/wp-content/uploads/2019/11/harry.png');
-//   update_user_meta( 8, 'user_dish', '/wp-content/uploads/2019/11/dish_harry.png');
-//   update_user_meta( 8, 'user_war_cry', 'Oh no!');
+ //  update_user_meta( 7, 'user_war_cry', 'It is on till the break of dawn!');
+
+   //   // Harry
+//   update_user_meta( 3, 'user_position', 'Lead Designer');
+//   update_user_meta( 3, 'user_photo', '/wp-content/uploads/2019/11/harry.png');
+//   update_user_meta( 3, 'user_dish', '/wp-content/uploads/2019/11/dish_harry.png');
+ //  update_user_meta( 3, 'user_war_cry', 'Everything is loud to me!');
 //   echo "<p>Updated!</p>";
 ?>
 
