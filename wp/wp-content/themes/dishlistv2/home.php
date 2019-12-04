@@ -10,11 +10,12 @@ get_header();?>
                 <div class="main-area">
                     <h1>Digital Menu for Restaurants</h1>
                     <p>
-                        Lorem Ipsum is simply dummy text of the 
-                        printing and typesetting industry.
+                        Are restaurant menus confusing to you too? Not anymore!<br>
+                        Dishlist makes it easy for you to order dishes with its easy to understand and interactive menu features.
+                        <br>Download dishlist to get started.                        
                     </p>                
-                    <a class="btn btn-primary" href="https://play.google.com/store/" target="_blank">Android</a>
-                    <a class="btn btn-primary" href="https://www.apple.com/ios/app-store/" target="_blank">Appstore</a>
+                    <a class="btn btn-primary" href="https://play.google.com/store/" target="_blank">Google Play</a>
+                    <a class="btn btn-primary" href="https://www.apple.com/ios/app-store/" target="_blank">App Store</a>
                 </div>
             </div>
             <div class="home-main-container-null"></div>

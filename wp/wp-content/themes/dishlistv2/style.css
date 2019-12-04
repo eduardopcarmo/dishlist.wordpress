@@ -848,6 +848,11 @@ footer.footer > .footer-copyright {
   padding: 30px;
   text-align: center;
 }
+footer.footer > .footer-copyright a {
+  color: #EA0024;
+  text-decoration: underline;
+  text-decoration-color: #EA0024;
+}
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -1968,6 +1973,9 @@ Add Contact Us media queries
   }
   .home-container section#home-main > .home-main-container > .main-area > h1 {
     text-align: left;
+  }
+  .home-container section#home-main > .home-main-container > .main-area > p {
+    width: 50%;
   }
   .home-container section#feature > .home-sb-plate {
     display: none;
