@@ -119,6 +119,12 @@ footer {
         >.footer-copyright {
             padding: 30px;
             text-align: center;
+
+            a{
+                color:$primary-color;
+                text-decoration: underline;
+                text-decoration-color: $primary-color;
+            }
         }
     }
 }
