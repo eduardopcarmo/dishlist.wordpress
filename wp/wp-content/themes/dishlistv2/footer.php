@@ -49,7 +49,7 @@
         ?>
         <div class="footer-copyright">
             <p>@Copyright Dishlist - <?= date("Y"); ?>.</p>
-            <a href="<?= get_permalink( get_page_by_path( 'our-team' ) ) ?>">References and Credits</a>
+            <a href="<?= get_permalink( get_page_by_path( 'references-and-credits' ) ) ?>">References and Credits</a>
         </div>
     </footer>
     <?php wp_footer(); ?>
