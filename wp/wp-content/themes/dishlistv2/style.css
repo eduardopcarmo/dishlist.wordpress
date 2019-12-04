@@ -39,7 +39,8 @@ File created and add all imports
     5.1 Home
     5.2 FAQ
     5.3 Our Team
-    5.2 Contact Us
+    5.4 Contact Us
+    5.5 References and Credits
 6.0 Media Queries
     6.1 Small Devices, Tablets (larger than 768 px)
     6.2 Medium Devices (larger than 992 px)
@@ -984,7 +985,8 @@ Based on https: //dev.to/adrianbdesigns/you-can-create-these-elements-without-ja
     5.1 Home 
     5.2 FAQ 
     5.3 Our Team 
-    5.2 Contact Us
+    5.4 Contact Us
+    5.5 References and Credits
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 5.1 Home
@@ -1012,92 +1014,7 @@ File created and all the new styles
 3.0 FAQ
 4.0 Animation
 --------------------------------------------------------------*/
-.home-container {
-  margin: auto 0; }
-  .home-container section {
-    /*--------------------------------------------------------------
-        1.0 Hero
-        --------------------------------------------------------------*/
-    /*--------------------------------------------------------------
-        2.0 Features
-        --------------------------------------------------------------*/
-    /*--------------------------------------------------------------
-        3.0 FAQ
-        --------------------------------------------------------------*/ }
-    .home-container section#home-main {
-      background-image: url("assets/images/circle_white_bottom_left.png");
-      background-repeat: no-repeat;
-      background-position: left 0 bottom 0;
-      background-size: 130px 150px; }
-      .home-container section#home-main > .home-main-container {
-        position: relative;
-        background-image: url("assets/images/home_bg_1.png");
-        background-repeat: no-repeat;
-        background-position: right 0 top 00;
-        background-size: auto;
-        padding-bottom: 30px; }
-        .home-container section#home-main > .home-main-container > .main-dish-1 {
-          background-image: url("assets/images/home_dish_1.png");
-          background-repeat: no-repeat;
-          background-size: 234px 234px;
-          height: 234px;
-          width: 234px;
-          position: absolute;
-          top: 70px;
-          right: -41px;
-          /*---Add Animation---*/
-          animation: slideup-rotate 5s ease-out; }
-        .home-container section#home-main > .home-main-container > .main-dish-2 {
-          background-image: url(assets/images/home_dish_2.png);
-          background-repeat: no-repeat;
-          background-size: 115px 113px;
-          height: 113px;
-          width: 115px;
-          position: absolute;
-          top: 15px;
-          left: -5px; }
-        .home-container section#home-main > .home-main-container > .main-dish-3 {
-          background-image: url(assets/images/home_dish_3.png);
-          background-repeat: no-repeat;
-          background-size: 51px 51px;
-          height: 51px;
-          width: 51px;
-          position: absolute;
-          top: 140px;
-          left: 115px; }
-        .home-container section#home-main > .home-main-container > .main-area {
-          padding: 260px 33px 33px 33px;
-          position: relative; }
-          .home-container section#home-main > .home-main-container > .main-area h1 {
-            text-align: center; }
-          .home-container section#home-main > .home-main-container > .main-area p {
-            margin: 30px 0 30px 0; }
-    .home-container section#feature {
-      background-image: url("assets/images/circle_gray_top.png");
-      background-repeat: no-repeat, no-repeat;
-      background-position: left 0 top 0;
-      background-size: 130px 150px;
-      position: relative;
-      text-align: center;
-      padding: 30px 30px 0; }
-      .home-container section#feature > .home-sb-plate {
-        background-image: url("assets/images/home_strawberry_palte.png");
-        background-repeat: no-repeat;
-        position: absolute;
-        top: -4%;
-        right: 15px;
-        background-size: 100px 100px;
-        height: 100px;
-        width: 100px; }
-    .home-container section#faq-area {
-      background-image: url("assets/images/home_fqa_bg_small.jpg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      margin-bottom: 18px; }
-      .home-container section#faq-area > .faq-box {
-        text-align: center;
-        padding: 30px; }
+
 
 /*--------------------------------------------------------------
     4.0 Animation
@@ -1496,6 +1413,42 @@ File created and FAQ page styles
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
+/*--------------------------------------------------------------
+5.5 References and Credits
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>>References and Credits
+----------------------------------------------------------------
+Author: Eduardo Pereira do Carmo 
+Date: 2019-12-02
+Description: References and Credits page of our theme
+----------------------------------------------------------------
+
+/*--------------------------------------------------------------
+>>> Log
+----------------------------------------------------------------
+- Eduardo Pereira do Carmo (2019-12-02)
+File created and add styles
+
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 References and Credits
+--------------------------------------------------------------*/
+.references-and-credits {
+  padding: 30px;
+}
+.references-and-credits table {
+  border-collapse: collapse;
+}
+.references-and-credits table,
+.references-and-credits th,
+.references-and-credits td {
+  border: 1px solid #33292A;
+}
 
 /*--------------------------------------------------------------
 6.0 Media Queries
@@ -1979,6 +1932,7 @@ Add Contact Us media queries
 3.0 FAQ/Features Single
 4.0 Our Team
 5.0 Contact Us
+6.0 References and Credits
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) {
   /*--------------------------------------------------------------
@@ -2091,7 +2045,15 @@ Add Contact Us media queries
     --------------------------------------------------------------*/
   .contact {
     width: 1024px;
-    margin: 0 auto; }
-    .contact .address:hover {
-      transform: scale(1.2) translateY(2rem) translateX(4rem);
-      transition: 1s ease-in-out; } }
+
+  /*--------------------------------------------------------------
+  6.0 References and Credits
+  --------------------------------------------------------------*/
+  .references-and-credits {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+

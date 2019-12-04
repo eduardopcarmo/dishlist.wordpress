@@ -12,10 +12,9 @@
 //   update_user_meta( 3, 'user_photo', '/wp-content/uploads/2019/11/Eduardo_Pereira_do_Carmo.jpg');
 //   update_user_meta( 3, 'user_dish', '/wp-content/uploads/2019/11/dish_eduardo.png');
 //   update_user_meta( 3, 'user_war_cry', 'Let\'s rock!');
-
 //   // Heloysa
 //   update_user_meta( 4, 'user_position', 'Project Manager');
-//   update_user_meta( 4, 'user_photo', '/wp-content/uploads/2019/11/heloysa.png');
+//   update_user_meta( 4, 'user_photo', '/wp-content/uploads/2019/12/Heloysa_B_T_Guerreiro.jpg');
 //   update_user_meta( 4, 'user_dish', '/wp-content/uploads/2019/12/dish_helo.png');
 //   update_user_meta( 4, 'user_war_cry', 'Let\'s go team!');
 //   // Walter
