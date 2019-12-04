@@ -87,7 +87,10 @@ add_post_type_support( 'post', 'excerpt' );
  * the reference of removing type attribute from Style and Script tags is :
  * https://wordpress.stackexchange.com/questions/287830/remove-type-attribute-from-script-and-style-tags-added-by-wordpress
  */
-/* Remove the attribute " 'type=text/css' " from stylesheet  */
-function wp_hide_type($src) {
-    return str_replace("type='text/css'", '', $src);
+//* Remove type tag from script and style
+add_filter('dishlist_styles_and_scripts', 'codeless_remove_type_attr', 10, 2);
+add_filter('autoptimize_html_after_minify', 'codeless_remove_type_attr', 10, 2);
+function codeless_remove_type_attr($tag, $handle='')
+{
+    return preg_replace("/type=['\"]text\/(javascript|css)['\"]/", '', $tag);
 }
