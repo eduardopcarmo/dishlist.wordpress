@@ -974,7 +974,6 @@ Based on https: //dev.to/adrianbdesigns/you-can-create-these-elements-without-ja
 --------------------------------------------------------------*/
 .text-truncated {
   overflow: hidden;
-  line-clamp: 2;
   display: -webkit-box;
   padding-right: 34px;
   -webkit-line-clamp: 2;
@@ -1014,7 +1013,88 @@ File created and all the new styles
 3.0 FAQ
 4.0 Animation
 --------------------------------------------------------------*/
-
+.home-container {
+  margin: auto 0; }
+  .home-container section {
+    /*--------------------------------------------------------------
+        1.0 Hero
+        --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+        2.0 Features
+        --------------------------------------------------------------*/
+    /*--------------------------------------------------------------
+        3.0 FAQ
+        --------------------------------------------------------------*/ }
+    .home-container section#home-main {
+      background-image: url("assets/images/circle_white_bottom_left.png"), url("assets/images/home_bg_1.png");
+      background-repeat: no-repeat,no-repeat;
+      background-position: left 0 bottom 0, right 0 top 0;
+      background-size: 130px 150px,auto; }
+      .home-container section#home-main > .home-main-container {
+        position: relative;
+        padding-bottom: 30px; }
+        .home-container section#home-main > .home-main-container > .main-dish-1 {
+          background-image: url("assets/images/home_dish_1.png");
+          background-repeat: no-repeat;
+          background-size: 234px 234px;
+          height: 234px;
+          width: 234px;
+          position: absolute;
+          top: 70px;
+          right: -41px;
+          /*---Add Animation---*/
+          animation: slideup-rotate 5s ease-out; }
+        .home-container section#home-main > .home-main-container > .main-dish-2 {
+          background-image: url(assets/images/home_dish_2.png);
+          background-repeat: no-repeat;
+          background-size: 115px 113px;
+          height: 113px;
+          width: 115px;
+          position: absolute;
+          top: 15px;
+          left: -5px; }
+        .home-container section#home-main > .home-main-container > .main-dish-3 {
+          background-image: url(assets/images/home_dish_3.png);
+          background-repeat: no-repeat;
+          background-size: 51px 51px;
+          height: 51px;
+          width: 51px;
+          position: absolute;
+          top: 140px;
+          left: 115px; }
+        .home-container section#home-main > .home-main-container > .main-area {
+          padding: 260px 33px 33px 33px;
+          position: relative; }
+          .home-container section#home-main > .home-main-container > .main-area h1 {
+            text-align: center; }
+          .home-container section#home-main > .home-main-container > .main-area p {
+            margin: 30px 0 30px 0; }
+    .home-container section#feature {
+      background-image: url("assets/images/circle_gray_top.png");
+      background-repeat: no-repeat, no-repeat;
+      background-position: left 0 top 0;
+      background-size: 130px 150px;
+      position: relative;
+      text-align: center;
+      padding: 30px 30px 0; }
+      .home-container section#feature > .home-sb-plate {
+        background-image: url("assets/images/home_strawberry_palte.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -4%;
+        right: 15px;
+        background-size: 100px 100px;
+        height: 100px;
+        width: 100px; }
+    .home-container section#faq-area {
+      background-image: url("assets/images/home_fqa_bg_small.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      margin-bottom: 18px; }
+      .home-container section#faq-area > .faq-box {
+        text-align: center;
+        padding: 30px; }
 
 /*--------------------------------------------------------------
     4.0 Animation
@@ -1292,9 +1372,8 @@ Description: Our Team page of our theme
                     It makes it easy to change the polygon using a variable, because there will be an only point of change.
                   */
             /* CSS Clip-Path as required by WMDD 4835 – HTML/CSS II */
-            --polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-            -webkit-clip-path: var(--polygon-shape);
-            clip-path: var(--polygon-shape);
+            -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+            clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
             background: #33292A;
             width: 130px;
             height: 130px;
@@ -1306,14 +1385,16 @@ Description: Our Team page of our theme
             justify-content: center;
             align-items: center; }
           .our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card > .img-container > img {
-            -webkit-clip-path: var(--polygon-shape);
-            clip-path: var(--polygon-shape);
+            -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+            clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
             width: 120px;
             height: 120px; }
           .our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card > .img-container-back {
             color: #fff;
             background-image: linear-gradient(to right bottom, #f33131, #731010);
             transform: rotateY(180deg); }
+            .our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card > .img-container-back > .user-war-cry {
+              padding: 15px; }
           .our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card:hover > .img-container {
             transform: rotateY(180deg); }
           .our-team-users > .our-team-users-container .user-box > .user-box-photo > .img-card:hover > .img-container-back {
@@ -1366,7 +1447,7 @@ File created and FAQ page styles
     1.1 Contac Us page (parent configuration)
     --------------------------------------------------------------*/
   display: grid;
-  grid-template-rows: repeat 3, auto;
+  grid-template-rows: repeat(3, auto);
   grid-template-columns: 1fr;
   padding: 0 22px;
   /*--------------------------------------------------------------
@@ -1439,16 +1520,13 @@ File created and add styles
 1.0 References and Credits
 --------------------------------------------------------------*/
 .references-and-credits {
-  padding: 30px;
-}
-.references-and-credits table {
-  border-collapse: collapse;
-}
-.references-and-credits table,
-.references-and-credits th,
-.references-and-credits td {
-  border: 1px solid #33292A;
-}
+  padding: 30px; }
+  .references-and-credits table {
+    border-collapse: collapse; }
+  .references-and-credits table,
+  .references-and-credits th,
+  .references-and-credits td {
+    border: 1px solid #33292A; }
 
 /*--------------------------------------------------------------
 6.0 Media Queries
@@ -1636,7 +1714,7 @@ Add Contact Us media queries
       background-color: #fff;
       color: #EA0024;
       box-shadow: none;
-      text-decoration: underlin; }
+      text-decoration: underline; }
     header.site-header > .main-navigation ul {
       display: flex; }
       header.site-header > .main-navigation ul .menu-item {
@@ -1858,7 +1936,7 @@ Add Contact Us media queries
     5.0 Contact Us
     --------------------------------------------------------------*/
   .contact {
-    grid-template-rows: auto, 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 1fr 1fr; }
     .contact .form-group textarea {
       height: 168px;
@@ -2045,15 +2123,13 @@ Add Contact Us media queries
     --------------------------------------------------------------*/
   .contact {
     width: 1024px;
-
+    margin: 0 auto; }
+    .contact .address:hover {
+      transform: scale(1.2) translateY(2rem) translateX(4rem);
+      transition: 1s ease-in-out; }
   /*--------------------------------------------------------------
-  6.0 References and Credits
-  --------------------------------------------------------------*/
+    6.0 References and Credits
+    --------------------------------------------------------------*/
   .references-and-credits {
     width: 1024px;
-    margin: 0 auto;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
-
+    margin: 0 auto; } }

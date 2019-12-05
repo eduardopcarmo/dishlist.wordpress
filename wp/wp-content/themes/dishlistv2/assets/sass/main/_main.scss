@@ -286,7 +286,6 @@ Based on https: //dev.to/adrianbdesigns/you-can-create-these-elements-without-ja
 --------------------------------------------------------------*/
 .text-truncated {
     overflow: hidden;
-    line-clamp: 2;
     display: -webkit-box;
     padding-right: 34px;
     -webkit-line-clamp: 2;
