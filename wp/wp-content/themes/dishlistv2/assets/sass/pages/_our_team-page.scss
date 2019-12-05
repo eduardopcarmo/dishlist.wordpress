@@ -35,10 +35,12 @@ Description: Our Team page of our theme
 $polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
 
 .our-team-users {
-  /*
+
+   /*
     .our-team-users-container --> Contains all users
   */
-  > .our-team-users-container {
+   >.our-team-users-container {
+
       /*
         .user-box -> each line
       */
@@ -48,12 +50,12 @@ $polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 
          flex-direction: column;
          align-items: center;
 
-      /*
+         /*
       --------------------------------------------------------------
       1.1 Box Photo - This element will hold the image and member description
       --------------------------------------------------------------
       */
-         > .user-box-photo {
+         >.user-box-photo {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -72,12 +74,13 @@ $polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 
               .img-card -> container that flips.
               It uses CSS Backface-Visibility Feature as required by WMDD 4835 – HTML/CSS II
             */
-            > .img-card {
+            >.img-card {
                display: grid;
+
                /*
                 This image container will make the clip-path using a polygon, creating a border around the image
                */
-               > .img-container-card {
+               >.img-container-card {
                   grid-row: 1/2;
                   grid-column: 1/2;
 
@@ -105,6 +108,7 @@ $polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 
                   justify-content: center;
                   align-items: center;
                }
+
                > .img-container {
                   > img {
                      -webkit-clip-path: $polygon-shape;
@@ -113,7 +117,8 @@ $polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 
                      height: 120px;
                   }
                }
-               > .img-container-back {
+
+               >.img-container-back {
                   color: $font-white;
                   background-image: linear-gradient(to right bottom, #f33131, #731010);
                   transform: rotateY(180deg);
@@ -121,29 +126,31 @@ $polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 
                      padding: 15px;
                   }
                }
+
                &:hover {
-                  > .img-container {
+                  >.img-container {
                      transform: rotateY(180deg);
                   }
-                  > .img-container-back {
+
+                  >.img-container-back {
                      transform: rotateY(360deg);
                   }
                }
             }
          }
 
-      /*
+         /*
       --------------------------------------------------------------
       1.2 Box Description -> This contains the user info and favorite dish
       --------------------------------------------------------------
       */
-         > .user-box-description {
+         >.user-box-description {
             position: relative;
             border: 1px solid $font-black;
             background-color: $secondary-color;
             padding-top: 40px;
 
-            > img {
+            >img {
                position: absolute;
                max-width: 57px;
                max-height: 57px;
@@ -151,7 +158,7 @@ $polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 
                left: 20px;
             }
 
-            > p {
+            >p {
                padding: 30px;
                background-color: $font-white;
                height: 100%;

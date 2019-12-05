@@ -15,8 +15,8 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/get_the_app_bg_2.png" width="352" height="295" alt="Get the App Now!" />
                 </div>
                 <div class="footer-cta-btns">
-                    <a class="btn btn-primary" href="https://play.google.com/store/" target="_blank">Android</a>
-                    <a class="btn btn-primary" href="https://www.apple.com/ios/app-store/" target="_blank">Appstore</a>
+                    <a class="btn btn-primary" href="https://play.google.com/store/" target="_blank">Google Play</a>
+                    <a class="btn btn-primary" href="https://www.apple.com/ios/app-store/" target="_blank">App Store</a>
                 </div>
             </div>
             <div class="footer-bgVid-container">
@@ -48,7 +48,8 @@
             );
         ?>
         <div class="footer-copyright">
-            <p>@Copyright Team 4 - <?= date("Y"); ?>.</p>
+            <p>@Copyright Dishlist - <?= date("Y"); ?>.</p>
+            <a href="<?= get_permalink( get_page_by_path( 'references-and-credits' ) ) ?>">References and Credits</a>
         </div>
     </footer>
     <?php wp_footer(); ?>
