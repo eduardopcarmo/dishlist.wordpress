@@ -65,7 +65,7 @@
                         >
                      </div>
                      <div class="img-container-back img-container-card">
-                        <div><?= get_user_meta($user->ID, 'user_war_cry', true);?></div>
+                        <div class="user-war-cry"><?= get_user_meta($user->ID, 'user_war_cry', true);?></div>
                      </div>                     
                   </div>
                   <div class="user-box-description">

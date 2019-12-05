@@ -31,6 +31,9 @@ Description: Our Team page of our theme
     1.2 Box Description
 --------------------------------------------------------------
 */
+
+$polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+
 .our-team-users {
 
    /*
@@ -80,6 +83,7 @@ Description: Our Team page of our theme
                >.img-container-card {
                   grid-row: 1/2;
                   grid-column: 1/2;
+
                   /*                    
                     Polygon from https://bennettfeely.com/clippy/
                     This variable will hold the polygon shape that is going to be used for the clip-path.
@@ -89,9 +93,9 @@ Description: Our Team page of our theme
                   */
 
                   /* CSS Clip-Path as required by WMDD 4835 – HTML/CSS II */
-                  --polygon-shape: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-                  -webkit-clip-path: var(--polygon-shape);
-                  clip-path: var(--polygon-shape);
+
+                  -webkit-clip-path: $polygon-shape;
+                  clip-path: $polygon-shape;
 
                   background: $tertiary-color;
                   width: 130px;
@@ -105,10 +109,10 @@ Description: Our Team page of our theme
                   align-items: center;
                }
 
-               >.img-container {
-                  >img {
-                     -webkit-clip-path: var(--polygon-shape);
-                     clip-path: var(--polygon-shape);
+               > .img-container {
+                  > img {
+                     -webkit-clip-path: $polygon-shape;
+                     clip-path: $polygon-shape;
                      width: 120px;
                      height: 120px;
                   }
@@ -118,6 +122,9 @@ Description: Our Team page of our theme
                   color: $font-white;
                   background-image: linear-gradient(to right bottom, #f33131, #731010);
                   transform: rotateY(180deg);
+                  > .user-war-cry {
+                     padding: 15px;
+                  }
                }
 
                &:hover {

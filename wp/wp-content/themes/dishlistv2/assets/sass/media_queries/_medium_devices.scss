@@ -110,7 +110,7 @@ Add Contact Us media queries
                     background-color: $font-white;
                     color: $primary-color;
                     box-shadow: none;
-                    text-decoration: underlin;
+                    text-decoration: underline;
                 }
 
                 ul {
@@ -417,7 +417,7 @@ Add Contact Us media queries
     4.0 Contact Us
     --------------------------------------------------------------*/
     .contact {
-        grid-template-rows: auto, 1fr;
+        grid-template-rows: auto 1fr;
         grid-template-columns: 1fr 1fr;
 
         .form-group textarea {
