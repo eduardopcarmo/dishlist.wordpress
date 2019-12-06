@@ -60,7 +60,7 @@
                   <div class="img-card">
                      <div class="img-container img-container-card">
                         <img 
-                           src=<?= get_user_meta($user->ID, 'user_photo', true);?>
+                           src=<?= get_site_url() . get_user_meta($user->ID, 'user_photo', true);?>
                            alt="<?= strtolower($user->first_name) . ' ' . strtolower($user->last_name); ?>"
                         >
                      </div>
@@ -75,7 +75,7 @@
                </div>
                <div class="user-box-description">
                   <img 
-                     src=<?= get_user_meta($user->ID, 'user_dish', true);?>
+                     src=<?= get_site_url() . get_user_meta($user->ID, 'user_dish', true);?>
                      alt="<?= strtolower($user->first_name) . '\'s favorite food' ?>"
                   >
                   <p><?= $user->description; ?></p>
