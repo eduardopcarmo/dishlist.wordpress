@@ -1,17 +1,21 @@
 # DishList.Wordpress
 
-You need Docker to run this application.
+WordPress Theme created as a group project during the second term of Web and Mobile App Design and Development at Langara College. 
+
+The main purpose of this Theme is to create a WordPress Website as a hot site to our mobile app. For more information about the mobile app: https://github.com/wbgneto/dishlist.mobile
 
 ---
 
-#### First Time Usage
+This theme was developed as a group project and these are all members:
 
-1: Run `docker-compose up -d` in the project root directory. Wait for the containers to be built.
+- Tran Tung Duong: ttran64@mylangara.bc.ca
+- Heloysa Tancredo: htancredoguerr00@mylangara.bc.ca
+- Jyot Sarup: jkaur060@mylangara.bc.ca
+- Marcos Cavalcanti: mcavalcantimon00@mylangara.bc.ca
+- Zeinab Ahmadi: zahmadi00@mylangara.bc.ca
+- Walter Galvão: wbarrosgalvone00@mylangara.bc.ca
+- Eduardo Pereira do Carmo: ecarmo@outlook.com
 
 ---
 
-#### Running Worpress Website
-
-1: You'll be able to access in the address: `http://localhost:8000` (Website) and `http://localhost:8000/wp-admin/` (Dashboard)
-
-2: Use **User**: team4 and **Password**: \$zOXx#PgHUSMWC3TC5
+Feel free to contact us if you have any questions.
